@@ -1,0 +1,32 @@
+% !TeX encoding = UTF-8
+% !TeX spellcheck = de_DE
+
+\documentclass[10pt,border=0mm]{standalone}
+\input{../gammastyle.sty}
+	
+\begin{document}
+
+	\begin{tikzpicture}
+		\begin{axis}[
+			%title=\text{$N=10$ PCB-Spule mit Anpassungsnetzwerk},
+			width=15.2cm, height=8cm,
+			ymin=0, xmin=0.07,xmax=1.43,ymax=350,
+			xlabel={Lichtleistung [mW]},ylabel={Spannung [mV]},legend pos=north west
+		]
+	
+			\addplot[color=red, forget plot, mark=o, only marks] table[skip first n=2, x index=0, y index=1] {500Ohm.dat};
+			\addplot[color=red, mark=o] table[skip first n=2, x index=0, y index=1] {1kOhm.dat};
+			\addlegendentry{Powermeter}
+			
+			\addplot[color=blue, mark=x] table[skip first n=2, x index=0, y index=2] {500Ohm.dat};
+			\addlegendentry{Photodiode $\unit[500]{\Omega}$}
+			
+			
+			\addplot[color=green, mark=+] table[skip first n=2, x index=0, y index=2] {1kOhm.dat};
+			\addlegendentry{Photodiode $\unit[1]{k\Omega}$}
+		
+		\end{axis}
+	\end{tikzpicture}
+
+
+\end{document}
