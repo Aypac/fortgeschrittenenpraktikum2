@@ -1,0 +1,36 @@
+
+\documentclass[11pt,border=0mm]{standalone}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usepackage[]{units}
+
+
+
+%Command to create a vertical dashed line in Plots
+\newcommand{\vasymptote}[2][]{
+	\draw [color=gray,densely dashed,#1] ({rel axis cs:0,0} -| {axis cs:#2,0}) -- ({rel axis cs:0,1} -| {axis cs:#2,0});
+}
+
+\usepgfplotslibrary{smithchart}
+%\usepgfplotslibrary[smithchart]
+%\usetikzlibrary{pgfplots.smithchart}
+%\usetikzlibrary[pgfplots.smithchart]
+\pgfplotsset{compat=1.12}
+
+%a4: width=21.00cm, height=29.70cm
+%borders 2.5cm each side => width=16.00cm*0.95=15.2cm
+%\usepackage[left=2cm, right=1cm, top=1cm, bottom=1cm]{geometry}
+%\pgfplotstablegetrowsof{../data/VNAS/GewSpule/0.22/Spulenhalter/gewSpuleN47.s1p}\pgfmathsetmacro\nrows{\pgfmathresult}
+
+\newcommand\addgammaplotSoneP[3][\@empty] { %
+	\addplot[#1] table[#2, skip first n=2, x index=0, y expr={20*log10(sqrt((\thisrowno{1})^2+(\thisrowno{2})^2))}] {#3};
+}
+\newcommand\addgammaplotSonePrs[3][\@empty] { %
+	\addplot[#1] table[#2, each nth point=2, filter discard warning=false, unbounded coords=discard, skip first n=2, x index=0, y expr={20*log10(sqrt((\thisrowno{1})^2+(\thisrowno{2})^2))}] {#3};
+}

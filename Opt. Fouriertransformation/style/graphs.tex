@@ -1,0 +1,37 @@
+
+\usepackage{color}
+\definecolor{gray}{rgb}{.5,.5,.5}
+\definecolor{lightgray}{rgb}{.25,.25,.25}
+
+%Graphics (PGF / TIKZ) **+**+**+**+**+**+**+**+**+**+**+**+**+**+
+\usepackage{tikz}
+\usetikzlibrary{patterns}
+\tikzset{
+	hatchhor/.style={pattern=horizontal lines,pattern color=#1},
+	hatchhor/.default=black
+}
+\tikzset{
+	hatchvert/.style={pattern=vertical lines,pattern color=#1},
+	hatchvert/.default=black
+}
+\tikzset{
+	hatchdiag/.style={pattern=north east lines,pattern color=#1},
+	hatchdiag/.default=black
+}
+\tikzset{
+	hatchdiag2/.style={pattern=north west lines,pattern color=#1},
+	hatchdiag2/.default=black
+}
+%also possible grid, crosshatch, dots, crosshatch dots, fivepointed stars, sixpointed stars
+
+\usepackage{pgfplots}
+\usepgfplotslibrary{fillbetween}
+
+\newcommand{\vasymptote}[2][]{
+	\draw [color=gray,densely dashed,#1] ({rel axis cs:0,0} -| {axis cs:#2,0}) -- ({rel axis cs:0,1} -| {axis cs:#2,0});
+}
+
+\newcommand{\vertline}[2][]{
+	\draw [#1] ({rel axis cs:0,0} -| {axis cs:#2,0}) -- ({rel axis cs:0,1} -| {axis cs:#2,0});
+}
+%END Graphics **+**+**+**+**+**+**+**+**+**+**+**+**+**+**+**+**+

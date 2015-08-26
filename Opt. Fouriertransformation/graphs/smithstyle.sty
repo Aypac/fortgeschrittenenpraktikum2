@@ -1,0 +1,47 @@
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usepackage[]{units}
+
+
+% Style to select only points from #1 to #2 (inclusive)
+\pgfplotsset{select coords between index/.style 2 args={
+		x filter/.code={
+			\ifnum\coordindex<#1\def\pgfmathresult{}\fi
+			\ifnum\coordindex>#2\def\pgfmathresult{}\fi
+		}
+	}
+}
+	
+	
+
+%Command to create a vertical dashed line in Plots
+\newcommand{\vasymptote}[2][]{
+	\draw [color=gray,densely dashed,#1] ({rel axis cs:0,0} -| {axis cs:#2,0}) -- ({rel axis cs:0,1} -| {axis cs:#2,0});
+}
+
+\usepgfplotslibrary{smithchart}
+\pgfplotsset{compat=newest} %1.12
+
+\usepackage{pgfplotstable}
+\usepgfplotslibrary{units}
+\usepackage{siunitx}
+\sisetup{
+	%strict,
+	output-decimal-marker={,},
+	exponent-product=\cdot,
+	detect-all
+}
+
+
+\pgfkeys{
+	/pgf/number format/set thousands separator = {},
+	/pgf/number format/.cd,
+	use comma,
+	1000 sep={},
+}
