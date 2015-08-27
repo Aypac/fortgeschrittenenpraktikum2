@@ -1,8 +1,7 @@
 \documentclass[pstricks,border=12pt]{standalone}% remove the border key if you want a tight output without any border.
 
 %Optical elements
-\usepackage{pst-optexp}
-\input{../gammastyle.sty}
+\input{../optexpstyle.sty}
 
 \def\fourFwidth{2}
 
@@ -11,18 +10,18 @@
 	%\psset{xunit=4cm, yunit=1.6cm}
 	%\addtopsstyle{Beam}{beamwidth=0.3, fillstyle=solid, fillcolor=green, opacity=0.25, arrowscale=1.8} %,linestyle=none, fillcolor=green!18!white
 	
-	\begin{pspicture}[showgrid](0,0)(15,2) %[showgrid]
+	\begin{pspicture}(0,0)(15,2) %[showgrid]
 	\pnodes(2,1){L0}(3,1){L1}(4,1){L2}(5.5,1){L3}(8.5,1){L4}(10.5,1){L5}(18.5,1){L6}
 	
 	\psset{mirrortype=extended, mirrordepth=0.15, hatchcolor=black!30}
 	
 	
-	\begin{optexp} %All beams placed behind components
+	%\begin{optexp} %All beams placed behind components
 	
 	
 	\optbox[position=start,compname=LA, optboxsize=2 1, labeloffset=0](L0)(L2){Auskoppler}
 	
-	\optretplate[beam, compname=LH](L0)(L1){$\nicefrac{\lambda}{2}$}
+	\optretplate[compname=LH](L0)(L1){$\nicefrac{\lambda}{2}$}
 	\beamsplitter[compname=BS](L0)(L2)(4,0)
 	\lens[lensradius=0.7,lensheight=1, labeloffset=1, labelangle=180,compname=L1, position=0](L3)(L4){Linse 1}
 	\lens[lensradius=2.3,lensheight=1.4, labeloffset=1, labelangle=180,compname=L2, position=1](L3)(L4){Linse 2}
@@ -35,7 +34,7 @@
 	\drawwidebeam[beamwidth=0.2, fillstyle=solid, opacity=0.25, arrowscale=1.8, fillcolor=red, linecolor=red] {LA}{LH}{BS}{L1}{L2}{DIA}{L3}{CCD1} %{L4}{CCD2}
 	
 	
-	\end{optexp}
+	%\end{optexp}
 	
 	\end{pspicture}
 	

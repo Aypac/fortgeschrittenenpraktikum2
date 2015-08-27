@@ -6,3 +6,4 @@
 *.synctex.gz
 .gitignore~
 *praktikum.pdf
+*.dvi
