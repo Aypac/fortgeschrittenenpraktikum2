@@ -1,17 +1,15 @@
 % !TeX encoding = UTF-8
 % !Tex spellcheck = de_DE
 
+%begin:Silbentrennung ****
+\RequirePackage{hyphsubst}
+\HyphSubstIfExists{ngerman-x-latest}{\HyphSubstLet{ngerman}{ngerman-x-latest}}{} 
+\listfiles
+%end:Silbentrennung ******
+
 \documentclass[10pt,a4paper]{article}
 \input{mystyle.tex}
 \usepackage[left=2.50cm, right=2.50cm, top=2.50cm, bottom=2.00cm]{geometry}
-
-
-% Literaturangabe
-%\usepackage{biblatex}
-%\bibliographystyle{plain}
-\bibliographystyle{alpha} %http://sites.stat.psu.edu/~surajit/present/bib.htm
-%\usepackage{natbib}
-%\bibliographystyle{plainnat}
 
 
 \begin{comment}
@@ -115,9 +113,9 @@
 	\pagenumbering{Alph}
 	
 	
-	%\nocite{zweitesBuch}
-	\bibliography{praktikum.bib}
-	\addcontentsline{toc}{section}{Bibliography}
+	%\nocite{bibid}
+	\bibliographystyle{deIEEEtran}
+	\bibliography{IEEEabrv,praktikum}
 	
 	\newpage
 	
