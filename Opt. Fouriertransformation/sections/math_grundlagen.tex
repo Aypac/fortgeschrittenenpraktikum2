@@ -1,0 +1,62 @@
+% !TeX root = ../praktikum.tex
+% !TeX encoding = UTF-8
+% !Tex spellcheck = de_DE
+
+Die kontinuierliche Fourier-Transformation (kurz FT) ist definiert als
+\begin{equation}
+	G(x) = F\left\{g(x)\right\}\defeq\int_{-\infty}^{+\infty} g(x) \cdot e^{-2\pi i x s} ~dx
+	\label{eq:ft}
+\end{equation}
+wobei $g(x)\in L^1(\mathbb{R})$ eine absolut integrabele, außer an endlich vielen Stellen stetige Funktion in einer Variable ist. Die transformierte dieser Funktion wird häufig mit dem gleichen Buchstaben wie die nicht transformierte, jedoch groß geschrieben bezeichnet.
+
+Die Rücktransformation (auch \textit{inverse Fourier-Transformation}, kurz iFT) ist definiert als
+\begin{equation}
+	g(x) = F^{-1}\left\{G(x)\right\}\defeq\int_{-\infty}^{+\infty} G(x) \cdot e^{+2\pi i x s} ~ds
+	\label{eq:ift}
+\end{equation}
+
+Diese Funktion besitzt einige besondere Eigenschaften, die sie für die Informationsverarbeitung interessant machen. Die wichtigsten sollen hier kurz skizziert werden:
+
+\begin{enumerate}
+	\item{Zweifache Anwendung}
+	\begin{equation}
+	F\left\{ F\{g(x)\} \right\} = F\left\{ G(s) \right\} = g(-x)
+	\label{eq:umdreh}
+	\end{equation}\textit{Beweisskizze:} Vorzeichenumkehr $x \rightarrow -x$ in \ref{eq:ift} entspricht der FT von $G(s)$ und $F\left\{ G(s) \right\} = F\left\{ F\left\{F^{-1}\{G(s)\}\right\} \right\} = F\left\{ F\left\{g(x)\right\} \right\}$.
+	
+	\item{Linearität}
+	\begin{equation}
+		F\left\{ a\cdot g(x)+b\cdot h(x) \right\} = a\cdot F\{g(x)\}+b\cdot F\{h(x)\}
+		\label{eq:lin}
+	\end{equation}
+	\textit{Beweisskizze:} Dank der Eigenschaften von $g(x)$ kann das Integral der Fourier-Transformation in Teilintegrale geteilt und lineare Faktoren heraus gezogen werden.
+	
+	\item{Ähnlichkeit}
+	\begin{equation}
+		F\left\{ g(a\cdot x) \right\} = \nicefrac{1}{a}\cdot F\{g(\nicefrac{x}{a})\} = \nicefrac{1}{a}\cdot G(\nicefrac{s}{a})
+		\label{eq:sim}
+	\end{equation}\textit{Beweisskizze:} Substitution von $y=a\cdot x$ als Integrationsvariable.
+	
+	\item{Verschiebung}
+	\begin{equation}
+		F\left\{ g(x-a) \right\} = e^{-2\pi isa} \cdot F\{g(x)\} = e^{-2\pi isa} \cdot G(s)
+		\label{eq:vers}
+	\end{equation}
+	\textit{Beweisskizze:} Variablensubstitution $x-a \rightarrow x$.
+	
+	\item{Faltung}
+	
+	\begin{equation}
+	F\left\{ g(x) \circ h(x) \right\} = F\left\{ g(x) \right\} \cdot F\left\{  h(x) \right\} =G(x)\cdot H(x)
+	\label{eq:ffalt}
+	\end{equation}
+	Mit der Definition der Faltung als
+	\begin{equation}
+		g(x)\circ h(x) \defeq \int g(x) \cdot h(x-a) ~da
+		\label{eq:faltung}
+	\end{equation}
+	\textit{Beweisskizze:} Nutze $F\left\{ \int g(a) \circ h(x-a) ~da \right\}=\int g(a) \cdot F\left\{ h(x) \right\} ~da$ und anschließendes Vertauschen der Integrationen über $a$ und $x$ aus Faltung und FT.
+	
+\end{enumerate}
+
+Einige dieser Eigenschaften können direkt im Versuch gesehen werden, siehe Abschnitt~\ref{chap:auswertung}.
