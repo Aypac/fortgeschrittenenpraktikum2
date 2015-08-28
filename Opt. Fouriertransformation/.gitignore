@@ -1,9 +1,0 @@
-*.log
-*.out
-*.toc
-*.aux
-*.lof
-*.synctex.gz
-.gitignore~
-*praktikum.pdf
-*.dvi

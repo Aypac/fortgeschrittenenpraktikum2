@@ -1,0 +1,80 @@
+\documentclass[pstricks,border=12pt]{standalone}% remove the border key if you want a tight output without any border.
+
+%Optical elements
+\input{../optexpstyle.sty}
+
+
+\begin{document}
+	
+	%\psset{xunit=4cm, yunit=1.6cm}
+	\addtopsstyle{Beam}{linecolor=red, beamwidth=0.3, fillstyle=solid, fillcolor=red, opacity=0.25, arrowscale=1.8, linewidth=.01} %,linestyle=none, fillcolor=green!18!white
+	
+	\begin{pspicture}(1.3,0)(11.6,2) %[showgrid]
+	\pnodes(0,1){Begin}(12,1){End}
+	
+	\psset{mirrortype=extended, mirrordepth=0.15, hatchcolor=black!30}
+	
+	
+	\begin{optexp} %All beams placed behind components
+		
+		\optplate[plateheight=1.5, abspos=0](Begin)(End){~}
+		\pinhole[abspos=2, phwidth=0.05, innerheight=0.08,labeloffset=.95, labelangle=200](Begin)(End){Objekt}
+		\lens[lensradius=2,lensheight=1.2, labeloffset=0.9, labelangle=180, abspos=4,n=1.5](Begin)(End){Linse}
+		\optplate[plateheight=1.2, abspos=6,labeloffset=.9, labelangle=180](Begin)(End){Fourierebene}
+		\lens[lensradius=2,lensheight=1.2, labeloffset=0.9, labelangle=180, abspos=8,n=1.5](Begin)(End){Linse}
+		\optplate[plateheight=1.2, abspos=10,labeloffset=.95, labelangle=160](Begin)(End){Abbildungsebene}
+		
+		\drawwidebeam[beamwidth=0.6, beamdiv=0]{1-2}
+		
+		\drawwidebeam[beamwidth=0.08, beamdiv=0, beamangle=10, opacity=0.1, linecolor=red!70]{2-}
+		\drawwidebeam[beamwidth=0.08, beamdiv=0, beamangle=-10, opacity=0.1, linecolor=red!70]{2-}
+		\drawwidebeam[beamwidth=0.1, beamdiv=0]{2-}
+	
+	
+	\end{optexp}
+	
+	\psset{arrows=|*-|*}
+	\pcline([offset=-1]\oenodeCenter{2})([offset=-1]\oenodeCenter{3})
+	\ncput*{$f$}
+	\pcline([offset=-1]\oenodeCenter{3})([offset=-1]\oenodeCenter{4})
+	\ncput*{$f$}
+	\pcline([offset=-1]\oenodeCenter{4})([offset=-1]\oenodeCenter{5})
+	\ncput*{$f$}
+	\pcline([offset=-1]\oenodeCenter{5})([offset=-1]\oenodeCenter{6})
+	\ncput*{$f$}
+	
+	\end{pspicture}
+	
+	
+	
+	\begin{comment}
+		\optbox[position=start,compname=LA](L0)(L2){Laser}
+		\optbox[position=0.53, optboxsize=0.2 0.6,labelangle=190, labeloffset=0.65](L0)(L2){{\small ND-Filter}}
+		\optbox[position=0.47, optboxsize=0.2 0.6](L0)(L2){~}
+		\mirror[compname=M1](L0)(L2)(L3)
+		\mirror[compname=M2](L2)(L3)(L5)
+		\optretplate[beam](L3)(L5){$\nicefrac{\lambda}{2}$}
+		\beamsplitter[compname=BS](L3)(L5)(L6)
+		
+		\mirror[compname=M3,variable](L5)(L6)(L7)
+		\mirror[compname=M4,variable](L7)(L8)(L9)
+		\optretplate[beam](L8)(L9){$\nicefrac{\lambda}{2}$}
+		
+		\drawbeam[linecolor=red,arrows=->] {BS}(-4,3.5)
+		
+		\drawbeam[linecolor=red] {LA}{M1}{M2}{BS}{M3}{M4}{EK}
+		
+	
+		%\optsource[innerlabel,beamdiv=1,beamangle=0,compname=LA](L)(C){Laser}
+		\lens[lensradius=1.5,lensheight=1.4, labeloffset=1, labelangle=180](L1)(L2){Lens 1}
+		\pinhole[innerheight=0.025,phwidth=-0.1, outerheight=1.4, labeloffset=1](L2)(L3){Pinhole/CCD}
+		\lens[lensradius=3,lensheight=1.4, labeloffset=1](L3)(L4){Lens 2}
+		
+		\optplate[plateheight=1.5, labelangle=-140, labeloffset=1.3, compname=CCD](L4)(L5){Screen/CCD}
+		%\optbox[position=end, labeloffset=0,labelref=relative,compname=CCD](L4)(L5){CCD}
+		
+		\drawwidebeam[beamdiv=5.5, fillcolor=orange, linecolor=white!]{1-5}
+		\drawwidebeam[beamdiv=1.5, ArrowInside=->]{-}
+	\end{comment}
+	
+\end{document}

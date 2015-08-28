@@ -5,6 +5,9 @@
 *.log
 *.out
 *.toc
+*.dvi
+*.ps
+*.synctex.gz
 
 Vivis �bungskram
 *.gitignore~
