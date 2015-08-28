@@ -8,6 +8,7 @@
 *.dvi
 *.ps
 *.synctex.gz
+*praktikum.pdf
 
 Vivis �bungskram
 *.gitignore~
