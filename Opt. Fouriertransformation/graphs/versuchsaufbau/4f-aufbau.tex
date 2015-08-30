@@ -16,7 +16,7 @@
 	\psset{mirrortype=extended, mirrordepth=0.15, hatchcolor=black!30}
 	
 	
-	%\begin{optexp} %All beams placed behind components
+	\begin{optexp} %All beams placed behind components
 	
 	
 	\optbox[position=start,compname=LA, optboxsize=2 1, labeloffset=0](L0)(L2){Auskoppler}
@@ -33,8 +33,17 @@
 	
 	\drawwidebeam[beamwidth=0.2, fillstyle=solid, opacity=0.25, arrowscale=1.8, fillcolor=red, linecolor=red] {LA}{LH}{BS}{L1}{L2}{DIA}{L3}{CCD1}{L4}{CCD2}
 	
+	\end{optexp}
 	
-	%\end{optexp}
+	\psset{arrows=|*-|*}
+	\pcline([offset=-1]\oenodeCenter{4})([offset=-1]\oenodeCenter{5})
+	\ncput*{$f_1$}
+	\pcline([offset=-1]\oenodeCenter{5})([offset=-1]\oenodeCenter{6})
+	\ncput*{$f_2$}
+	\pcline([offset=-1]\oenodeCenter{6})([offset=-1]\oenodeCenter{7})
+	\ncput*{$f_3$}
+	\pcline([offset=-1]\oenodeCenter{7})([offset=-1]\oenodeCenter{8})
+	\ncput*{$f_4$}
 	
 	\end{pspicture}
 	
