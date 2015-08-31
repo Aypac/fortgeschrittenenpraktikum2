@@ -1,0 +1,28 @@
+% !TeX encoding = UTF-8
+% !TeX spellcheck = de_DE
+
+\documentclass[12pt,border=0mm]{standalone}
+\input{../gammastyle.sty}
+\def\yerr{.05*y} %Oszi plus natural mV
+\def\xerr{.01} %Unprecise Powermeter mW reading (reading of x.xx mW)
+	
+\begin{document}
+
+	\begin{tikzpicture}
+		\begin{axis}[
+			width=15.2cm, height=8.5cm,
+			ymin=0.1, xmin=-7.7,xmax=7.7,ymax=415,
+			xlabel={Magnetfeld [T]},ylabel={Widerstand [$\Omega$]},legend pos=north west
+		]
+			
+			\addplot[color=green, mark=\empty] {15*x+100};
+			\addlegendentry{$U_H$}
+			
+			\addplot[color=orange, mark=\empty] {20*x + 100};
+			\addlegendentry{$U_{xy}$}
+		
+		\end{axis}
+	\end{tikzpicture}
+
+
+\end{document}
