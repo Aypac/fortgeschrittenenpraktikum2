@@ -11,6 +11,9 @@
 \input{mystyle.tex}
 \usepackage[left=2.50cm, right=2.50cm, top=2.50cm, bottom=2.00cm]{geometry}
 
+
+\usepackage[ngerman]{babel}
+
 %test
 \begin{comment}
 \usepackage{titlesec}
@@ -51,6 +54,7 @@
 		\bigskip
 		
 		\begin{minipage}{0.75\textwidth}
+			\textbf{[Zusammenfassung]}
 			\input{sections/abstract.tex}
 		\end{minipage}
 	\end{center}
@@ -66,7 +70,6 @@
 	\pagenumbering{arabic}
 	
 	\section{Theoretische Grundlagen}
-	
 	\input{sections/theory.tex}
 
 	
@@ -118,20 +121,21 @@
 	
 	
 	%\nocite{bibid}
+	\addcontentsline{toc}{section}{Literatur}
 	\bibliographystyle{deIEEEtran}
 	\bibliography{IEEEabrv,praktikum}
 	
 	\newpage
 	
 	\listoffigures %lof
-	\addcontentsline{toc}{section}{List of figures}
+	\addcontentsline{toc}{section}{Abbildungsverzeichnis}
 	%\tableofcontents %toc
 	%\listoftables %lot
 	
 	\newpage
 	\clearpage
 	
-	\section{Appendix}
+	\section{Anhang}
 	\input{sections/appendix.tex}
 	
 \end{document} 
