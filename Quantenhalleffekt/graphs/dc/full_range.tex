@@ -12,13 +12,13 @@
 		\begin{axis}[
 			width=15.2cm, height=8.5cm,
 			xmin=-7.7,xmax=7.7, %ymin=0.1, ymax=415,
-			xlabel={Magnetfeld [T]},ylabel={Widerstand [$\Omega$]},legend pos=north west
+			xlabel={Magnetfeld [T]},ylabel={Widerstand [$\Omega$]},legend pos=north middle
 		]
 			
-			\addplot[color=green, mark=\empty] table[x index=0, y index=1] {../data/gleichspannung/2Kelvin-1V-full_range.dat};
+			\addplot[color=green, mark=\empty] table[x index=0, y expr={abs(\thisrowno{1})}] {../data/gleichspannung/2Kelvin-1uA-full_range.dat};
 			\addlegendentry{$U_H$}
 			
-			\addplot[color=orange, mark=\empty] table[x index=0, y expr={-1*(\thisrowno{3})}] {../data/gleichspannung/2Kelvin-1V-full_range.dat};
+			\addplot[color=orange, mark=\empty] table[x index=0, y expr={-1*(\thisrowno{3})}] {../data/gleichspannung/2Kelvin-1uA-full_range.dat};
 			\addlegendentry{$U_{xx}$}
 		
 		
