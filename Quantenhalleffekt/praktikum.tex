@@ -11,16 +11,7 @@
 \input{mystyle.tex}
 \usepackage[left=2.50cm, right=2.50cm, top=2.50cm, bottom=2.00cm]{geometry}
 
-%test
-\begin{comment}
-\usepackage{titlesec}
-\titleformat{\subsection}[runin]% runin puts it in the same paragraph
-{\normalfont\bfseries}% formatting commands to apply to the whole heading
-{\thesubsection}% the label and number
-{0.5em}% space between label/number and subsection title
-{}% formatting commands applied just to subsection title
-[]% e.g. [.] punctuation or other commands following subsection title\frac{•}{•}
-\end{comment}
+\usepackage[ngerman]{babel}
 
 
 \linespread{1.1}
@@ -51,6 +42,7 @@
 		\bigskip
 		
 		\begin{minipage}{0.75\textwidth}
+			\textbf{[Zusammenfassung]}
 			\input{sections/abstract.tex}
 		\end{minipage}
 	\end{center}
@@ -129,20 +121,21 @@
 	
 	
 	%\nocite{bibid}
+	\addcontentsline{toc}{section}{Literatur}
 	\bibliographystyle{deIEEEtran}
 	\bibliography{IEEEabrv,praktikum}
 	
 	\newpage
 	
 	\listoffigures %lof
-	\addcontentsline{toc}{section}{List of figures}
+	\addcontentsline{toc}{section}{Abbildungsverzeichnis}
 	%\tableofcontents %toc
 	%\listoftables %lot
 	
 	\newpage
 	\clearpage
 	
-	\section{Appendix}
+	\section{Anhang}
 	\input{sections/appendix.tex}
 	
 \end{document} 
