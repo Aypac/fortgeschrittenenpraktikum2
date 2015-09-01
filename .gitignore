@@ -1,4 +1,4 @@
-*.aux
+﻿*.aux
 *.bbl
 *.blg
 *.lof
@@ -13,3 +13,5 @@
 Vivis �bungskram
 *.gitignore~
 *Thumbs.db
+*.odt#
+*.odp#
