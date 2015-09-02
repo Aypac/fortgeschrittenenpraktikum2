@@ -23,24 +23,25 @@
 	\begin{axis}[
 		axis y line*=left,
 		width=15.2cm, height=8.5cm,
-		xmin=-7.7,xmax=7.7, ymin=0, %ymax=14,
+		xmin=-2,xmax=2, ymin=0, %ymax=14,
 		xlabel={Magnetfeld [T]},
 		ylabel={Hallwiderstand [\unit{$k\Omega$}]},
+		xtick={-2,-1.5,-1,-0.5,0,.5,1,1.5,2},
 	]
 	
-		\addplot[color=green, mark=\empty] table[skip first n=1, x index=0, y expr={\UhallEq}] {../data/wechselspannung/2Kelvin-1V-full_range_10MOhm.dat};
+		\addplot[color=green, mark=\empty] table[skip first n=1, x index=0, y expr={\UhallEq}] {../data/wechselspannung/2Kelvin-1V-(+-2T)_range_10MOhm_38Hz.dat};
 		%\addlegendentry{$U_H$}
 	\end{axis}
 	
 	\begin{axis}[
 		axis y line*=right,
 		width=15.2cm, height=8.5cm,
-		xmin=-7.7,xmax=7.7,
-		ymin=0, %ymax=1,
+		xmin=-2,xmax=2,
+		ymin=0, %ymax=1-
 		axis x line=none,
 		xlabel=none,
 		xticklabel=none,
-		ylabel={Längswiderstand [\unit{$k\Omega$}]},
+		ylabel={Längswiderstand [\unit{$\Omega$}]},
 		legend style={
 			at={(0,0)},
 			anchor=north,
@@ -50,7 +51,7 @@
 		\addplot[color=green, mark=\empty] {-1}; %dummy
 		\addlegendentry{Hallwiderstand $U_H$}
 		
-		\addplot[color=orange, mark=\empty] table[skip first n=1, x index=0, y expr={\UxxEq}] {../data/wechselspannung/2Kelvin-1V-full_range_10MOhm.dat};
+		\addplot[color=orange, mark=\empty] table[skip first n=1, x index=0, y expr={(\UxxEq)*1000}]  {../data/wechselspannung/2Kelvin-1V-(+-2T)_range_10MOhm_38Hz.dat};
 		\addlegendentry{Längswiderstand $U_{xx}$}
 	
 	\end{axis}

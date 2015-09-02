@@ -27,6 +27,16 @@
 \usepackage{pgfplots}
 \usepgfplotslibrary{fillbetween}
 
+% Style to select only points from #1 to #2 (inclusive)
+\pgfplotsset{select coords between index/.style 2 args={
+		x filter/.code={
+			\ifnum\coordindex<#1\def\pgfmathresult{}\fi
+			\ifnum\coordindex>#2\def\pgfmathresult{}\fi
+		}
+	}
+}
+
+
 \newcommand{\vasymptote}[2][]{
 	\draw [color=gray,densely dashed,#1] ({rel axis cs:0,0} -| {axis cs:#2,0}) -- ({rel axis cs:0,1} -| {axis cs:#2,0});
 }

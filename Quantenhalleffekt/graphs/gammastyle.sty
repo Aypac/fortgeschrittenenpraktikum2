@@ -2,15 +2,7 @@
 \input{../../style/graphs.tex}
 \input{../../style/newsymbols.tex}
 
-% Style to select only points from #1 to #2 (inclusive)
-\pgfplotsset{select coords between index/.style 2 args={
-		x filter/.code={
-			\ifnum\coordindex<#1\def\pgfmathresult{}\fi
-			\ifnum\coordindex>#2\def\pgfmathresult{}\fi
-		}
-	}}
-	
-	
+
 
 \usepackage{pgfplots}
 \usepackage{tikz}
@@ -24,3 +16,14 @@
 %a4: width=21.00cm, height=29.70cm
 %borders 2.5cm each side => width=16.00cm*0.95=15.2cm
 %\usepackage[left=2cm, right=1cm, top=1cm, bottom=1cm]{geometry}
+
+
+\pgfkeys{
+	/pgfplots/legend cell align=left,
+	/pgf/number format/set thousands separator = {},
+	/pgf/number format/.cd,
+	use comma,
+	1000 sep={},
+}
+
+\def\gammaEquation{{20*log10(sqrt((\thisrowno{1})^2+(\thisrowno{2})^2))}}

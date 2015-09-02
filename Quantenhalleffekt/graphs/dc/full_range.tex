@@ -3,24 +3,56 @@
 
 \documentclass[12pt,border=0mm]{standalone}
 \input{../gammastyle.sty}
-\def\yerr{.05*y} %Oszi plus natural mV
-\def\xerr{.01} %Unprecise Powermeter mW reading (reading of x.xx mW)
+\def\probelength{600} %µm
+\def\probewidth{100} %µm
+\def\probecurrent{1} %µA
+\def\unitfactor{10^3} %
+\def\UhallEq{(abs(\thisrowno{1})/\probecurrent)*\unitfactor}
+\def\UxxEq{-1*\thisrowno{3}*\probewidth/(\probelength*\probecurrent)*\unitfactor} %kOhm
 	
-\begin{document}
-
-	\begin{tikzpicture}
-		\begin{axis}[
-			width=15.2cm, height=8.5cm,
-			xmin=-7.7,xmax=7.7, %ymin=0.1, ymax=415,
-			xlabel={Magnetfeld [T]},ylabel={Widerstand [$\Omega$]},legend pos=north middle
-		]
-			
-			\addplot[color=green, mark=\empty] table[x index=0, y expr={abs(\thisrowno{1})}] {../data/gleichspannung/2Kelvin-1uA-full_range.dat};
-			\addlegendentry{$U_H$}
-			
-			\addplot[color=orange, mark=\empty] table[x index=0, y expr={-1*(\thisrowno{3})}] {../data/gleichspannung/2Kelvin-1uA-full_range.dat};
-			\addlegendentry{$U_{xx}$}
+	
+	\begin{document}
 		
+	\begin{tikzpicture}
+	\pgfplotsset{
+		scale only axis,
+		%scaled x ticks=base 10:3,
+		%xmin=0, xmax=0.06
+	}
+	
+	\begin{axis}[
+		axis y line*=left,
+		width=15.2cm, height=8.5cm,
+		xmin=-7.7,xmax=7.7, ymin=0, %ymax=415,
+		xlabel={Magnetfeld [T]},
+		ylabel={Hallwiderstand [\unit{$k\Omega$}]},
+	]
+		
+		\addplot[color=green, mark=\empty] table[x index=0, y expr={\UhallEq}] {../data/gleichspannung/2Kelvin-1uA-full_range.dat};
+		%\addlegendentry{$U_H$}
+	\end{axis}
+	
+	\begin{axis}[
+		axis y line*=right,
+		width=15.2cm, height=8.5cm,
+		xmin=-7.7,xmax=7.7,
+		ymin=0, %ymax=415,
+		axis x line=none,
+		%ymin=0, ymax=100,
+		xlabel=none,
+		xticklabel=none,
+		ylabel={Längswiderstand [\unit{$k\Omega$}]},
+		legend style={
+			at={(0,0)},
+			anchor=north,
+			at={(axis description cs:.5,.95)}
+		}
+	]
+		\addplot[color=green, mark=\empty] {-1}; %dummy
+		\addlegendentry{Hallwiderstand $U_H$}
+		
+		\addplot[color=orange, mark=\empty] table[x index=0, y expr={\UxxEq}] {../data/gleichspannung/2Kelvin-1uA-full_range.dat};
+		\addlegendentry{Längswiderstand $U_{xx}$}
 		
 		\end{axis}
 	\end{tikzpicture}
