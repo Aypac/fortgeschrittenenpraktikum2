@@ -12,6 +12,7 @@
 \usepackage[left=2.50cm, right=2.50cm, top=2.50cm, bottom=2.00cm]{geometry}
 
 \usepackage[ngerman]{babel}
+\usepackage{wrapfig}
 
 
 \linespread{1.1}
@@ -66,9 +67,16 @@
 	\clearpage
 	
 	\section{Experimentelle Durchführung und Beobachtungen}
-	Der Versuchsaufbau besteht aus einem im Boden eingelassenen Kryostaten und sich in einem Rack befindlicher Steuerungs- und Messelektronik, welche mit Hilfe eines Computers gesteuert bzw. ausgelesen und aufgezeichnet werden kann. Der Kryostat ist ein Vakuumtank mit einer heliumgefüllten Kammer im Inneren. Darin befindet sich ein Probeneinschub. Mit einer Pumpe wird der Druck in diesem auf wenigen Millibar gehalten. Durch die Verdunstungskälte kann die Innentemperatur auf unter \unit[1,5]{K} gehalten werden.
 	
-	Für den Versuch wird als erstes die Probe an der Spitze eines Stabes montiert und in den Probeneinschub eingeführt. Anschließend wird dieser mehrfach mit Helium geflutet und abgepumpt, um Luftreste zu entfernen und Vereisungen zu vermeiden. Bei laufender Pumpe wird eine Einstellung für die Heliumzufuhr gesucht, sodass sich in dem Probeneinschub der gewünschte Druck einstellt.\\
+	\begin{wrapfigure}{l}{7cm}
+		\centering
+		\includegraphics[scale=1]{graphs/aufbau/tank.pdf}
+		\caption[Schematischer Aufbau des Kryostaten]{Schematische Zeichnung des im Text beschriebenen Kryostaten.}
+		\label{fig:kryo}
+	\end{wrapfigure}
+	Der Versuchsaufbau besteht aus einem im Boden eingelassenen Kryostaten und sich in einem Rack befindlicher Steuerungs- und Messelektronik, welche mit Hilfe eines Computers gesteuert bzw. ausgelesen und die Messdaten aufgezeichnet werden können. Der Kryostat ist ein Vakuumtank mit einer heliumgefüllten Kammer im Inneren. Darin befindet sich eine Kammer in der wiederum ein Probeneinschub ist. Mit einer Pumpe wird der Druck in dieser Kammer auf wenigen Millibar gehalten. Durch die Verdunstungskälte kann die Innentemperatur, und so effektiv auf die Probentemperatur auf etwa \unit[1,5]{K} gehalten werden. Dieser Aufbau ist in Abbildung~\ref{fig:kryo} schematisch dargestellt. Durch einige Sensoren und eine Heizung kann die Temperatur anschließend sehr genau geregelt werden. Um die beiden Effekte letztendlich beobachten zu können sind sehr hohe Magnetfelder von Nöten, hierfür werden zwei supraleitende Magnetspulen genutzt.\\
+	
+	Vor dem Versuch wurde der Tank über den Heliumeinlass an der Oberseite mit flüssigem Helium gefüllt. Die Probe wurde an der Spitze des Probenstabes montiert und in den Probeneinschub eingeführt. Anschließend wurde die den Einschub umgebende Kammer mehrfach mit Hilfe eines Nadelventils mit Helium geflutet welches anschließend wieder abgepumpt wurde, um Luftreste zu entfernen und Vereisungen an Probe und Nadelventil zu vermeiden. Anschließend wurde bei laufender Pumpe eine Einstellung für die Heliumzufuhr (Nadelventil) gesucht, sodass sich in der Kammer der gewünschte Unterdruck und somit die sehr tiefen Temperaturen einstellen.\\
 	
 	Im Nachfolgenden werden in den ersten beiden Abschnitten zwei unterschiedliche Messmethoden erprobt und in den anschließenden werden Winkel, Temperatur und Elektronendichte verändert und die Folgen auf den Quanten-Hall Effekt und die Shubnikov-de Haas Oszillationen untersucht.
 	
