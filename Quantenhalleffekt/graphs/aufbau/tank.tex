@@ -34,15 +34,14 @@
 	\draw (1.5,.5) node[anchor=center] {Vakuum};
 	
 	%Flüssiges Helium
-	\fill[white!0,pattern=north west lines, pattern color=blue!60] (.5,1) rectangle (2.5,3);
+	\fill[white!0,pattern=north west lines, pattern color=blue!80] (.5,1) rectangle (2.5,3);
 	\draw (1.5,1.5) node[anchor=center,text width=1.5cm, text centered] {flüssiges Helium};
-	
 	%Heliumtank
 	\draw[thick] (.5,7) -- (.5,1) -- (2.5,1) -- (2.5,7);
 	
 	%Verdampfungskammer
 	\fill[blue!5] (1,7) -- (1,2) -- (2,2) -- (2,7);
-	\fill[pattern=north west lines, pattern color=blue!25] (1,7) -- (1,2) -- (2,2) -- (2,7);
+	\fill[pattern=north west lines, pattern color=blue!20] (1,7) -- (1,2) -- (2,2) -- (2,7);
 	\draw[thick] (1,7) -- (1,2) -- (2,2) -- (2,7);
 	\draw[darkgray, thin, <-] (2,5) -- (3.4,5.5) node[anchor=west, text width=1.5cm] {Unter-druck-kammer};
 	
@@ -55,6 +54,7 @@
 	\draw[darkgray, thin, <-] (1.87,2.5) -- (3.4,2.6) node[anchor=west, text width=1.5cm] {vergasendes Helium};
 	
 	%Probenkammer
+	\fill[white] (1.3,7+.7) -- (1.3,2.8) -- (1.7,2.8) -- (1.7,7+.7) -- (1.3,7+.7);
 	\draw[thin] (1.3,7+.7) -- (1.3,2.8) -- (1.7,2.8) -- (1.7,7+.7) -- (1.3,7+.7);
 	\draw[darkgray, thin, <-] (1.8,7+.4) -- (2.5,7+.4) node[anchor=west] {Einschub};
 	
