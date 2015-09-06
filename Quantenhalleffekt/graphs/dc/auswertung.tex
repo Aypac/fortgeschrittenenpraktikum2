@@ -31,11 +31,11 @@
 		%\vertline{0.5}
 		%\vertline{-0.5}
 		
-		\addplot[mark=x, only marks] table[select coords between index={5}{36}, x index=1, y index=3] {../data/gleichspannung/ausgewertet.dat};
+		\addplot[mark=x, only marks] table[select coords between index={3}{16}, x index=1, y index=3] {../data/gleichspannung/ausgewertet.dat};
 		\addlegendentry{SDHO mit Minima $\rho_{xx}\neq 0$}
 		
-		\addplot[mark=o, only marks, forget plot] table[select coords between index={0}{4}, x index=1, y index=3] {../data/gleichspannung/ausgewertet.dat};
-		\addplot[mark=o, only marks] table[select coords between index={37}{43}, x index=1, y index=3] {../data/gleichspannung/ausgewertet.dat};
+		\addplot[mark=o, only marks, forget plot] table[select coords between index={0}{2}, x index=1, y index=3] {../data/gleichspannung/ausgewertet.dat};
+		\addplot[mark=o, only marks] table[select coords between index={17}{20}, x index=1, y index=3] {../data/gleichspannung/ausgewertet.dat};
 		\addlegendentry{SDHO mit Minima $\rho_{xx}=0$}
 		%\addlegendentry{$U_H$}
 		
