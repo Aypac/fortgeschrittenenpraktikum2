@@ -1,0 +1,53 @@
+% !TeX encoding = UTF-8
+% !TeX spellcheck = de_DE
+
+\documentclass[12pt,border=0mm]{standalone}
+\input{../gammastyle.sty}
+
+\usepackage{pgfplotstable}
+\def\probelength{600} %µm
+\def\probewidth{100} %µm
+\def\probecurrent{(-(\thisrowno{5})*10^6)} %µA
+\def\unitfactor{10^3} %
+\def\UhallEq{(abs(\thisrowno{1})/\probecurrent)*\unitfactor}
+\def\UxxEq{\thisrowno{4}*\probewidth/(\probelength*\probecurrent)*\unitfactor} %kOhm
+
+
+\begin{document}
+	
+	\begin{tikzpicture}
+	
+	\begin{axis}[
+		%axis y line*=left,
+		width=15.2cm, height=7cm,
+		xmin=-2,xmax=2, %ymin=0, %ymax=14,
+		xlabel={Reziprokes Magnetfeld \nicefrac{1}{B} [${T}^{-1}$]},
+		ylabel={Füllfaktor [$\nu$]},
+		legend pos=north west,
+	]
+	
+		%\addplot[mark=x, only marks] table[x index=1, y index=3] {../data/wechselspannung/ausgewertet.dat};
+		
+		%\vertline{0.5}
+		%\vertline{-0.5}
+		
+		\addplot[mark=x, only marks] table[select coords between index={5}{36}, x index=1, y index=3] {../data/wechselspannung/ausgewertet.dat};
+		\addlegendentry{SDHO mit Minima $\rho_{xx}\neq 0$}
+		
+		\addplot[mark=o, only marks, forget plot] table[select coords between index={0}{4}, x index=1, y index=3] {../data/wechselspannung/ausgewertet.dat};
+		\addplot[mark=o, only marks] table[select coords between index={37}{43}, x index=1, y index=3] {../data/wechselspannung/ausgewertet.dat};
+		\addlegendentry{SDHO mit Minima $\rho_{xx}=0$}
+		%\addlegendentry{$U_H$}
+		
+		\addplot[red, mark=\empty] {x*28.9081133643839};
+		\addlegendentry{Lineare Regression }
+		
+		%\addplot table[x index=1, y={create col/linear regression={y=C3}}] {../data/wechselspannung/ausgewertet.dat};\addlegendentry{%
+		%	$\pgfmathprintnumber{\pgfplotstableregressiona} \cdot x
+		%	\pgfmathprintnumber[print sign]{\pgfplotstableregressionb}$ lin. Regression} %
+		
+	\end{axis}
+	\end{tikzpicture}
+	
+	
+\end{document}
