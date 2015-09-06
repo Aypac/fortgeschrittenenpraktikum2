@@ -3,7 +3,7 @@ QtiPlot 0.9.8 project file
 <windows>	7
 <table>
 pm2T	1335	11	06.09.15 13:58
-geometry	38	8	560	725	active
+geometry	38	8	560	725	
 header	BT[X]	X1V[Y]	Y1V[Y]	X2V[Y]	Y2V[Y]	X3V[Y]	Y3V[Y]	X4V[Y]	Y4V[Y]	SensAV[Y]	SensBV[Y]
 ColWidth	100	100	100	100	100	100	100	100	100	100	100	
 <com>
@@ -1353,7 +1353,7 @@ WindowLabel		2
 </table>
 <table>
 Table2	52	4	06.09.15 14:00
-geometry	28	111	640	755	
+geometry	28	111	640	755	active
 header	1[X]	4[X]	2[Y]	3[Y]
 ColWidth	56	133	58	48	
 <com>
@@ -2727,7 +2727,7 @@ EnabledTickLabels	1	1	1	1
 <x>-1.8997493734336</x>
 <y>55.986622073579</y>
 <right>-1.53846153846154</right>
-<bottom>52.5563909774436</bottom>
+<bottom>26.2781954887218</bottom>
 <attachTo>1</attachTo>
 <onTop>1</onTop>
 <visible>1</visible>
@@ -2835,8 +2835,8 @@ EnabledTickLabels	1	1	1	1
 <LineStyle>0</LineStyle>
 <x>-2.8496240601504</x>
 <y>0.0037324414715719</y>
-<right>-1.3609022556391</right>
-<bottom>0.00295652173913043</bottom>
+<right>-2.25</right>
+<bottom>-0.000717105263157895</bottom>
 <attachTo>1</attachTo>
 <onTop>1</onTop>
 <visible>1</visible>
@@ -2859,7 +2859,7 @@ EnabledTickLabels	1	1	1	1
 </multiLayer>
 <multiLayer>
 Graph3	1	1	06.09.15 19:40
-geometry	464	21	1066	667	
+geometry	683	159	1066	667	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -2925,8 +2925,8 @@ EnabledTickLabels	1	1	1	1
 <LineStyle>0</LineStyle>
 <x>-7.5989974937343</x>
 <y>0.013996655518395</y>
-<right>-3.62907268170426</right>
-<bottom>0.0110869565217391</bottom>
+<right>-6.21633554083885</right>
+<bottom>0.0011231732776618</bottom>
 <attachTo>1</attachTo>
 <onTop>1</onTop>
 <visible>1</visible>
@@ -3021,4 +3021,5 @@ Adjusted R^2 = 0.999536576134465
 RMSE (Root Mean Squared Error) = 4.65341697770302e-05
 RSS (Residual Sum of Squares) = 2.88868222842118e-06
 ---------------------------------------------------------------------------------------
+
 </log>
