@@ -1,3 +1,5 @@
+\usepackage{ifplatform}
+
 
 % ******************************~~~~*****************************
 %Photo quality management. This is an old try:
@@ -36,24 +38,42 @@
 % must add default argument [] so typeout works
 \DeclareDocumentCommand{\includegraphicsRS}{ O{\@empty} O{1} m }{ %
 %\renewcommand\includegraphicsRS[2][\@empty]{
-	% run downsampling bash script
-	\immediate\write18{mkdir -p images; mkdir -p images/downsampled; IFP=#3 ; %
-		PIX=#2 ; PIX=$( awk  'BEGIN { rounded = sprintf("\%.0f", ('$PIX')*1000); print rounded }' ) ;
-		echo "$PIX 1000 *p" | dc ; %
-		echo "Processing $IFP" ; %
-		IFN=$(basename $IFP) ; %
-		echo "images/downsampled/$IFN" > tmpname ; %
-		if [ ! -f images/downsampled/$IFN ]; then %
-		echo "File images/downsampled/$IFN not found! Converting..." ; %
-		%the \string> after the pixel width (e.g. 1000x) will prevent imagemagick from producing files larger than the original
-		convert $IFP -resize $PIX"x\string>" -quality 85 images/downsampled/$IFN ; %
-
-		else %
-		echo "Found images/downsampled/$IFN - reusing." ; %
-		fi ; %
-		%alternatively: bash includegraphicsRS.sh #3 #2
-		%and have the code in the *.sh-file.
-	} % end write18
+	\ifwindows %not tested...
+		%\immediate\write18{mkdir images; mkdir images/downsampled; IFP=#3 ; %
+		%	PIX=#2 ; %
+		%	echo "Processing $IFP" ; %
+		%	IFN=$(basename $IFP) ; %
+		%	echo "images/downsampled/$IFN" > tmpname ; %
+		%	if [ ! -f images/downsampled/$IFN ]; then %
+		%	echo "File images/downsampled/$IFN not found! Converting..." ; %
+		%	%the \string> after the pixel width (e.g. 1000x) will prevent imagemagick from producing files larger than the original
+		%	convert $IFP -resize $PIX"x\string>" -quality 85 images/downsampled/$IFN ; %
+		%	else %
+		%	echo "Found images/downsampled/$IFN - reusing." ; %
+		%	fi ; %
+		%} % end write18
+	\else %If not using windows,
+		% run downsampling bash script
+		\immediate\write18{mkdir -p images; mkdir -p images/downsampled; IFP=#3 ; %
+			PIX=#2 ; PIX=$( awk  'BEGIN { rounded = sprintf("\%.0f", ('$PIX')*1000); print rounded }' ) ;
+			echo "$PIX 1000 *p" | dc ; %
+			echo "Processing $IFP" ; %
+			IFN=$(basename $IFP) ; %
+			echo "images/downsampled/$IFN" > tmpname ; %
+			if [ ! -f images/downsampled/$IFN ]; then %
+			echo "File images/downsampled/$IFN not found! Converting..." ; %
+			%the \string> after the pixel width (e.g. 1000x) will prevent imagemagick from producing files larger than the original
+			convert $IFP -resize $PIX"x\string>" -quality 85 images/downsampled/$IFN ; %
+	
+			else %
+			echo "Found images/downsampled/$IFN - reusing." ; %
+			fi ; %
+			%alternatively: bash includegraphicsRS.sh #3 #2
+			%and have the code in the *.sh-file.
+		} % end write18
+	\fi %Else you are damned to use full-resolution-pictures. Sorry. Or you need someone using MacOs/*ix/Cygwin to create the downsampled files for you.
+	%
+	%
 	% here we should have downsampled file
 	% retrieve downsample filename first
 	\immediate\openin\myinput=tmpname

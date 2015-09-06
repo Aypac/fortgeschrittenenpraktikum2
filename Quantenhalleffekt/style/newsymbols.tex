@@ -11,7 +11,8 @@
 \newcommand{\avg}[1]{\left< #1 \right>} % for average
 \let\underdot=\d % rename builtin command \d{} to \underdot{}
 \renewcommand{\d}[2]{\frac{d #1}{d #2}} % for derivatives
-\newcommand{\dd}[2]{\frac{d^2 #1}{d #2^2}} % for double derivatives
+\newcommand{\niced}[2]{\nicefrac{d #1}{d #2}} % for in-text-derivatives
+\newcommand{\nicedd}[2]{\nicefrac{d^2 #1}{d #2^2}} % for double derivatives\newcommand{\dd}[2]{\frac{d^2 #1}{d #2^2}} % for in-text-double derivatives
 \newcommand{\pd}[2]{\frac{\partial #1}{\partial #2}} 
 % for partial derivatives
 \newcommand{\pdd}[2]{\frac{\partial^2 #1}{\partial #2^2}} 
