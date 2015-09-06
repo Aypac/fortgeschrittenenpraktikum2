@@ -2,3 +2,111 @@
 % !TeX encoding = UTF-8
 % !Tex spellcheck = de_DE
 
+
+Im Folgenden sind die Auswertungen der in den jeweiligen Versuchsteilen aufgenommenen Messdaten zu finden. 
+
+\subsection{Gleichstrommessung}
+\label{Auswertung_Gleichstrom}
+
+Anhand der Messdaten aus der Gleichstrommessung, abgebildet in Graphik \ref{fig:full_range_dc} und \ref{fig:2T_range_dc}, wurde die Dichte der Ladungsträger im 2DEG, sowie deren Beweglichkeit bestimmt.
+
+\subsubsection{Näherung über die Hall-Spannung}
+\label{Über die Hall-Spannung}
+
+ Zunächst wurde die Steigung der Hall-Spannung mittels linearer Regression aus dem klassischen Bereich der Messdaten zwischen \unit[-2]{T} und \unit[2]{T} anhand der Formel $b=\frac{dU_{Hall}}{dB}$  
+bestimmt: \\
+
+$\frac{dU_{Hall}}{dB}=  \frac{m^2}{s}$  %TODO: ZAHLENWERTE! 
+\\
+Hieraus ließ sich mit der Formel 
+\\
+$n_s=\frac{I}{e}\frac{1}{\frac{dU_{Hall}}{dB}}$ 
+\\
+und dem bekannten Strom von $I=\unit[100]{nA}$ die Ladungsträgerdichte des 2DEG berechnen: 
+\\
+$n_s= \frac{1}{cm^2}$    %TODO: ZAHLENWERTE!
+\\
+Mit den Bekannten Maßen der Probe wurde anschließend die Beweglichkeit der Ladungsträger bestimmt. Dies erfolgte anhand der Formel \\
+$\mu=\frac{1}{n_se}\frac{I}{U_{xx}}\frac{L}{W}$
+\\
+und mit den Probenmaßen von $600\mu m$ für die Länge L und $100\mu m$  für die Breite B. \\
+
+$\mu= \frac{cm^2}{Vs}$  %TODO: ZAHLENWERTE!
+
+\subsubsection{Näherung über die Shubnikov-de Haas-Oszillation}
+\label{Über die SDH-Oszillation}
+
+Eine Alternative Möglichkeit, die Ladungsträgerdichte zu berechnen, erfolgt über die Shubnikov-de Haas-Oszillation. Hierzu wurde die Längsspannung über der Probe 
+%$U_{Längs}$
+ gegen $\frac{1}{B}$ aufgetragen und jedem Minimum der Oszillation ein Füllfaktor $\nu$ zugeordnet. Dies ist in Graphik %TODO: GRAPHIK 
+zu sehen. 
+
+Mit der Steigung der Geraden von $b=...$  %TODO: ZAHLENWERTE!
+ließ sich analog zur Näherung über die Hallspannung mit Gleichung %TODO: REF! 
+die Ladungsträgerdichte bestimmen:
+\\
+$n_s= \frac{1}{cm^2}$  %TODO: ZAHLENWERTE!
+\\
+So ergibt sich aus Gleichung %TODO: REF! 
+für die Beweglichkeit:
+\\
+$\mu= \frac{cm^2}{Vs}$  %TODO: ZAHLENWERTE! 
+
+
+\subsection{Wechselstrommessung}
+\label{Auswertung_Wechselstrom}
+
+Analog zur Auswertung der Gleichstrommessung wurde auch für die aufgenommenen Messdaten der Wechselstrommessung, abgebildet in Graphik \ref{fig:full_range_ac} und \ref{fig:2T_range_ac}, die Dichte der Ladungsträger im 2DEG, sowie deren Beweglichkeit bestimmt.
+
+\subsubsection{Näherung über die Hall-Spannung}
+\label{über Hall-Spannung}
+
+Wie in der Auswertung der Gleichstrommessung wurde auch hier die Ladungsträgerdichte und deren Beweglichkeit im 2DEG zunächst über die Steigung des klassischen Teils der Hallspannung zwischen \unit[-2]{T} und \unit[2]{T} anhand der Formel $b=\frac{dU_{Hall}}{dB}$  
+bestimmt. Dabei ergab sich aufgrund des großen Vorwiderstands ein kleinerer Spannungsabfall relativ zur Spannungsquelle und somit über 
+\\
+$\frac{dU_{Hall}}{dB}=  \frac{m^2}{s}$  %TODO: ZAHLENWERTE! 
+\\
+ein geringerer Strom bei der Wechselstrommessung von $I=\unit[]{nA}$. %TODO: ZAHLENWERTE! 
+
+Analog zur Auswertung der Gleichstrommessdaten ergaben sich hier für die gesuchten Größen folgende Werte: \\
+
+$n_s= \frac{1}{cm^2}$  %TODO: ZAHLENWERTE!
+
+
+$\mu= \frac{cm^2}{Vs}$  %TODO: ZAHLENWERTE! 
+
+
+\subsubsection{Näherung über die Shubnikov-de Haas-Oszillation}
+\label{über SDH-Oszillation}
+
+Ebenfalls analog zur Gleichstrommessung wurden die gesuchten physikalischen Größen alternativ über die Shubnikov-de Haas-Oszillation berechnet. Hierzu wurde wieder die Längsspannung über der Probe 
+%$U_{Längs}$
+gegen $\frac{1}{B}$ aufgetragen und jedem Minimum der Oszillation ein Füllfaktor $\nu$ zugeordnet. Dies ist in Graphik %TODO: GRAPHIK 
+zu sehen. 
+Es ergibt sich eine Steigung der Geraden von $b=...$  %TODO: ZAHLENWERTE!
+und daraus entsprechend mit Gleichung %TODO: REF
+die Ladungsträgerdichte $n_s= \frac{1}{cm^2}$  %TODO: ZAHLENWERTE!
+und mit Gleichung %TODO: REF
+die Beweglichkeit          
+$\mu= \frac{cm^2}{Vs}$ . %TODO: ZAHLENWERTE! 
+
+
+
+\subsection{Vergleich der Messergebnisse aus Gleich- und Wechselstrommessung}
+\label{Vergleich der Messergebnisse}
+
+
+%TODO: - Ergebnisse auch wie Bernd in ner Tabelle gegenüberstellen und vgl.? - Hier noch ne Fehlerdiskussion, je nach Ergebnissen? (wegen unserer Asymmetrie o.ä.?)
+
+
+\subsection{Winkelabhängigkeit}
+\label{Winkelabhängigkeit}
+
+
+\subsection{Temperaturabhängigkeit}
+\label{Temperaturabhängigkeit}
+
+
+\subsection{Gatespannungsabhängikeit}
+\label{Gatespannungsabhängikeit}
+
