@@ -10,7 +10,6 @@
 *.ps
 *.synctex.gz
 *praktikum.pdf
-*photomanagement.tex
 
 Vivis Übungskram
 *.gitignore~
