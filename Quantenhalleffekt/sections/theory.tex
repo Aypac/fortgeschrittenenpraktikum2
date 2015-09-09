@@ -4,32 +4,25 @@
 
 \subsection{Zweidimensionales Elektronengas}
 
-In einem 2DEG ist die Bewegung der freien Elektronen in einer Raumrichtung eingeschränkt. 2DEGs können auf verschiedene Weise realisiert werden. In diesem Versuch wird dazu eine AlGaAs-GaAs-Heterostruktur verwendet. Die darin gestapelten, unterschiedlichen, einkristallinen Halbleitermaterialien sorgen aufgrund ihrer verschiedenen Bandlücken dafür, dass der Verlauf der Leitungs- bzw. Valenzbandkante in Stapelrichtung z.B. Potentialtöpfe für die Leitungsbandelektronen erzeugt. Der elektronische Transport ist in Stapelrichtung also eingeschränkt, während sich die Elektronen in den anderen beiden Raumrichtungen frei bewegen können.
-Vorraussetzung zur Entstehung eines 2DEG ist, dass der Potentialtopf eine Ausdehung von wenigen Nanometern beträgt, sodass sich die Elektronen de facto nur in der Ebene entlang der Grenzfläche bewegen können. 
+In einem zweidimensionalen Elektronengas (2DEG) ist die Bewegung der freien Elektronen auf eine Ebene eingeschränkt. Es gibt verschiedene Möglichkeiten dies zu erreichen. In diesem Versuch wird dazu eine AlGaAs-GaAs-Heterostruktur verwendet. Die darin gestapelten, unterschiedlichen, einkristallinen Halbleitermaterialien sorgen aufgrund ihrer verschiedenen Bandlücken dafür, dass der Verlauf der Leitungs- bzw. Valenzbandkante in Stapelrichtung einen sehr kleinen Potentialtopf für die Leitungsbandelektronen erzeugt. Der elektronische Transport ist so in Stapelrichtung stark eingeschränkt, während sich die Elektronen in den anderen beiden Raumrichtungen bewegen können. Dabei muss die Bandverbiegung so sein, dass der Bereich des Potentialtopfes nur wenige Nanometer zwischen den Schichten einnimmt.
 
 In der quantenmechanischen Beschreibung des 2DEGs setzt sich die Energie der Elektronen wie folgt zusammen:
 
 \begin{equation}
-E(k_x,k_y,i)=\frac{\hbar^2k_x^2}{2m^*}+\frac{\hbar^2k_y^2}{2m^*}+E_i^z   ~~~~~~~~~ mit ~~~i=1,2,3....
+E(k_x,k_y,i)=\frac{\hbar^2k_x^2}{2m^*}+\frac{\hbar^2k_y^2}{2m^*}+E_i^z   \text{~~~~~~~~~ mit ~~~} i=1,2,3....
 \label{eq:energie_2DEG}
 \end{equation}
 
-Die Zustandsdichte D in einem Band ergibt sich aus der Anzahl der Elektronenzustände N pro Energieintervall und Probenvolumen V:
+Die Zustandsdichte D in einem Band ergibt sich aus der Anzahl der Elektronenzustände $N$ pro Energieintervall und Probenvolumen $V$ und kann mit Gleichung~\eqref{eq:energie_2DEG} geschrieben werden als:
 
 \begin{equation}
-	D=\frac{1}{V}\d{N(E)}{E}
+	D(E)=\frac{1}{V}\d{N(E)}{E}=g\frac{m^*}{2\pi\hbar^2}
 	\label{eq:2DEG_zustandsdich} 
 \end{equation}
 
-Mit der Energiedispersion aus Gleichung \ref{eq:energie_2DEG} und der Annahme eines zweidimensionalen Volumens folgt, dass die Zustandsdichte D(E) in einem Leitungsband des 2DEGs konstant ist:
+Die Zustandsdichte D(E) in dem Leitungsband eines 2DEGs ist also konstant. Im senkrechten Magnetfeld ist die Bewegung der Elektronen auch in der xy-Ebene festgelegt.
 
-\begin{equation}
-D(E)=g\frac{m^*}{2\pi\hbar^2}
-\label{eq:2deg_zustandsdichte}
-\end{equation}
-
-Im senkrechten Magnetfeld ist die Bewegung der Elektronen auch in der xy-Ebene festgelegt. Klassisch ist zu erwarten, dass die Elektronen durch die Lorentz-Kraft auf Kreisbahnen abgelenkt werden.
-Dies lässt sich durch die Überlagerung zweier senkrecht aufeinander stehenden harmonischen Schwingungen beschreiben. Der Abstand der Energiewerte ist durch $\hbar \omega_c$ gegeben,
+Wenn nun ein Magnetfeld angelegt wird, werden die freien Elektronen durch die Lorentz-Kraft auf Kreisbahnen abgelenkt. Diese lässt sich durch die Überlagerung zweier senkrecht aufeinander stehenden harmonischen Schwingungen beschreiben. Der Abstand der Energiewerte ist durch $\hbar \omega_c$ gegeben,
 mit der Kreisfrequenz:
 
 \begin{equation}
@@ -37,15 +30,15 @@ mit der Kreisfrequenz:
 \label{eq:kreisfrequenz}
 \end{equation}
 
-Die Elektronenenergiedispersion eines 2DEGs wird durch Anlegen eines Magnetfeldes zu:
+So folgt für die Elektronenenergiedispersion des 2DEG in einem in z-Richtung angelegten Magnetfeld
 
 \begin{equation}
-E=E_i^z +(n+\frac{1}{2})\hbar\omega_c +g_L^*\mu_B Bs ~~~~~~~~~~ mit~~~~~ n,i=1,2,3...
+E=E_i^z +(n+\frac{1}{2})\hbar\omega_c +g_L^*\mu_B Bs \text{~~~~~~~~~~mit~~~~~} n,i=1,2,3...
 \label{eq:elektr_disp_bfeld}	
 \end{equation}
 
-Die Anzahl der durch ein Landauniveau aufgenommenen Elektronen ergibt sich aus der Zustandsdichte $ \frac{D(E)}{g}$ bei $B=\unit
-[0]{T}$:
+%Die Anzahl der durch ein Landauniveau aufgenommenen Elektronen ergibt sich aus der Zustandsdichte $ \frac{D(E)}{g}$ bei $B=\unit[0]{T}$:
+Die Anzahl der Elektronen pro Zustand kann mit der Zustandsdichte $D(E)$ bei $B=\unit[0]{T}$ ausgedrückt werden zu
 
 \begin{equation}
 N_L=\frac{D(E)}{g}\hbar\omega_c = \frac{eB}{h}
@@ -172,6 +165,12 @@ Beim Quanten-Hall-Effekt bilden sich im Gegensatz zum klassischen Hall-Effekt wa
 \begin{equation}
 R_H=\frac{U_H}{I}=\frac{1}{M}\frac{h}{e^2}
 \label{eq:U_Hall_simpel}
+\end{equation}
+Dabei ist $\nu$ ein Füllfaktor, $h$ das Planksche Wirkungsquantum und e die Elementarladung. 
+
+\begin{equation}
+R_H=\frac{1}{\nu}\cdot 25812,8\Omega =\frac{1}{\nu} \frac{h}{e^2}
+\label{eq:qh_plateauwerte}
 \end{equation}
 
 
