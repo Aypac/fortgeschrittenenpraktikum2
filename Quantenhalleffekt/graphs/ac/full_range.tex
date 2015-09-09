@@ -49,10 +49,10 @@
 		}
 	]
 		\addplot[color=green, mark=\empty] {-1}; %dummy
-		\addlegendentry{Hallwiderstand $U_H$}
+		\addlegendentry{Hallwiderstand $\rho_H$}
 		
 		\addplot[color=orange, mark=\empty] table[skip first n=1, x index=0, y expr={\UxxEq*1000}] {../data/wechselspannung/2Kelvin-1V-full_range_10MOhm.dat};
-		\addlegendentry{Längswiderstand $U_{xx}$}
+		\addlegendentry{Längswiderstand $\rho_{xx}$}
 	
 	\end{axis}
 	\end{tikzpicture}
