@@ -2,21 +2,173 @@
 % !TeX encoding = UTF-8
 % !Tex spellcheck = de_DE
 
+\subsection{Zweidimensionales Elektronengas}
+
+In einem 2DEG ist die Bewegung der freien Elektronen in einer Raumrichtung eingeschränkt. 2DEGs können auf verschiedene Weise realisiert werden. In diesem Versuch wird dazu eine AlGaAs-GaAs-Heterostruktur verwendet. Die darin gestapelten, unterschiedlichen, einkristallinen Halbleitermaterialien sorgen aufgrund ihrer verschiedenen Bandlücken dafür, dass der Verlauf der Leitungs- bzw. Valenzbandkante in Stapelrichtung z.B. Potentialtöpfe für die Leitungsbandelektronen erzeugt. Der elektronische Transport ist in Stapelrichtung also eingeschränkt, während sich die Elektronen in den anderen beiden Raumrichtungen frei bewegen können.
+Vorraussetzung zur Entstehung eines 2DEG ist, dass der Potentialtopf eine Ausdehung von wenigen Nanometern beträgt, sodass sich die Elektronen de facto nur in der Ebene entlang der Grenzfläche bewegen können. 
+
+In der quantenmechanischen Beschreibung des 2DEGs setzt sich die Energie der Elektronen wie folgt zusammen:
+
+\begin{equation}
+E(k_x,k_y,i)=\frac{\hbar^2k_x^2}{2m^*}+\frac{\hbar^2k_y^2}{2m^*}+E_i^z   ~~~~~~~~~ mit ~~~i=1,2,3....
+\label{eq:energie_2DEG}
+\end{equation}
+
+Die Zustandsdichte D in einem Band ergibt sich aus der Anzahl der Elektronenzustände N pro Energieintervall und Probenvolumen V:
+
+\begin{equation}
+	D=\frac{1}{V}\d{N(E)}{E}
+	\label{eq:2DEG_zustandsdich} 
+\end{equation}
+
+Mit der Energiedispersion aus Gleichung \ref{eq:energie_2DEG} und der Annahme eines zweidimensionalen Volumens folgt, dass die Zustandsdichte D(E) in einem Leitungsband des 2DEGs konstant ist:
+
+\begin{equation}
+D(E)=g\frac{m^*}{2\pi\hbar^2}
+\label{eq:2deg_zustandsdichte}
+\end{equation}
+
+Im senkrechten Magnetfeld ist die Bewegung der Elektronen auch in der xy-Ebene festgelegt. Klassisch ist zu erwarten, dass die Elektronen durch die Lorentz-Kraft auf Kreisbahnen abgelenkt werden.
+Dies lässt sich durch die Überlagerung zweier senkrecht aufeinander stehenden harmonischen Schwingungen beschreiben. Der Abstand der Energiewerte ist durch $\hbar \omega_c$ gegeben,
+mit der Kreisfrequenz:
+
+\begin{equation}
+\omega_c=\frac{eB}{m^*}
+\label{eq:kreisfrequenz}
+\end{equation}
+
+Die Elektronenenergiedispersion eines 2DEGs wird durch Anlegen eines Magnetfeldes zu:
+
+\begin{equation}
+E=E_i^z +(n+\frac{1}{2})\hbar\omega_c +g_L^*\mu_B Bs ~~~~~~~~~~ mit~~~~~ n,i=1,2,3...
+\label{eq:elektr_disp_bfeld}	
+\end{equation}
+
+Die Anzahl der durch ein Landauniveau aufgenommenen Elektronen ergibt sich aus der Zustandsdichte $ \frac{D(E)}{g}$ bei $B=\unit
+[0]{T}$:
+
+\begin{equation}
+N_L=\frac{D(E)}{g}\hbar\omega_c = \frac{eB}{h}
+\label{eq:zustandsd_pro_landauniveau}
+\end{equation}
+
+Daraus ist ersichtlich, dass die Anzahl der Elektronen pro Flächeneinheit, die ein Landauniveau aufnehmen kann, linear mit dem Magnetfeld zunimmt. Es wird ein Füllfaktor $\nu$ eingeführt, welcher angibt, wie viele Spin aufgespaltenen Landau-Niveaus bei gegebener Ladungsträgerdichte $n_s$ und einem Magnetfeld B zumindest teilweise besetzt sind:
+
+\begin{equation}
+\nu=\frac{n_s}{N_L}=\frac{hn_s}{eB}
+\label{eq:einfuehrung_fuellfakt}
+\end{equation}
+
+
+\subsection{Klassischer Hall-Effekt}
+
+Beim klassischen Hall-Effekt liegt ein Magnetfeld B senkrecht zu einem stromdurchflossenen Leiter an. Das Magnetfeld wirkt durch die Lorentzkraft auf die bewegten Ladungsträger und es bildet sich eine Hallspannung $U_{Hall}$ senkrecht zur Strom- und Magnetfeldrichtung aus. Die Hallspannung ist proportional zum angelegten Magnetfeld.
+
+
+Für das in diesem Versuch verwendete 2DEG lässt sich der Ladungsträgertransport mit der Drude-Transporttheorie beschreiben. 
+Man erhält die Bewegungsgleichung für Elektronen im E- und B-Feld im stationären Zustand:
+
+\begin{equation}
+\frac{m^*}{\tau} \vec{v}_D = -e(\vec{E}+\vec{v}_D \times \vec{B})
+\label{eq:beweggl_stat}
+\end{equation}
+
+Mit $\tau$ als mittlere Stoßzeit zweier Elektronen und $\vec{v}_D$ als Driftgeschwindigkeit der Elektronen. Diese erhält man für $B=\unit[0]{T}$ aus:
+
+\begin{equation}
+\vec{v}_D=\frac{-e\tau}{m^*}\vec{E}=\mu\vec{E}
+\label{eq:driftgeschw}
+\end{equation}
+mit der Beweglichkeit
+
+\begin{equation}
+\mu=\frac{-e\tau}{m^*}
+\label{eq:bewegl_def}
+\end{equation}
+
+Die Stromdichte $\vec{j}$ beschreibt die Anzahl der Ladungen pro Zeit und Fläche und lässt sich anhand von Gleichung \ref{eq:driftgeschw} beschreiben durch:
+
+\begin{equation}
+\vec{j}=-en_s\vec{v}_D=en_s\mu\vec{E}=\sigma_0\vec{E}
+\label{eq:stromdichte_herleitung}
+\end{equation}
+mit $\sigma_0$ als spezifischer Leitfähigkeit des Systems
+
+\begin{equation}
+\sigma_0=en_s\mu
+\label{eq:sigma_def}
+\end{equation}
+
+Im hier durchgeführten Experiment wurde die Richtung des Stroms festgelegt und aus den gemessenen Daten zunächst die Komponenten des spezifischen Widerstandstensors $\vec{\rho}$ bestimmt. 
+Die Komponenten des Widerstandstensors erhält man aus:
+
+\begin{equation}
+\rho_{xx}=\rho_{yy}=\frac{1}{e\mu n_s}
+\label{eq:widerst_tensor_xx_yy}
+\end{equation}
+und
+\begin{equation}
+\rho_{xy}=-\rho_{yx}=\frac{1}{\mu n_s}B
+\label{eq:widerst_tensor_xy_yx}
+\end{equation}
+
+Die Komponenten des Leitfähigkeitstensors ergeben sich über Matrixinversion aus dem Widerstandstensor, sodass spezifische Leitfähigkeit und spezifischer Widerstand gleichzeitig Null werden können. Man erhält über die Stromdichte $\vec{j}$ folgenden Zusammenhang von spezifischer Leitfähigkeit zu spezifischem Widerstand:
+
 \begin{align}
 	\vec{j} = \sigma \cdot \vec{E} & & \Leftrightarrow & & \vec{E} = \rho \cdot \vec{j}
 	\label{eq:u2rho}
 \end{align}
 
-\begin{equation}
-	n_s=\frac{I}{e} \cdot \left( \d{U_{Hall}}{B} \right)^{-1}
-	\label{eq:ladungsdichte_steig}
-\end{equation}
+Zudem wurde im Experiment nicht die Stromdichte vorgegeben und das E-Feld gemessen, sondern es wurde die Spannung gemessen, indem der absolute Strom vorgegeben wurde. Die Probe entsprach hierzu der sogenannten Hall-Streifen-Geometrie. 
+%TODO: Vllt wäre hier das Schema des Hallstreifens sinnvoll? Weißt du, wie das im Anleitungsheft? :)
+Das hat den Vorteil, dass kein Strom durch die Kontakte fließt, an welchen die Hallspannung gemessen wird, sodass Kontaktwiderstände keine Rolle spielen, sondern nur die in der Probe abfallende Spannung. Der absolute Strom ist dann gegeben durch:
 
 \begin{equation}
-\mu=\frac{1}{n_se}\frac{I}{U_{xx}}\frac{L}{W}
-\label{eq:bewegl_masse}
+I=j \cdot W
+\label{eq:absoluter_Strom}
 \end{equation}
 
+Mit der Breite des Hallstreifens W und dessen Länge L, anhand derer sich die Längsspannung $U_{xx}$ ergibt über:
+
+\begin{equation}
+U_{xx}=E_x \cdot L
+\label{eq:laengsspannung}
+\end{equation}
+
+Daraus ergibt sich:
+
+\begin{equation}
+\rho_{xx}=\frac{U_{xx}}{I}\frac{W}{L}
+\label{eq:rho_xx}
+\end{equation}
+und
+\begin{equation}
+\rho_{xy}=\frac{U_{Hall}}{I}
+\label{eq:rho_xy}
+\end{equation}
+
+Daraus und aus den Gleichungen \ref{eq:widerst_tensor_xx_yy} und \ref{eq:widerst_tensor_xy_yx} folgt für die Ladungsträgerdichte im Leiter:
+ 
+ \begin{equation}
+ n_s=\frac{I}{e} \cdot \left( \d{U_{Hall}}{B} \right)^{-1}
+ \label{eq:ladungsdichte_steig}
+ \end{equation}
+ Mit der Änderung der Hallspannung mit dem Magnetfeld $\d{U_{Hall}}{B}$. 
+ 
+ Anhand der Ladungsträgerdichte und der in Stromrichtung über den Leiter abfallenden Spannung, kann man zudem die Beweglichkeit der Ladungsträger ermitteln:
+ 
+ \begin{equation}
+ \mu=\frac{1}{n_se}\frac{I}{U_{xx}}\frac{L}{W}
+ \label{eq:bewegl_masse}
+ \end{equation}
+
+
+\subsection{Quanten-Hall-Effekt}
+
+
+\subsection{Shubnikov-de Haas-Oszillation}
+
+\subsection{Plattenkondensator-Geometrie}
 
 Plattenkondensator der Fläche A: $N_s=n_s \cdot A$ 
 \begin{equation}
@@ -38,7 +190,5 @@ n_s=\frac{\epsilon \epsilon_0}{d}(U_{Gate}-U_{th})
 
 mit der Einsatzspannung $U_{th}$
 
-%TODO: Diesen Schritt von Formel 5 und 6 auf 7 hab ich im GAtesannungsteil jetzt durch refs abgekürtzt. muss ja nich alles 2mal drin stehen, dafür ist der theorieteil ja da, gell?
-
-
+%TODO: Diesen Schritt von Formel 5 und 6 auf 7 hab ich im Gatesannungsteil jetzt durch refs abgekürtzt. muss ja nich alles 2mal drin stehen, dafür ist der theorieteil ja da, gell?
 
