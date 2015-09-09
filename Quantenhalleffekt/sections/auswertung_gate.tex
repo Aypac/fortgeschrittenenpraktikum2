@@ -5,19 +5,12 @@
 
 Um anhand der Messdaten zur Gatespannung den Abstand des 2DEG zur Probenoberfläche zu bestimmen, wurde zunächst angenommen, dass das 2DEG und das verwendete Titan-Gate einen Plattenkondensator bilden. Die beiden Schichten von GaAs und AlGaAs dazwischen bilden hierfür ein nichtleitendes Dielektrikum. 
 Durch das Anlegen der Gatespannung wurde die Ladungsträgerdichte im 2DEG verändert. 
-In einem Plattenkondensator der Fläche A ist die Anzahl der Ladungsträger $N_s=n_s \cdot A$ gegeben durch
+In einem Plattenkondensator der Fläche A ist die Anzahl der Ladungsträger $N_s=n_s \cdot A$ gegeben durch die Gleichung \ref{eq:kondensator_ladung}. 
+Damit ergibt sich der Abstand d der Kondensatorplatten und somit der Abstand des 2DEG zur Probenoberfläche aus der Gleichung \ref{eq:kondensator_abstand}. 
 
-\begin{equation}
-N_s=C \cdot U_{Gate}
-\end{equation}
-Damit ergibt sich der Abstand d der Kondensatorplatten und somit der Abstand des 2DEG zur Probenoberfläche aus
-
-\begin{equation}
-C=\frac{\epsilon \epsilon_0 A}{d}
-\end{equation}
 Dabei kann $\epsilon \approx 12$ angenommen werden, da die verwendete Probe im wesentlichen AlGaAs mit einem Aluminiumanteil von 33 \% enthält.
 Anhand der beiden Gleichungen %TODO: ref! (die beiden Gleichungen drüber verwendet!)
-und der Einsatzspannung $U_{th}$ kann nun die Abhängigkeit der Ladungsträgerdichte von der Gatespannung angegeben werden durch 
+und der Einsatzspannung $U_{th}$ kann nun die Abhängigkeit der Ladungsträgerdichte von der Gatespannung angegeben werden durch Gleichung \ref{eq:kondens_lad_und_abst}:
 
 \begin{equation}
 n_s=\frac{\epsilon \epsilon_0}{d}(U_{Gate}-U_{th})
@@ -26,7 +19,7 @@ Dieser Zusammenhang wurde in der Abbildung %TODO: GRAPHIK!
 dargestellt, indem die bestimmten Ladungsträgerdichten gegen die angelegten Gatespannungen aufgetragen wurden. 
 Die Ladungsträgerdichten wurden dabei analog zu den obigen Versuchsteilen aus der Näherung über die Shubnikov-de Haas-Oszilation %TODO: Oder Hall-Spannung, was dir lieber ist
 bestimmt und es ergaben sich folgende Werte: %TODO: Werte angeben
-Der Abstand d des 2DEG zur Probenoberfläche wurde dann mittels linearer Regression bestimmt. Dafür ergab sich ein Wert von $d=...$ %TODO: WERT ANGEBEN
+Der Abstand d des 2DEG zur Probenoberfläche wurde mittels linearer Regression bestimmt. Dafür ergab sich ein Wert von $d=...$ %TODO: WERT ANGEBEN
 
 
 
