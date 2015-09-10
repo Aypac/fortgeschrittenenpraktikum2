@@ -3,7 +3,7 @@ QtiPlot 0.9.8 project file
 <windows>	7
 <table>
 pm2T	1335	11	06.09.15 13:58
-geometry	38	8	560	725	
+geometry	38	8	560	725	active
 header	BT[X]	X1V[Y]	Y1V[Y]	X2V[Y]	Y2V[Y]	X3V[Y]	Y3V[Y]	X4V[Y]	Y4V[Y]	SensAV[Y]	SensBV[Y]
 ColWidth	100	100	100	100	100	100	100	100	100	100	100	
 <com>
@@ -2641,7 +2641,7 @@ WindowLabel		2
 </table>
 <multiLayer>
 Graph4	1	1	06.09.15 18:32
-geometry	647	48	1015	727	
+geometry	885	483	816	353	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -2650,8 +2650,8 @@ Alignement	0	0
 <AlignPolicy>0</AlignPolicy>
 <CommonAxes>0</CommonAxes>
 <graph>
-ggeometry	5	5	997	664
-<PageGeometry>0.00496524	0.00736377	0.99007	0.977909</PageGeometry>
+ggeometry	5	5	798	298
+<PageGeometry>0.00618812	0.0163934	0.987624	0.977049</PageGeometry>
 PlotTitle	Title	#000000	4228
 <Antialiasing>0</Antialiasing>
 <Autoscaling>1</Autoscaling>
@@ -2668,15 +2668,15 @@ AxesTitleColors	#000000	#000000	#000000	#000000
 AxesTitleAlignment	5124	5124	5124	5124
 AxesTitleDistance	2	2	2	2
 InvertedTitle	0	0	0	0
-TitleFont	Ubuntu	21	75	0	0	0
-ScaleFont0	Ubuntu	18	75	0	0	0
-ScaleFont1	Ubuntu	18	75	0	0	0
-ScaleFont2	Ubuntu	18	75	0	0	0
-ScaleFont3	Ubuntu	18	75	0	0	0
-AxisFont0	Ubuntu	18	50	0	0	0
-AxisFont1	Ubuntu	18	50	0	0	0
-AxisFont2	Ubuntu	18	50	0	0	0
-AxisFont3	Ubuntu	18	50	0	0	0
+TitleFont	Ubuntu	9	75	0	0	0
+ScaleFont0	Ubuntu	8	75	0	0	0
+ScaleFont1	Ubuntu	8	75	0	0	0
+ScaleFont2	Ubuntu	8	75	0	0	0
+ScaleFont3	Ubuntu	8	75	0	0	0
+AxisFont0	Ubuntu	8	50	0	0	0
+AxisFont1	Ubuntu	8	50	0	0	0
+AxisFont2	Ubuntu	8	50	0	0	0
+AxisFont3	Ubuntu	8	50	0	0	0
 AxesColors	#000000	#000000	#000000	#000000
 AxesNumberColors	#3c3c3c	#3c3c3c	#3c3c3c	#3c3c3c
 AxesBaseline	0	0	0	0	
@@ -2735,7 +2735,7 @@ EnabledTickLabels	1	1	1	1
 \l(1)%(1)
 \l(2)%(2)
 </Text>
-<Font>Ubuntu	18	50	0	0	0</Font>
+<Font>Ubuntu	8	50	0	0	0</Font>
 <TextColor>#000000</TextColor>
 <Background>#ffffff</Background>
 <Alpha>0</Alpha>
@@ -2748,9 +2748,9 @@ EnabledTickLabels	1	1	1	1
 <ScaleLayers>1</ScaleLayers>
 </multiLayer>
 <multiLayer>
-Graph5	1	1	06.09.15 19:39
-geometry	665	83	949	731	active
-WindowLabel		2
+pm2T-graph	1	1	06.09.15 19:39
+geometry	721	-10	747	526	
+WindowLabel		0
 Margins	5	5	5	5
 Spacing	5	5
 LayerCanvasSize	400	300
@@ -2758,8 +2758,8 @@ Alignement	0	0
 <AlignPolicy>0</AlignPolicy>
 <CommonAxes>0</CommonAxes>
 <graph>
-ggeometry	3	5	931	664
-<PageGeometry>0.0031881	0.00732064	0.989373	0.972182</PageGeometry>
+ggeometry	3	5	729	463
+<PageGeometry>0.00405954	0.0104603	0.986468	0.968619</PageGeometry>
 PlotTitle	Title	#000000	4228
 <Antialiasing>0</Antialiasing>
 <Autoscaling>1</Autoscaling>
@@ -2776,21 +2776,21 @@ AxesTitleColors	#000000	#000000	#000000	#000000
 AxesTitleAlignment	5124	5124	5124	5124
 AxesTitleDistance	2	2	2	2
 InvertedTitle	0	0	0	0
-TitleFont	Ubuntu	21	75	0	0	0
-ScaleFont0	Ubuntu	18	75	0	0	0
-ScaleFont1	Ubuntu	18	75	0	0	0
-ScaleFont2	Ubuntu	18	75	0	0	0
-ScaleFont3	Ubuntu	18	75	0	0	0
-AxisFont0	Ubuntu	18	50	0	0	0
-AxisFont1	Ubuntu	18	50	0	0	0
-AxisFont2	Ubuntu	18	50	0	0	0
-AxisFont3	Ubuntu	18	50	0	0	0
+TitleFont	Ubuntu	15	75	0	0	0
+ScaleFont0	Ubuntu	13	75	0	0	0
+ScaleFont1	Ubuntu	13	75	0	0	0
+ScaleFont2	Ubuntu	13	75	0	0	0
+ScaleFont3	Ubuntu	13	75	0	0	0
+AxisFont0	Ubuntu	13	50	0	0	0
+AxisFont1	Ubuntu	13	50	0	0	0
+AxisFont2	Ubuntu	13	50	0	0	0
+AxisFont3	Ubuntu	13	50	0	0	0
 AxesColors	#000000	#000000	#000000	#000000
 AxesNumberColors	#3c3c3c	#3c3c3c	#3c3c3c	#3c3c3c
 AxesBaseline	0	0	0	0	
 CanvasBackground	#ffffff	0
 curve	pm2T_BT	pm2T_X2V	0	1	#000000	0	1	7	0	#000000	#000000	0	#000000	14	1	2	0	0	1334	1
-curve	pm2T_BT	pm2T_X1V	0	1	#ff0000	0	1	7	0	#ff0000	#ff0000	0	#000000	14	1	2	1	0	1334	0
+curve	pm2T_BT	pm2T_X1V	0	1	#ff0000	0	1	7	0	#ff0000	#ff0000	0	#000000	14	1	2	1	0	1334	1
 <Function>
 <Type>0</Type>
 <Title>LinearSlopeFit1</Title>
@@ -2809,7 +2809,27 @@ curve	pm2T_BT	pm2T_X1V	0	1	#ff0000	0	1	7	0	#ff0000	#ff0000	0	#000000	14	1	2	1	0	
 <xAxis>2</xAxis>
 <yAxis>1</yAxis>
 <CurveType>0</CurveType>
-<Visible>0</Visible>
+<Visible>1</Visible>
+</Function>
+<Function>
+<Type>0</Type>
+<Title>LinearSlopeFit2</Title>
+<Expression>A*x</Expression>
+<Variable>x</Variable>
+<Range>-1	1</Range>
+<Points>100</Points>
+<Constant>A	0.00187603716044264</Constant>
+<Style>0</Style>
+<LineStyle>1</LineStyle>
+<Pen>
+	<Color>#ff00ff</Color>
+	<Style>0</Style>
+	<Width>1</Width>
+</Pen>
+<xAxis>2</xAxis>
+<yAxis>1</yAxis>
+<CurveType>0</CurveType>
+<Visible>1</Visible>
 </Function>
 scale	0	-0.004	-0.0005	0	8	5	0	0
 scale	1	-0.004	0.004	0	9	5	0	0
@@ -2844,8 +2864,9 @@ EnabledTickLabels	1	1	1	1
 \l(1)%(1)
 \l(2)%(2)
 \l(3)%(3)
+\l(4)%(4)
 </Text>
-<Font>Ubuntu	18	50	0	0	0</Font>
+<Font>Ubuntu	13	50	0	0	0</Font>
 <TextColor>#000000</TextColor>
 <Background>#ffffff</Background>
 <Alpha>0</Alpha>
@@ -2858,9 +2879,9 @@ EnabledTickLabels	1	1	1	1
 <ScaleLayers>1</ScaleLayers>
 </multiLayer>
 <multiLayer>
-Graph3	1	1	06.09.15 19:40
-geometry	683	159	1066	667	
-WindowLabel		2
+pm7-7T-graph	1	1	06.09.15 19:40
+geometry	877	87	821	517	
+WindowLabel		0
 Margins	5	5	5	5
 Spacing	5	5
 LayerCanvasSize	400	300
@@ -2868,8 +2889,8 @@ Alignement	0	0
 <AlignPolicy>0</AlignPolicy>
 <CommonAxes>0</CommonAxes>
 <graph>
-ggeometry	5	5	1043	604
-<PageGeometry>0.0047259	0.00807754	0.985822	0.975767</PageGeometry>
+ggeometry	5	5	798	454
+<PageGeometry>0.00615006	0.010661	0.98155	0.968017</PageGeometry>
 PlotTitle	Title	#000000	4228
 <Antialiasing>0</Antialiasing>
 <Autoscaling>1</Autoscaling>
@@ -2886,21 +2907,21 @@ AxesTitleColors	#000000	#000000	#000000	#000000
 AxesTitleAlignment	5124	5124	5124	5124
 AxesTitleDistance	2	2	2	2
 InvertedTitle	0	0	0	0
-TitleFont	Ubuntu	19	75	0	0	0
-ScaleFont0	Ubuntu	16	75	0	0	0
-ScaleFont1	Ubuntu	16	75	0	0	0
-ScaleFont2	Ubuntu	16	75	0	0	0
-ScaleFont3	Ubuntu	16	75	0	0	0
-AxisFont0	Ubuntu	16	50	0	0	0
-AxisFont1	Ubuntu	16	50	0	0	0
-AxisFont2	Ubuntu	16	50	0	0	0
-AxisFont3	Ubuntu	16	50	0	0	0
+TitleFont	Ubuntu	14	75	0	0	0
+ScaleFont0	Ubuntu	12	75	0	0	0
+ScaleFont1	Ubuntu	12	75	0	0	0
+ScaleFont2	Ubuntu	12	75	0	0	0
+ScaleFont3	Ubuntu	12	75	0	0	0
+AxisFont0	Ubuntu	12	50	0	0	0
+AxisFont1	Ubuntu	12	50	0	0	0
+AxisFont2	Ubuntu	12	50	0	0	0
+AxisFont3	Ubuntu	12	50	0	0	0
 AxesColors	#000000	#000000	#000000	#000000
 AxesNumberColors	#3c3c3c	#3c3c3c	#3c3c3c	#3c3c3c
 AxesBaseline	0	0	0	0	
 CanvasBackground	#ffffff	0
 curve	pm7-7T_BT	pm7-7T_X2V	0	1	#000000	0	1	7	0	#000000	#000000	0	#000000	14	1	2	0	0	1197	1
-curve	pm7-7T_BT	pm7-7T_X1V	0	1	#ff0000	0	1	7	0	#ff0000	#ff0000	0	#000000	14	1	2	1	0	1197	1
+curve	pm7-7T_BT	pm7-7T_X1V	0	1	#ff0000	0	1	7	0	#ff0000	#ff0000	0	#000000	14	1	2	1	0	1197	0
 scale	0	-0.01	0.002	0	7	5	0	0
 scale	1	-0.015	0.015	0	7	5	0	0
 scale	2	-8	8	0	9	5	0	0
@@ -2934,7 +2955,7 @@ EnabledTickLabels	1	1	1	1
 \l(1)%(1)
 \l(2)%(2)
 </Text>
-<Font>Ubuntu	16	50	0	0	0</Font>
+<Font>Ubuntu	12	50	0	0	0</Font>
 <TextColor>#000000</TextColor>
 <Background>#ffffff</Background>
 <Alpha>0</Alpha>
@@ -3121,6 +3142,19 @@ RMSE (Root Mean Squared Error) = 2.850569360596e-06
 RSS (Residual Sum of Squares) = 5.395495131233e-09
 ---------------------------------------------------------------------------------------
 [10.09.15 12:55	Plot: ''Graph5'']
+Linear Regression of dataset: pm2T_X1V, using function: A*x
+Weighting Method: No weighting
+From x = -9.9720000000000e-01 to x = 9.9780000000000e-01
+A (slope) = 1.8760371604426e-03 +/- 3.0463451912632e-07
+--------------------------------------------------------------------------------------
+Chi^2/doF = 2.0560161073909e-11
+R^2 = 0.9999824655328
+Adjusted R^2 = 0.9999824391254
+RMSE (Root Mean Squared Error) = 4.534331381131e-06
+RSS (Residual Sum of Squares) = 1.367250711415e-08
+---------------------------------------------------------------------------------------
+
+[10.09.15 16:35	Plot: ''pm2T-graph'']
 Linear Regression of dataset: pm2T_X1V, using function: A*x
 Weighting Method: No weighting
 From x = -9.9720000000000e-01 to x = 9.9780000000000e-01
