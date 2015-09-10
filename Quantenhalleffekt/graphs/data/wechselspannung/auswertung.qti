@@ -3,7 +3,7 @@ QtiPlot 0.9.8 project file
 <windows>	7
 <table>
 pm2T	1001	11	06.09.15 13:58
-geometry	0	2	560	725	
+geometry	82	16	560	725	
 header	BT[X]	X1V[Y]	Y1V[Y]	X2V[Y]	Y2V[Y]	X3V[Y]	Y3V[Y]	X4V[Y]	Y4V[Y]	SensAV[Y]	SensBV[Y]
 ColWidth	100	100	100	100	100	100	100	100	100	100	100	
 <com>
@@ -1019,7 +1019,7 @@ WindowLabel		2
 </table>
 <table>
 Table2	52	4	06.09.15 14:00
-geometry	28	111	640	755	active
+geometry	185	119	357	659	
 header	1[X]	4[X]	2[Y]	3[Y]
 ColWidth	56	133	58	48	
 <com>
@@ -2030,7 +2030,7 @@ WindowLabel		2
 </table>
 <multiLayer>
 pm2T-graph	1	1	06.09.15 14:05
-geometry	572	89	1327	727	
+geometry	721	20	1058	679	active
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -2039,8 +2039,8 @@ Alignement	0	0
 <AlignPolicy>0</AlignPolicy>
 <CommonAxes>0</CommonAxes>
 <graph>
-ggeometry	7	9	1304	653
-<PageGeometry>0.00530705	0.0132548	0.988628	0.961708</PageGeometry>
+ggeometry	7	9	1035	605
+<PageGeometry>0.00666667	0.0142631	0.985714	0.958796</PageGeometry>
 PlotTitle	Title	#000000	4228
 <Antialiasing>0</Antialiasing>
 <Autoscaling>1</Autoscaling>
@@ -2057,33 +2057,33 @@ AxesTitleColors	#000000	#000000	#000000	#000000
 AxesTitleAlignment	5124	5124	5124	5124
 AxesTitleDistance	2	2	2	2
 InvertedTitle	0	0	0	0
-TitleFont	Ubuntu	21	75	0	0	0
-ScaleFont0	Ubuntu	18	75	0	0	0
-ScaleFont1	Ubuntu	18	75	0	0	0
-ScaleFont2	Ubuntu	18	75	0	0	0
-ScaleFont3	Ubuntu	18	75	0	0	0
-AxisFont0	Ubuntu	18	50	0	0	0
-AxisFont1	Ubuntu	18	50	0	0	0
-AxisFont2	Ubuntu	18	50	0	0	0
-AxisFont3	Ubuntu	18	50	0	0	0
+TitleFont	Ubuntu	20	75	0	0	0
+ScaleFont0	Ubuntu	17	75	0	0	0
+ScaleFont1	Ubuntu	17	75	0	0	0
+ScaleFont2	Ubuntu	17	75	0	0	0
+ScaleFont3	Ubuntu	17	75	0	0	0
+AxisFont0	Ubuntu	17	50	0	0	0
+AxisFont1	Ubuntu	17	50	0	0	0
+AxisFont2	Ubuntu	17	50	0	0	0
+AxisFont3	Ubuntu	17	50	0	0	0
 AxesColors	#000000	#000000	#000000	#000000
 AxesNumberColors	#3c3c3c	#3c3c3c	#3c3c3c	#3c3c3c
 AxesBaseline	0	0	0	0	
 CanvasBackground	#ffffff	0
 curve	pm2T_BT	pm2T_Y2V	0	1	#000000	0	1	7	0	#000000	#000000	0	#000000	14	1	2	0	0	1000	1
-curve	pm2T_BT	pm2T_Y1V	0	1	#ff0000	0	1	7	0	#ff0000	#ff0000	0	#000000	14	1	2	1	0	1000	1
+curve	pm2T_BT	pm2T_X1V	0	1	#ff0000	0	1	7	0	#ff0000	#ff0000	0	#000000	14	1	2	1	0	1000	1
 <Function>
 <Type>0</Type>
 <Title>LinearSlopeFit1</Title>
 <Expression>A*x</Expression>
 <Variable>x</Variable>
-<Range>-2	1.9991</Range>
-<Points>2</Points>
-<Constant>A	0.00016460971770321</Constant>
+<Range>-1	1</Range>
+<Points>100</Points>
+<Constant>A	-0.000854023377012865</Constant>
 <Style>0</Style>
 <LineStyle>1</LineStyle>
 <Pen>
-	<Color>#ff0000</Color>
+	<Color>#ff00ff</Color>
 	<Style>0</Style>
 	<Width>1</Width>
 </Pen>
@@ -2093,9 +2093,9 @@ curve	pm2T_BT	pm2T_Y1V	0	1	#ff0000	0	1	7	0	#ff0000	#ff0000	0	#000000	14	1	2	1	0	
 <Visible>1</Visible>
 </Function>
 scale	0	0	0.0008	0	9	5	0	0
-scale	1	-0.0004	0.0004	0	9	5	0	0
-scale	2	-2	2	0	5	5	0	0
-scale	3	-2	2	0	5	5	0	0
+scale	1	-0.002	0.002	0	9	5	0	0
+scale	2	-3	3	0	7	5	0	0
+scale	3	-3	3	0	7	5	0	0
 LabelsFormat	0	6	0	6	0	6	0	6
 AxisType	0	0	0	0	
 MajorTicks	1	1	1	1
@@ -2126,7 +2126,7 @@ EnabledTickLabels	1	1	1	1
 \l(2)%(2)
 \l(3)%(3)
 </Text>
-<Font>Ubuntu	18	50	0	0	0</Font>
+<Font>Ubuntu	17	50	0	0	0</Font>
 <TextColor>#000000</TextColor>
 <Background>#ffffff</Background>
 <Alpha>0</Alpha>
@@ -2139,9 +2139,9 @@ EnabledTickLabels	1	1	1	1
 <ScaleLayers>1</ScaleLayers>
 </multiLayer>
 <multiLayer>
-Graph3	1	1	06.09.15 18:23
-geometry	667	135	1262	663	
-WindowLabel		2
+pm7-7T_graph	1	1	06.09.15 18:23
+geometry	865	47	947	549	
+WindowLabel		0
 Margins	5	5	5	5
 Spacing	5	5
 LayerCanvasSize	400	300
@@ -2149,8 +2149,8 @@ Alignement	0	0
 <AlignPolicy>0</AlignPolicy>
 <CommonAxes>0</CommonAxes>
 <graph>
-ggeometry	5	5	1244	600
-<PageGeometry>0.00398724	0.00813008	0.992026	0.97561</PageGeometry>
+ggeometry	5	5	929	486
+<PageGeometry>0.00532481	0.00998004	0.98935	0.97006</PageGeometry>
 PlotTitle	Title	#000000	4228
 <Antialiasing>0</Antialiasing>
 <Autoscaling>1</Autoscaling>
@@ -2167,15 +2167,15 @@ AxesTitleColors	#000000	#000000	#000000	#000000
 AxesTitleAlignment	5124	5124	5124	5124
 AxesTitleDistance	2	2	2	2
 InvertedTitle	0	0	0	0
-TitleFont	Ubuntu	19	75	0	0	0
-ScaleFont0	Ubuntu	16	75	0	0	0
-ScaleFont1	Ubuntu	16	75	0	0	0
-ScaleFont2	Ubuntu	16	75	0	0	0
-ScaleFont3	Ubuntu	16	75	0	0	0
-AxisFont0	Ubuntu	16	50	0	0	0
-AxisFont1	Ubuntu	16	50	0	0	0
-AxisFont2	Ubuntu	16	50	0	0	0
-AxisFont3	Ubuntu	16	50	0	0	0
+TitleFont	Ubuntu	15	75	0	0	0
+ScaleFont0	Ubuntu	13	75	0	0	0
+ScaleFont1	Ubuntu	13	75	0	0	0
+ScaleFont2	Ubuntu	13	75	0	0	0
+ScaleFont3	Ubuntu	13	75	0	0	0
+AxisFont0	Ubuntu	13	50	0	0	0
+AxisFont1	Ubuntu	13	50	0	0	0
+AxisFont2	Ubuntu	13	50	0	0	0
+AxisFont3	Ubuntu	13	50	0	0	0
 AxesColors	#000000	#000000	#000000	#000000
 AxesNumberColors	#3c3c3c	#3c3c3c	#3c3c3c	#3c3c3c
 AxesBaseline	0	0	0	0	
@@ -2215,7 +2215,7 @@ EnabledTickLabels	1	1	1	1
 \l(1)%(1)
 \l(2)%(2)
 </Text>
-<Font>Ubuntu	16	50	0	0	0</Font>
+<Font>Ubuntu	13	50	0	0	0</Font>
 <TextColor>#000000</TextColor>
 <Background>#ffffff</Background>
 <Alpha>0</Alpha>
@@ -2229,7 +2229,7 @@ EnabledTickLabels	1	1	1	1
 </multiLayer>
 <multiLayer>
 Graph4	1	1	06.09.15 18:32
-geometry	744	83	1015	727	
+geometry	923	448	844	374	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -2238,8 +2238,8 @@ Alignement	0	0
 <AlignPolicy>0</AlignPolicy>
 <CommonAxes>0</CommonAxes>
 <graph>
-ggeometry	5	5	997	664
-<PageGeometry>0.00496524	0.00736377	0.99007	0.977909</PageGeometry>
+ggeometry	5	5	826	316
+<PageGeometry>0.00598086	0.0153374	0.988038	0.969325</PageGeometry>
 PlotTitle	Title	#000000	4228
 <Antialiasing>0</Antialiasing>
 <Autoscaling>1</Autoscaling>
@@ -2256,43 +2256,23 @@ AxesTitleColors	#000000	#000000	#000000	#000000
 AxesTitleAlignment	5124	5124	5124	5124
 AxesTitleDistance	2	2	2	2
 InvertedTitle	0	0	0	0
-TitleFont	Ubuntu	21	75	0	0	0
-ScaleFont0	Ubuntu	18	75	0	0	0
-ScaleFont1	Ubuntu	18	75	0	0	0
-ScaleFont2	Ubuntu	18	75	0	0	0
-ScaleFont3	Ubuntu	18	75	0	0	0
-AxisFont0	Ubuntu	18	50	0	0	0
-AxisFont1	Ubuntu	18	50	0	0	0
-AxisFont2	Ubuntu	18	50	0	0	0
-AxisFont3	Ubuntu	18	50	0	0	0
+TitleFont	Ubuntu	10	75	0	0	0
+ScaleFont0	Ubuntu	9	75	0	0	0
+ScaleFont1	Ubuntu	9	75	0	0	0
+ScaleFont2	Ubuntu	9	75	0	0	0
+ScaleFont3	Ubuntu	9	75	0	0	0
+AxisFont0	Ubuntu	9	50	0	0	0
+AxisFont1	Ubuntu	9	50	0	0	0
+AxisFont2	Ubuntu	9	50	0	0	0
+AxisFont3	Ubuntu	9	50	0	0	0
 AxesColors	#000000	#000000	#000000	#000000
 AxesNumberColors	#3c3c3c	#3c3c3c	#3c3c3c	#3c3c3c
 AxesBaseline	0	0	0	0	
 CanvasBackground	#ffffff	0
-curve	Table2_4	Table2_3	2	1	#000000	0	1	7	1	#000000	#000000	0	#000000	14	1	2	0	0	51	1
+curve	Table2_4	Table2_3	1	0	#000000	0	1	7	1	#000000	#000000	0	#000000	14	1	2	0	0	51	1
 <Function>
 <Type>0</Type>
 <Title>LinearSlopeFit1</Title>
-<Expression>A*x</Expression>
-<Variable>x</Variable>
-<Range>-1.587301587302	1.587301587302</Range>
-<Points>2</Points>
-<Constant>A	28.9896662285494</Constant>
-<Style>0</Style>
-<LineStyle>1</LineStyle>
-<Pen>
-	<Color>#ff0000</Color>
-	<Style>0</Style>
-	<Width>1</Width>
-</Pen>
-<xAxis>2</xAxis>
-<yAxis>0</yAxis>
-<CurveType>0</CurveType>
-<Visible>1</Visible>
-</Function>
-<Function>
-<Type>0</Type>
-<Title>LinearSlopeFit2</Title>
 <Expression>A*x</Expression>
 <Variable>x</Variable>
 <Range>-1.612903225806	1.612903225806</Range>
@@ -2342,9 +2322,8 @@ EnabledTickLabels	1	1	1	1
 <Text>
 \l(1)%(1)
 \l(2)%(2)
-\l(3)%(3)
 </Text>
-<Font>Ubuntu	18	50	0	0	0</Font>
+<Font>Ubuntu	9	50	0	0	0</Font>
 <TextColor>#000000</TextColor>
 <Background>#ffffff</Background>
 <Alpha>0</Alpha>
@@ -2418,5 +2397,102 @@ R^2 = 0.999818333684936
 Adjusted R^2 = 0.999818151836773
 RMSE (Root Mean Squared Error) = 2.56591365839162e-06
 RSS (Residual Sum of Squares) = 6.58391290232065e-09
+---------------------------------------------------------------------------------------
+
+[10.09.15 12:19	Plot: ''Graph4'']
+Linear Regression of dataset: Table2_3, using function: A*x
+Weighting Method: No weighting
+From x = -2.083333333333000e-01 to x = 2.070393374741000e-01
+A (slope) = 2.890811336438390e+01 +/- 3.578191720863701e-02
+--------------------------------------------------------------------------------------
+Chi^2/doF = 5.293386749400039e-02
+R^2 = 0.99993718775853
+Adjusted R^2 = 0.999935617452494
+RMSE (Root Mean Squared Error) = 0.230073613206731
+RSS (Residual Sum of Squares) = 2.17028856725401
+---------------------------------------------------------------------------------------
+[10.09.15 14:22	Plot: ''pm2T-graph'']
+Linear Regression of dataset: pm2T_Y1V, using function: A*x
+Weighting Method: No weighting
+From x = 9.991000000000000e-01 to x = -9.968000000000000e-01
+A (slope) = 1.644781419535147e-04 +/- 2.751109993997623e-08
+--------------------------------------------------------------------------------------
+Chi^2/doF = 1.261400225463164e-13
+R^2 = 0.999986039481926
+Adjusted R^2 = 0.999986011448757
+RMSE (Root Mean Squared Error) = 3.55161966638204e-07
+RSS (Residual Sum of Squares) = 6.29438712506119e-11
+---------------------------------------------------------------------------------------
+[10.09.15 14:50	Plot: ''Graph5'']
+Linear Regression of dataset: pm7-7T_X1V, using function: A*x
+Weighting Method: No weighting
+From x = 7.6961000000000e+00 to x = -7.7000000000000e+00
+A (slope) = -8.9248990982161e-04 +/- 2.0055479376670e-06
+--------------------------------------------------------------------------------------
+Chi^2/doF = 7.1654544555584e-08
+R^2 = 0.995485901751
+Adjusted R^2 = 0.9954808693115
+RMSE (Root Mean Squared Error) = 0.0002676836650892
+RSS (Residual Sum of Squares) = 6.434578101091e-05
+---------------------------------------------------------------------------------------
+[10.09.15 14:51	Plot: ''Graph5'']
+Linear Regression of dataset: pm2T_X1V, using function: A*x
+Weighting Method: No weighting
+From x = 1.9991000000000e+00 to x = -2.0000000000000e+00
+A (slope) = -8.5321164171538e-04 +/- 3.6316758713702e-07
+--------------------------------------------------------------------------------------
+Chi^2/doF = 1.7637546008055e-10
+R^2 = 0.9998188559073
+Adjusted R^2 = 0.9998186745818
+RMSE (Root Mean Squared Error) = 1.328064230678e-05
+RSS (Residual Sum of Squares) = 1.763754600805e-07
+---------------------------------------------------------------------------------------
+[10.09.15 14:52	Plot: ''Graph5'']
+Linear Regression of dataset: pm2T_X1V, using function: A*x
+Weighting Method: No weighting
+From x = 9.9910000000000e-01 to x = -9.9680000000000e-01
+A (slope) = -8.5402337701286e-04 +/- 1.7362684242027e-07
+--------------------------------------------------------------------------------------
+Chi^2/doF = 5.0242440819858e-12
+R^2 = 0.9999793747723
+Adjusted R^2 = 0.9999793333562
+RMSE (Root Mean Squared Error) = 2.241482563391e-06
+RSS (Residual Sum of Squares) = 2.507097796911e-09
+---------------------------------------------------------------------------------------
+[10.09.15 15:01	Plot: ''pm2T-graph'']
+Linear Regression of dataset: pm2T_Y2V, using function: A*x
+Weighting Method: No weighting
+From x = 9.9910000000000e-01 to x = -9.9680000000000e-01
+A (slope) = 1.5005801197911e-05 +/- 2.0602439238618e-05
+--------------------------------------------------------------------------------------
+Chi^2/doF = 7.0741502407850e-08
+R^2 = -141.3464077274
+Adjusted R^2 = -141.6322438875
+RMSE (Root Mean Squared Error) = 0.0002659727474909
+RSS (Residual Sum of Squares) = 3.530000970152e-05
+---------------------------------------------------------------------------------------
+[10.09.15 15:02	Plot: ''pm2T-graph'']
+Linear Regression of dataset: pm2T_Y1V, using function: A*x
+Weighting Method: No weighting
+From x = 9.9910000000000e-01 to x = -9.9680000000000e-01
+A (slope) = 1.6447814195351e-04 +/- 2.7511099939976e-08
+--------------------------------------------------------------------------------------
+Chi^2/doF = 1.2614002254632e-13
+R^2 = 0.9999860394819
+Adjusted R^2 = 0.9999860114488
+RMSE (Root Mean Squared Error) = 3.551619666382e-07
+RSS (Residual Sum of Squares) = 6.294387125061e-11
+---------------------------------------------------------------------------------------
+[10.09.15 15:06	Plot: ''pm2T-graph'']
+Linear Regression of dataset: pm2T_X1V, using function: A*x
+Weighting Method: No weighting
+From x = 9.9910000000000e-01 to x = -9.9680000000000e-01
+A (slope) = -8.5402337701286e-04 +/- 1.7362684242027e-07
+--------------------------------------------------------------------------------------
+Chi^2/doF = 5.0242440819858e-12
+R^2 = 0.9999793747723
+Adjusted R^2 = 0.9999793333562
+RMSE (Root Mean Squared Error) = 2.241482563391e-06
+RSS (Residual Sum of Squares) = 2.507097796911e-09
 ---------------------------------------------------------------------------------------
 </log>

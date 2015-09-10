@@ -42,7 +42,7 @@
 		%ymin=0, ymax=100,
 		xlabel=none,
 		xticklabel=none,
-		ylabel={Längswiderstand [\unit{$k\Omega$}]},
+		ylabel={Längswiderstand [\unit{$\Omega$}]},
 		legend style={
 			at={(0,0)},
 			anchor=north,
@@ -52,7 +52,7 @@
 		\addplot[color=green, mark=\empty] {-1}; %dummy
 		\addlegendentry{Hallwiderstand $\rho_H$}
 		
-		\addplot[color=orange, mark=\empty] table[x index=0, y expr={\UxxEq}] {../data/gleichspannung/2Kelvin-1uA-(+-2)_range.dat};
+		\addplot[color=orange, mark=\empty] table[x index=0, y expr={\UxxEq * 1000}] {../data/gleichspannung/2Kelvin-1uA-(+-2)_range.dat};
 		\addlegendentry{Längswiderstand $\rho_{xx}$}
 		
 		\end{axis}

@@ -1353,7 +1353,7 @@ WindowLabel		2
 </table>
 <table>
 Table2	52	4	06.09.15 14:00
-geometry	28	111	640	755	active
+geometry	28	111	640	755	
 header	1[X]	4[X]	2[Y]	3[Y]
 ColWidth	56	133	58	48	
 <com>
@@ -2641,7 +2641,7 @@ WindowLabel		2
 </table>
 <multiLayer>
 Graph4	1	1	06.09.15 18:32
-geometry	800	144	1015	727	
+geometry	647	48	1015	727	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -2681,7 +2681,7 @@ AxesColors	#000000	#000000	#000000	#000000
 AxesNumberColors	#3c3c3c	#3c3c3c	#3c3c3c	#3c3c3c
 AxesBaseline	0	0	0	0	
 CanvasBackground	#ffffff	0
-curve	Table2_4	Table2_3	2	1	#000000	0	1	7	1	#000000	#000000	0	#000000	14	1	2	0	0	51	1
+curve	Table2_4	Table2_3	1	0	#000000	0	1	7	1	#000000	#000000	0	#000000	14	1	2	0	0	51	1
 <Function>
 <Type>0</Type>
 <Title>LinearSlopeFit1</Title>
@@ -2749,7 +2749,7 @@ EnabledTickLabels	1	1	1	1
 </multiLayer>
 <multiLayer>
 Graph5	1	1	06.09.15 19:39
-geometry	665	83	949	731	
+geometry	665	83	949	731	active
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -2758,8 +2758,8 @@ Alignement	0	0
 <AlignPolicy>0</AlignPolicy>
 <CommonAxes>0</CommonAxes>
 <graph>
-ggeometry	5	5	931	664
-<PageGeometry>0.0053135	0.00732064	0.989373	0.972182</PageGeometry>
+ggeometry	3	5	931	664
+<PageGeometry>0.0031881	0.00732064	0.989373	0.972182</PageGeometry>
 PlotTitle	Title	#000000	4228
 <Antialiasing>0</Antialiasing>
 <Autoscaling>1</Autoscaling>
@@ -2790,26 +2790,26 @@ AxesNumberColors	#3c3c3c	#3c3c3c	#3c3c3c	#3c3c3c
 AxesBaseline	0	0	0	0	
 CanvasBackground	#ffffff	0
 curve	pm2T_BT	pm2T_X2V	0	1	#000000	0	1	7	0	#000000	#000000	0	#000000	14	1	2	0	0	1334	1
-curve	pm2T_BT	pm2T_X1V	0	1	#ff0000	0	1	7	0	#ff0000	#ff0000	0	#000000	14	1	2	1	0	1334	1
+curve	pm2T_BT	pm2T_X1V	0	1	#ff0000	0	1	7	0	#ff0000	#ff0000	0	#000000	14	1	2	1	0	1334	0
 <Function>
 <Type>0</Type>
 <Title>LinearSlopeFit1</Title>
 <Expression>A*x</Expression>
 <Variable>x</Variable>
-<Range>-1.9991	2</Range>
-<Points>2</Points>
-<Constant>A	0.00186929392290308</Constant>
+<Range>-1	1</Range>
+<Points>100</Points>
+<Constant>A	0.0018760371604426</Constant>
 <Style>0</Style>
 <LineStyle>1</LineStyle>
 <Pen>
-	<Color>#ff0000</Color>
+	<Color>#ff00ff</Color>
 	<Style>0</Style>
 	<Width>1</Width>
 </Pen>
 <xAxis>2</xAxis>
 <yAxis>1</yAxis>
 <CurveType>0</CurveType>
-<Visible>1</Visible>
+<Visible>0</Visible>
 </Function>
 scale	0	-0.004	-0.0005	0	8	5	0	0
 scale	1	-0.004	0.004	0	9	5	0	0
@@ -3022,4 +3022,114 @@ RMSE (Root Mean Squared Error) = 4.65341697770302e-05
 RSS (Residual Sum of Squares) = 2.88868222842118e-06
 ---------------------------------------------------------------------------------------
 
+
+[10.09.15 12:37	Plot: ''Graph4'']
+Linear Regression of dataset: Table2_3, using function: A*x
+Weighting Method: No weighting
+From x = -1.492537313433000e-01 to x = 1.492537313433000e-01
+A (slope) = 1.314623240680909e+01 +/- 1.895065278600170e-02
+--------------------------------------------------------------------------------------
+Chi^2/doF = 6.399990180509264e-03
+R^2 = 0.999960519541094
+Adjusted R^2 = 0.999958326182266
+RMSE (Root Mean Squared Error) = 0.0799999386281595
+RSS (Residual Sum of Squares) = 0.121599813429677
+---------------------------------------------------------------------------------------
+[10.09.15 12:50	Plot: ''Graph5'']
+Linear Regression of dataset: pm2T_X2V, using function: A*x
+Weighting Method: No weighting
+From x = -1.999100000000000e+00 to x = 2.000000000000000e+00
+A (slope) = -8.526882249063786e-05 +/- 4.792612741923758e-05
+--------------------------------------------------------------------------------------
+Chi^2/doF = 4.098623426862235e-06
+R^2 = -14.4418898188109
+Adjusted R^2 = -14.4534741322533
+RMSE (Root Mean Squared Error) = 0.0020245057240873
+RSS (Residual Sum of Squares) = 0.00546756365143422
+---------------------------------------------------------------------------------------
+[10.09.15 12:50	Plot: ''Graph5'']
+Linear Regression of dataset: pm2T_X1V, using function: A*x
+Weighting Method: No weighting
+From x = -1.999100000000000e+00 to x = 2.000000000000000e+00
+A (slope) = 1.869293922903080e-03 +/- 1.101603479579105e-06
+--------------------------------------------------------------------------------------
+Chi^2/doF = 2.165428956837468e-09
+R^2 = 0.999536923528667
+Adjusted R^2 = 0.999536576134465
+RMSE (Root Mean Squared Error) = 4.65341697770302e-05
+RSS (Residual Sum of Squares) = 2.88868222842118e-06
+---------------------------------------------------------------------------------------
+[10.09.15 12:52	Plot: ''Graph5'']
+Linear Regression of dataset: pm2T_X2V, using function: A*x
+Weighting Method: No weighting
+From x = -9.9720000000000e-01 to x = 9.9780000000000e-01
+A (slope) = -8.2368669446018e-05 +/- 1.3167391613933e-04
+--------------------------------------------------------------------------------------
+Chi^2/doF = 3.8412077010747e-06
+R^2 = -672.6916366975
+Adjusted R^2 = -673.7062325359
+RMSE (Root Mean Squared Error) = 0.001959899921188
+RSS (Residual Sum of Squares) = 0.002554403121215
+---------------------------------------------------------------------------------------
+[10.09.15 12:52	Plot: ''Graph5'']
+Linear Regression of dataset: pm2T_X2V, using function: A*x
+Weighting Method: No weighting
+From x = -1.9991000000000e+00 to x = 2.0000000000000e+00
+A (slope) = -8.5268822490638e-05 +/- 4.7926127419238e-05
+--------------------------------------------------------------------------------------
+Chi^2/doF = 4.0986234268622e-06
+R^2 = -14.44188981881
+Adjusted R^2 = -14.45347413225
+RMSE (Root Mean Squared Error) = 0.002024505724087
+RSS (Residual Sum of Squares) = 0.005467563651434
+---------------------------------------------------------------------------------------
+[10.09.15 12:52	Plot: ''Graph5'']
+Linear Regression of dataset: pm2T_X2V, using function: A*x
+Weighting Method: No weighting
+From x = -9.9720000000000e-01 to x = 9.9780000000000e-01
+A (slope) = -8.2368669446018e-05 +/- 1.3167391613933e-04
+--------------------------------------------------------------------------------------
+Chi^2/doF = 3.8412077010747e-06
+R^2 = -672.6916366975
+Adjusted R^2 = -673.7062325359
+RMSE (Root Mean Squared Error) = 0.001959899921188
+RSS (Residual Sum of Squares) = 0.002554403121215
+---------------------------------------------------------------------------------------
+[10.09.15 12:52	Plot: ''Graph5'']
+Linear Regression of dataset: pm2T_X1V, using function: A*x
+Weighting Method: No weighting
+From x = -9.9720000000000e-01 to x = 9.9780000000000e-01
+A (slope) = 1.8760371604426e-03 +/- 3.0463451912632e-07
+--------------------------------------------------------------------------------------
+Chi^2/doF = 2.0560161073909e-11
+R^2 = 0.9999824655328
+Adjusted R^2 = 0.9999824391254
+RMSE (Root Mean Squared Error) = 4.534331381131e-06
+RSS (Residual Sum of Squares) = 1.367250711415e-08
+---------------------------------------------------------------------------------------
+[10.09.15 12:53	Plot: ''Graph5'']
+Linear Regression of dataset: pm2T_X1V, using function: A*x+B
+Weighting Method: No weighting
+From x = -9.9720000000000e-01 to x = 9.9780000000000e-01
+B (y-intercept) = -3.5253297210099e-06 +/- 1.1045733561976e-07
+A (slope) = 1.8760405051965e-03 +/- 1.9151268035527e-07
+--------------------------------------------------------------------------------------
+Chi^2/doF = 8.1257456795682e-12
+R^2 = 0.9999930804839
+Adjusted R^2 = 0.9999930596106
+RMSE (Root Mean Squared Error) = 2.850569360596e-06
+RSS (Residual Sum of Squares) = 5.395495131233e-09
+---------------------------------------------------------------------------------------
+[10.09.15 12:55	Plot: ''Graph5'']
+Linear Regression of dataset: pm2T_X1V, using function: A*x
+Weighting Method: No weighting
+From x = -9.9720000000000e-01 to x = 9.9780000000000e-01
+A (slope) = 1.8760371604426e-03 +/- 3.0463451912632e-07
+--------------------------------------------------------------------------------------
+Chi^2/doF = 2.0560161073909e-11
+R^2 = 0.9999824655328
+Adjusted R^2 = 0.9999824391254
+RMSE (Root Mean Squared Error) = 4.534331381131e-06
+RSS (Residual Sum of Squares) = 1.367250711415e-08
+---------------------------------------------------------------------------------------
 </log>
