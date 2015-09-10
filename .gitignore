@@ -13,8 +13,10 @@
 
 Vivis Übungskram
 *.gitignore~
+*.qti~
 *Thumbs.db
 *.odt#
 *.odp#
+*.ods#
 *tmpname
 *(busy)
