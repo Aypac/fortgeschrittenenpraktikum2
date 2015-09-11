@@ -18,7 +18,7 @@
 	\begin{axis}[
 	axis y line*=left,
 	width=13.5cm, height=6.5cm,
-	xmin=0,xmax=45, ymin=0, %ymax=415,
+	xmin=0,xmax=45, %ymin=0, %ymax=415,
 	xlabel={Temperatur [\unit{K}]},
 	ylabel={Elektronenbeweglichkeit $\mu$ [$\unitfrac{m^2}{Vs}$]},
 	]
@@ -43,16 +43,15 @@
 	axis y line*=right,
 	width=13.5cm, height=6.5cm,
 	xmin=0,xmax=45,
-	%ymin=0, %ymax=415,
+	%ymin=7.15*10^15, ymax=7.25*10^15,
 	axis x line=none,
-	%ymin=0, ymax=100,
 	xlabel=none,
 	xticklabel=none,
 	ylabel={Elektronendichte $n_s$ [$\unitfrac{1}{m^2}$]},
 	legend pos=north east,
 	]
 	
-	\addplot[color=red, mark=x, only marks, domain=-300:-299, samples=2] {0}; %dummy
+	\addplot[color=red, mark=x, domain=-2:-1, samples=2] {0}; %dummy
 	\addlegendentry{$\mu$}
 	
 	

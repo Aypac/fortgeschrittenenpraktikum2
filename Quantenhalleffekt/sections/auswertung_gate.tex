@@ -2,9 +2,7 @@
 % !TeX encoding = UTF-8
 % !Tex spellcheck = de_DE
 
-Im abschließenden Versuchsteil sollte die Abhängigkeit der Ladungsträgerdichte von der Gatespannung ermittelt werden.
-Analog zu den bisherigen Messreihen geschah dies mittels der Steigung $\frac{dU_{Hall}}{dB}$. 
-Anhand der wie in Kapitel \ref{ch:gate} beschrieben aufgenommenen Messdaten zur Gatespannung sollte der Abstand des 2DEG zur Probenoberfläche bestimmt werden. Dazu dient die Annahme, dass das 2DEG und das verwendete Titan-Gate einen Plattenkondensator bilden. Die beiden Schichten von GaAs und AlGaAs dazwischen bilden hierfür ein nichtleitendes Dielektrikum. 
+Im abschließenden Versuchsteil sollte die Abhängigkeit der Ladungsträgerdichte von der Gatespannung ermittelt werden. Analog zu den bisherigen Messreihen geschah dies mittels der Steigung $\frac{dU_{Hall}}{dB}$. Anhand der wie in Kapitel \ref{ch:gate} beschrieben aufgenommenen Messdaten zur Gatespannung sollte der Abstand des 2DEG zur Probenoberfläche bestimmt werden. Dazu dient die Annahme, dass das 2DEG und das verwendete Titan-Gate einen Plattenkondensator bilden. Die beiden Schichten von GaAs und AlGaAs dazwischen bilden hierfür ein nichtleitendes Dielektrikum. 
 Durch das Anlegen der Gatespannung wurde die Ladungsträgerdichte im 2DEG verändert. 
 In einem Plattenkondensator der Fläche A ist die Anzahl der Ladungsträger $N_s=n_s \cdot A$ gegeben durch die Gleichung \ref{eq:kondensator_ladung}. 
 Damit ergibt sich der Abstand d der Kondensatorplatten und somit der Abstand des 2DEG zur Probenoberfläche aus der Gleichung \ref{eq:kondensator_abstand}. 
@@ -13,12 +11,12 @@ Dabei kann $\epsilon \approx 12$ angenommen werden, da die verwendete Probe im w
 Anhand der beiden Gleichungen und der Einsatzspannung $U_{th}$ kann nun die Abhängigkeit der Ladungsträgerdichte von der Gatespannung angegeben werden durch Gleichung \ref{eq:kondens_lad_und_abst}:
 
 \begin{equation}
-n_s=\frac{\epsilon \epsilon_0}{d}(U_{Gate}-U_{th})
+	n_s=\frac{\epsilon \epsilon_0}{d}(U_{Gate}-U_{th})
+	\label{eq:ns_kond}
 \end{equation}
 
-Dieser Zusammenhang wurde in der Abbildung %TODO: GRAPHIK!
-dargestellt, indem die bestimmten Ladungsträgerdichten gegen die angelegten Gatespannungen aufgetragen wurden. 
-Die Ladungsträgerdichten wurden dabei analog zu den obigen Versuchsteilen aus der Näherung über die Hall-Spannung bestimmt und es ergaben sich die Werte in Tabelle~\ref{tab:gate_ausw}. %Der Abstand d des 2DEG zur Probenoberfläche wurde mittels linearer Regression bestimmt. Dafür ergab sich ein Wert von $d=...$ %TODO: WERT ANGEBEN
+Die Ladungsträgerdichten wurden analog zu den obigen Versuchsteilen aus der Näherung über die Hall-Spannung bestimmt und es ergaben sich die Werte in Tabelle~\ref{tab:gate_ausw}. Wie bereits in den Messergebnissen selber (s. Abbildung\ref{fig:gate_mess}) zu sehe, fällt der Punkt ohne Gatespannung aus der systematik heraus. Es wurde hier keine eigene Messung gemacht, sondern die Messung aus dem Kapitel~\ref{ch:ac} weiterverwendet. Dies stärkt die Vermutung aus diesem Kapitel, dass die Abweichung zu der Gleichstrommessung des Kapitel~\ref{ch:dc} aus einer elektrostatischen Aufladung des Gates herrührt.
+
 
 \begin{table}[h]
 	\centering
@@ -42,13 +40,29 @@ Die Ladungsträgerdichten wurden dabei analog zu den obigen Versuchsteilen aus d
 \end{table}
 
 
-Die gleichen Werte sind auch in Abbildung~\ref{fig:gate_ausw} aufgetragen. Da die Werte der Längsspannung $U_{xx}$ bei hochfahrendem Magnetfeld stark von jeden bei herunterfahrendem abweichen, wurden diese mit dem Faktor $200$ multipliziert und als $\mu_{\uparrow}\cdot 200$ geplottet. Woher dieser Effekt kommt konnte nicht geklärt werden.
+Um den Abstand des Gates zu bestimmen, wurde eine Lineare Regression unter Auslassung des Messwertes bei $U_{Gate}=\unit[0]{mV}$ über die Elektronendichte durchgeführt. Mit der Regressionsformel $n_s=a\cdot U_{Gate} + b$ wurden folgende Parameter errechnet:
+\begin{align}
+a = ( 0,012326 \pm 0,00031)\cdot 10^{15} ~ \unit{(m^2 \cdot mV)^{-1}}\\
+b=( 5,90481 \pm 0,04254 )\cdot 10^{15} ~ \unitfrac{1}{m^2}
+\end{align}
+%B (y-intercept) = 5.9048076827751e+15 +/- 4.2539634405612e+13
+%A (slope) = 1.2325863159878e+13 +/- 3.1066556469302e+11
+
+Mit Gleichung~\eqref{eq:ns_kond} ergibt sich der Abstand zu
+\begin{align}
+& n_s=\frac{\epsilon \epsilon_0}{d}\cdot U_{Gate} - \frac{\epsilon \epsilon_0}{n_s} \cdot U_{th}= a \cdot U_{Gate} + b \\
+\Rightarrow~ & a=\frac{\epsilon \epsilon_0}{d}\\
+\Leftrightarrow~ & d=\frac{\epsilon \epsilon_0}{a} \cong \unit[50]{nm}
+\end{align}
+
+
+Die Werte aus Tabelle~\ref{tab:gate_ausw} sind auch in Abbildung~\ref{fig:gate_ausw} aufgetragen. Da die Werte der Längsspannung $U_{xx}$ bei hochfahrendem Magnetfeld stark von jenem bei herunterfahrendem abweichen, wurden diese mit dem Faktor $200$ multipliziert und als $\mu_{\uparrow}\cdot 200$ geplottet. Woher dieser Effekt kommt konnte nicht geklärt werden.
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=1]{graphs/gate/auswertung.pdf}
 	\caption[Auswertung der Gatespannungsvariation]{
-		Berechnete Elektronendichte $n_s$ und -beweglichkeit $\mu$ in Abhängigkeit zu der Gatespannung. $\mu_{\uparrow}$ entsprechen den Werten, die mit einer positiven Magnetfeldrampe gemessen wurden, die Werte $\mu_{\downarrow}$ wurden bei einer negativen gemessen.
+		Berechnete Elektronendichte $n_s$ und -beweglichkeit $\mu$ in Abhängigkeit zu der Gatespannung. $\mu_{\uparrow}$ entsprechen den Werten, die mit einer positiven Magnetfeldrampe gemessen wurden, die Werte $\mu_{\downarrow}$ wurden bei einer negativen gemessen. Die blaue Linie ist die Lineare Regression der blauen Kreise unter Auslassung des $U_{Gate}=\unit[0]{mV}$-Wertes, siehe Text.
 	}
 	\label{fig:gate_ausw}
 \end{figure}

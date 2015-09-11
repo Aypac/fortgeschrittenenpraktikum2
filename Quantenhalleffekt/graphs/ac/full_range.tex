@@ -29,14 +29,19 @@
 		ylabel={Hallwiderstand [\unit{$k\Omega$}]},
 	]
 	
-		\addplot[color=green, mark=\empty,%mark=o, mark phase=5, mark repeat=100,
-		] table[skip first n=1, x index=0, y expr={\UhallEq}] {../data/wechselspannung/2Kelvin-1V-full_range_10MOhm.dat};
+		\addplot[color=green, mark=\empty,%mark=o,
+		%point meta=explicit, mark phase=10, mark repeat=80,nodes near coords,
+		%every node near coord/.append style={
+		%	/pgf/number format/precision=3,
+		%},
+		] table[meta expr={\UhallEq}, skip first n=1, x index=0, y expr={\UhallEq},
+		] {../data/wechselspannung/2Kelvin-1V-full_range_10MOhm.dat};
 		%\addlegendentry{$U_H$}
 	\end{axis}
 	
 	\begin{axis}[
 		axis y line*=right,
-		width=13.5cm, height=6.5cm,
+,		width=13.5cm, height=6.5cm,
 		xmin=-7.7,xmax=7.7,
 		ymin=0, %ymax=1,
 		axis x line=none,

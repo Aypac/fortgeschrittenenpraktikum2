@@ -28,7 +28,12 @@
 		ylabel={Hallwiderstand [\unit{$k\Omega$}]},
 	]
 		
-		\addplot[color=green, mark=\empty] table[x index=0, y expr={\UhallEq}] {../data/gleichspannung/2Kelvin-1uA-full_range.dat};
+		\addplot[color=green, mark=\empty%mark=o,
+		%point meta=explicit, mark phase=10, mark repeat=80,nodes near coords,
+		%every node near coord/.append style={
+		%	/pgf/number format/precision=3,
+		%},
+		] table[meta expr={\UhallEq},x index=0, y expr={\UhallEq}] {../data/gleichspannung/2Kelvin-1uA-full_range.dat};
 		%\addlegendentry{$U_H$}
 	\end{axis}
 	
