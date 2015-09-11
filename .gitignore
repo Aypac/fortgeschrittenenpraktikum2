@@ -14,6 +14,8 @@
 Vivis Übungskram
 *.gitignore~
 *.qti~
+*.csv~
+*.dat~
 *Thumbs.db
 *.odt#
 *.odp#
