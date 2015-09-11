@@ -18,9 +18,37 @@ n_s=\frac{\epsilon \epsilon_0}{d}(U_{Gate}-U_{th})
 
 Dieser Zusammenhang wurde in der Abbildung %TODO: GRAPHIK!
 dargestellt, indem die bestimmten Ladungsträgerdichten gegen die angelegten Gatespannungen aufgetragen wurden. 
-Die Ladungsträgerdichten wurden dabei analog zu den obigen Versuchsteilen aus der Näherung über die Shubnikov-de Haas-Oszilation %TODO: Oder Hall-Spannung, was dir lieber ist
-bestimmt und es ergaben sich folgende Werte: %TODO: Werte angeben
-Der Abstand d des 2DEG zur Probenoberfläche wurde mittels linearer Regression bestimmt. Dafür ergab sich ein Wert von $d=...$ %TODO: WERT ANGEBEN
+Die Ladungsträgerdichten wurden dabei analog zu den obigen Versuchsteilen aus der Näherung über die Hall-Spannung bestimmt und es ergaben sich die Werte in Tabelle~\ref{tab:gate_ausw}. %Der Abstand d des 2DEG zur Probenoberfläche wurde mittels linearer Regression bestimmt. Dafür ergab sich ein Wert von $d=...$ %TODO: WERT ANGEBEN
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|r|r|l|r|r|}
+		\hline
+		\multicolumn{1}{|l|}{\cellcolor{black!30} $U_{Gate}$ } & \multicolumn{1}{|l|}{\cellcolor{black!30} $b$ } & \multicolumn{1}{|l|}{\cellcolor{black!30} $U_{xx}$ } & \multicolumn{1}{|l|}{\cellcolor{black!30} $n_s$ } & \multicolumn{1}{|l|}{\cellcolor{black!30} $\mu$ } \\
+		\multicolumn{1}{|l|}{\cellcolor{black!30} [$\unit{V}$] } &  \multicolumn{1}{|l|}{\cellcolor{black!30} [\unit{T}] } &
+		\multicolumn{1}{|l|}{\cellcolor{black!30} [$\unit{V}$] } &  \multicolumn{1}{|l|}{\cellcolor{black!30} [$\unitfrac{1}{m^2}$] } & \multicolumn{1}{|l|}{\cellcolor{black!30} [$\unitfrac{m^2}{Vs}$] } \\ \hline
+		$ 200 $  & $ 7,41865\cdot 10^{-4} $  & $ 9,53682\cdot 10^{-7} $  & $ 8,23972\cdot 10^{15} $  & $ 4,77216\cdot 10^{9} $  \\ 
+		$ 150 $  & $ 7,86923\cdot 10^{-4} $  & $ 9,53682\cdot 10^{-7} $  & $ 7,76793\cdot 10^{15} $  & $ 5,06200\cdot 10^{9} $  \\ 
+		\textcolor{gray}{$ 100 $}  & \textcolor{gray}{$ 8,52505\cdot 10^{-4} $}  & \textcolor{gray}{$ 2,76567\cdot 10^{-4} $}  & \textcolor{gray}{$ 7,17036\cdot 10^{15} $}  & \textcolor{gray}{$ 1,89099\cdot 10^{7} $}  \\ 
+		$ 50 $  & $ 9,34121\cdot 10^{-4} $  & $ 1,43052\cdot 10^{-6} $  & $ 6,54387\cdot 10^{15} $  & $ 4,00592\cdot 10^{9} $  \\ 
+		\textcolor{gray}{$ 0 $}  & \textcolor{gray}{$ 8,52914\cdot 10^{-4} $}  & \textcolor{gray}{$ 2,74183\cdot 10^{-4} $}  & \textcolor{gray}{$ 7,16692\cdot 10^{15} $}  & \textcolor{gray}{$ 1,90835\cdot 10^{7} $}  \\ 
+		$ -50 $  & $ 1,12890\cdot 10^{-3} $  & $ 2,86104\cdot 10^{-6} $  & $ 5,41482\cdot 10^{15} $  & $ 2,42060\cdot 10^{9} $  \\ 
+		\textcolor{gray}{$ -100 $}  & \textcolor{gray}{$ 1,26965\cdot 10^{-3} $}  & \textcolor{gray}{$ 7,30876\cdot 10^{-4} $}  & \textcolor{gray}{$ 4,81451\cdot 10^{15} $}  & \textcolor{gray}{$ 1,06570\cdot 10^{7} $}  \\ 
+		$ -150 $  & $ 1,51940\cdot 10^{-3} $  & $ 4,52998\cdot 10^{-6} $  & $ 4,02315\cdot 10^{15} $  & $ 2,05764\cdot 10^{9} $  \\ 
+		\textcolor{gray}{$ -200 $}  & \textcolor{gray}{$ 1,87273\cdot 10^{-3} $}  & \textcolor{gray}{$ 2,16796\cdot 10^{-3} $}  & \textcolor{gray}{$ 3,26410\cdot 10^{15} $}  & \textcolor{gray}{$ 5,29928\cdot 10^{6} $}  \\ \hline
+	\end{tabular}
+	\caption{Berechnete Elektronendichte $n_s$ und -beweglichkeit $\mu$ in Abhängigkeit zu der Gatespannung, aus Platzgründen ohne Fehler. Ausgegraut sind die Werte, die mit einer positiven Magnetfeldrampe gemessen wurden, alle anderen wurden bei einer negativen gemessen.}
+	\label{tab:gate_ausw}
+\end{table}
 
 
-%TODO: Beschreibung der Berechneten Werte fehlt halt noch. Das weiß ich ja noch nicht.  
+Die gleichen Werte sind auch in Abbildung~\ref{fig:gate_ausw} aufgetragen. Da die Werte der Längsspannung $U_{xx}$ bei hochfahrendem Magnetfeld stark von jeden bei herunterfahrendem abweichen, wurden diese mit dem Faktor $200$ multipliziert und als $\mu_{\uparrow}\cdot 200$ geplottet. Woher dieser Effekt kommt konnte nicht geklärt werden.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=1]{graphs/gate/auswertung.pdf}
+	\caption[Auswertung der Gatespannungsvariation]{
+		Berechnete Elektronendichte $n_s$ und -beweglichkeit $\mu$ in Abhängigkeit zu der Gatespannung. $\mu_{\uparrow}$ entsprechen den Werten, die mit einer positiven Magnetfeldrampe gemessen wurden, die Werte $\mu_{\downarrow}$ wurden bei einer negativen gemessen.
+	}
+	\label{fig:gate_ausw}
+\end{figure}

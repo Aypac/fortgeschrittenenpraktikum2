@@ -32,14 +32,12 @@ Eine Alternative Möglichkeit, die Ladungsträgerdichte zu berechnen, erfolgt ü
 %$U_{Längs}$
  gegen $\unitfrac{1}{B}$ aufgetragen und jedem Minimum der Oszillation ein Füllfaktor $\nu$ zugeordnet. Dies ist in Abbildung~\ref{fig:dc_sdho_ausw} zu sehen. 
  
-Mit der linearen Regression $\mu = \nicefrac{b}{B}$ kann die Steigung zu $b=(13,1462 \pm 0,0190)\unit{T}$ bestimmt werden. Mit dieser ließ sich analog zur Näherung über die Hall-Spannung mit Gleichung %TODO: REF! 
-die Ladungsträgerdichte bestimmen:
+Mit der linearen Regression $\mu = \nicefrac{b}{B}$ kann die Steigung zu $b=(13,1462 \pm 0,0190)\unit{T}$ bestimmt werden. Mit dieser ließ sich analog zur Näherung über die Hall-Spannung mit Gleichung~\eqref{eq:bewegl_masse} die Ladungsträgerdichte bestimmen:
 \begin{equation}
 n_s=  ( 3,17874 \pm 0,00046) \cdot 10^{15} ~ \unitfrac{1}{m^2}\\ %3,17874E+15	4,58225E+12
 \end{equation}
 
-So ergibt sich aus Gleichung %TODO: REF! 
-für die Beweglichkeit:
+So ergibt sich aus Gleichung~\eqref{eq:sdh_osz_naeherung} für die Beweglichkeit:
 \begin{equation}
 \mu= (6,20901\pm 0,00896)\cdot 10^6 ~ \unitfrac{m^2}{Vs} %6,20901E+06	8,96337E+03
 \end{equation}
@@ -48,8 +46,8 @@ für die Beweglichkeit:
 \begin{figure}[h]
 	\centering
 	\includegraphics{graphs/dc/auswertung.pdf}
-	\caption[Auswertung Füllfaktor Gleichstrommessung]{
-		Auswertung Füllfaktor Gleichstrommessung.
+	\caption[Lineare Regression Gleichstrommessung]{
+		Lineare Regression über den Füllfaktor der QHE-Plateaus der Gleichstrommessung aufgetragen gegen das Reziproke Magnetfeld.
 	}
 	\label{fig:dc_sdho_ausw}
 \end{figure}

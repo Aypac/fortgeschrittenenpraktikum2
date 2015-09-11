@@ -1,0 +1,78 @@
+% !TeX encoding = UTF-8
+% !TeX spellcheck = de_DE
+
+\documentclass[12pt,border=0mm]{standalone}
+\input{../gammastyle.sty}
+\def\probelength{600} %µm
+\def\probewidth{100} %µm
+\def\probecurrent{(-(\thisrowno{5})*10^6)} %µA
+\def\unitfactor{10^3} %
+\def\UhallEq{(abs(\thisrowno{1})/\probecurrent)*\unitfactor}
+\def\UxxEq{\thisrowno{4}*\probewidth/(\probelength*\probecurrent)*\unitfactor} %kOhm
+
+
+\begin{document}
+	
+	\begin{tikzpicture}
+	\pgfplotsset{
+		scale only axis,
+		%scaled x ticks=base 10:0,
+		%scaled y ticks=base 10:0,
+		%xmin=0, xmax=0.06
+	}
+	
+	\begin{axis}[
+	%axis y line*=left,
+	width=13.5cm, height=6.5cm,
+	xmin=0,xmax=7.7, %ymin=0, %ymax=14,
+	xlabel={Magnetfeld $B$ [\unit{T}]},
+	ylabel={Hallwiderstand [\unit{$\Omega$}]},
+	legend pos=north west,
+	%legend style={
+	%	at={(0,0)},
+	%	anchor=north,
+	%	at={(axis description cs:.5,.95)}
+	%}
+	]
+	
+	\addplot[color=blue, mark=\empty]
+	table[skip first n=4, x index=0, y expr={\UhallEq*1000}] {../data/gate/2Kelvin-1V-full_range_10MOhm_38Hz_0_GRAD_+200mVgate.dat};
+	\addlegendentry{\unit[+200]{mV}}
+	
+	\addplot[color=green!50!blue, mark=\empty]
+	table[skip first n=3, x index=0, y expr={\UhallEq*1000}] {../data/gate/2Kelvin-1V-full_range_10MOhm_38Hz_0_GRAD_+150mVgate.dat};
+	\addlegendentry{\unit[+150]{mV}}
+	
+	\addplot[color=green, mark=\empty]
+	table[skip first n=3, x index=0, y expr={\UhallEq*1000}] {../data/gate/2Kelvin-1V-full_range_10MOhm_38Hz_0_GRAD_+100mVgate.dat};
+	\addlegendentry{\unit[+100]{mV}}
+	
+	\addplot[color=yellow!50!green, mark=\empty]
+	table[skip first n=4, x index=0, y expr={\UhallEq*1000}] {../data/gate/2Kelvin-1V-full_range_10MOhm_38Hz_0_GRAD_+50mVgate.dat};
+	\addlegendentry{\unit[+50]{mV}}
+	
+	\addplot[color=yellow, mark=\empty]
+	table[skip first n=3, x index=0, y expr={\UhallEq*1000}] {../data/wechselspannung/2Kelvin-1V-full_range_10MOhm.dat};
+	\addlegendentry{\unit[0]{mV}}
+	
+	\addplot[color=yellow!50!orange, mark=\empty]
+	table[skip first n=3, x index=0, y expr={\UhallEq*1000}] {../data/gate/2Kelvin-1V-full_range_10MOhm_38Hz_0_GRAD_-50mVgate.dat};
+	\addlegendentry{\unit[-50]{mV}}
+	
+	\addplot[color=orange, mark=\empty]
+	table[skip first n=3, x index=0, y expr={\UhallEq*1000}] {../data/gate/2Kelvin-1V-full_range_10MOhm_38Hz_0_GRAD_-100mVgate.dat};
+	\addlegendentry{\unit[-100]{mV}}
+	
+	\addplot[color=red!50!orange, mark=\empty]
+	table[skip first n=4, x index=0, y expr={\UhallEq*1000}] {../data/gate/2Kelvin-1V-full_range_10MOhm_38Hz_0_GRAD_-150mVgate.dat};
+	\addlegendentry{\unit[-150]{mV}}
+	
+	\addplot[color=red, mark=\empty]
+	table[skip first n=3, x index=0, y expr={\UhallEq*1000}] {../data/gate/2Kelvin-1V-full_range_10MOhm_38Hz_0_GRAD_-200mVgate.dat};
+	\addlegendentry{\unit[-200]{mV}}
+	
+	\end{axis}
+	\end{tikzpicture}
+	
+	
+\end{document}
