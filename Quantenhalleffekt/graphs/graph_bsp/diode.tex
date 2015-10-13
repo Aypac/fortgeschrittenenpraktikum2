@@ -1,0 +1,35 @@
+% !TeX encoding = UTF-8
+% !TeX spellcheck = de_DE
+
+\documentclass[12pt,border=0mm]{standalone}
+\input{../gammastyle.sty}
+\def\yerr{.05*y} %Oszi plus natural mV
+\def\xerr{.01} %Unprecise Powermeter mW reading (reading of x.xx mW)
+	
+\begin{document}
+
+	\begin{tikzpicture}
+		\begin{axis}[
+			%title=\text{$N=10$ PCB-Spule mit Anpassungsnetzwerk},
+			width=15.2cm, height=8.5cm,
+			ymin=-15, xmin=0.07,xmax=1.43,ymax=415,
+			xlabel={Lichtleistung [mW]},ylabel={Spannung [mV]},legend pos=north west
+		]
+	
+			\addplot[color=red, forget plot, mark=\empty, only marks, mark size=1pt,error bars/.cd, error mark=-, x dir=both, x explicit, y dir=both, y explicit] table[skip first n=2, x index=0, y index=1, x error expr=\xerr, y error expr=\yerr] {500Ohm.dat};
+			
+			\addplot[color=red, mark size=1pt,error bars/.cd, error mark=-, x dir=both, x explicit, y dir=both, y explicit] table[skip first n=2, x index=0, y index=1, x error expr=\xerr, y error expr=\yerr] {1kOhm.dat};
+			\addlegendentry{Powermeter}
+			
+			\addplot[color=blue, mark=\empty, mark size=1pt,error bars/.cd, error mark=-, x dir=both, x explicit, y dir=both, y explicit] table[skip first n=2, x index=0, y index=2, x error expr=\xerr, y error expr=\yerr] {500Ohm.dat};
+			\addlegendentry{Photodiode $\unit[500]{\Omega}$}
+			
+			
+			\addplot[color=green, mark=\empty, mark size=1pt,error bars/.cd, error mark=-, x dir=both, x explicit, y dir=both, y explicit] table[skip first n=2, x index=0, y index=2, x error expr=\xerr, y error expr=\yerr] {1kOhm.dat};
+			\addlegendentry{Photodiode $\unit[1]{k\Omega}$}
+		
+		\end{axis}
+	\end{tikzpicture}
+
+
+\end{document}

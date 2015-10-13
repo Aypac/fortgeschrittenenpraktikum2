@@ -1,0 +1,66 @@
+% !TeX encoding = UTF-8
+% !TeX spellcheck = de_DE
+
+\documentclass[12pt,border=0mm]{standalone}
+\input{../gammastyle.sty}
+\def\probelength{600} %µm
+\def\probewidth{100} %µm
+\def\probecurrent{1} %µA
+\def\unitfactor{10^3} %
+\def\UhallEq{(abs(\thisrowno{1})/\probecurrent)*\unitfactor}
+\def\UxxEq{-1*\thisrowno{3}*\probewidth/(\probelength*\probecurrent)*\unitfactor} %kOhm
+	
+	
+	\begin{document}
+		
+	\begin{tikzpicture}
+	\pgfplotsset{
+		scale only axis,
+		%scaled x ticks=base 10:3,
+		%xmin=0, xmax=0.06
+	}
+	
+	\begin{axis}[
+		axis y line*=left,
+		width=13.5cm, height=6.5cm,
+		xmin=-7.7,xmax=7.7, ymin=0, %ymax=415,
+		xlabel={Magnetfeld [T]},
+		ylabel={Hallwiderstand [\unit{$k\Omega$}]},
+	]
+		
+		\addplot[color=green, mark=\empty%mark=o,
+		%point meta=explicit, mark phase=10, mark repeat=80,nodes near coords,
+		%every node near coord/.append style={
+		%	/pgf/number format/precision=3,
+		%},
+		] table[meta expr={\UhallEq},x index=0, y expr={\UhallEq}] {../data/gleichspannung/2Kelvin-1uA-full_range.dat};
+		%\addlegendentry{$U_H$}
+	\end{axis}
+	
+	\begin{axis}[
+		axis y line*=right,
+		width=13.5cm, height=6.5cm,
+		xmin=-7.7,xmax=7.7,
+		ymin=0, %ymax=415,
+		axis x line=none,
+		%ymin=0, ymax=100,
+		xlabel=none,
+		xticklabel=none,
+		ylabel={Längswiderstand [\unit{$k\Omega$}]},
+		legend style={
+			at={(0,0)},
+			anchor=north,
+			at={(axis description cs:.5,.95)}
+		}
+	]
+		\addplot[color=green, mark=\empty] {-1}; %dummy
+		\addlegendentry{Hallwiderstand $\rho_H$}
+		
+		\addplot[color=orange, mark=\empty] table[x index=0, y expr={\UxxEq}] {../data/gleichspannung/2Kelvin-1uA-full_range.dat};
+		\addlegendentry{Längswiderstand $\rho_{xx}$}
+		
+		\end{axis}
+	\end{tikzpicture}
+
+
+\end{document}

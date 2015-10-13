@@ -1,0 +1,111 @@
+\usepackage{ifplatform}
+
+
+% ******************************~~~~*****************************
+%Photo quality management. This is an old try:
+\newcommand\openfile{\newwrite\outputstream\immediate\openout\outputstream=photo.log
+	\writetofile[linewidth]{\the\linewidth}
+	\writetofile[textwidth]{\the\textwidth}
+	\writetofile[dpi]{300}
+	}
+\newcommand\closefile{\immediate\closeout\outputstream}
+\newcommand\writetofile[2][2]{\immediate\write\outputstream{#1 #2}}
+
+\newcommand\photo[2][2]{\includegraphics[width=#1]{#2}\writetofile[#2]{#1}}
+
+% ***************************************************************
+% And this is working
+% Reduce image size for fixed dpi
+% Introduce \includegraphicsRS for this purpose
+
+% for downsampling large images: \includegraphicsRS
+% (\includegraphics "resize")
+% \includegraphicsRS[#1][#2]{#3}
+% #1 = normal \includegraphics[] - Parameter (like scale=1) {optional}
+% #2 = approx part of the screen, eg half page width use 0.5 or 1/2 {optional}
+%      reduces to #2*1000px
+% #3 = relative path to image file WITH ending (e.g. .jpg) {required}
+
+%--------------------------------------
+%You can change these settings:
+\def\imagequali{85} %Quality in percent, default: 85
+\def\downpath{images/downsampled} %path for the downsampled files, default: images/downsampled
+\def\maximagewidth{1000} %Default width in pixel, default: 1000
+%END
+%--------------------------------------
+\usepackage[nomessages]{fp}% http://ctan.org/pkg/fp
+
+\newcommand{\includegraphicsRS}{}
+
+\ifnum\pdfshellescape=1
+% Yes, enabled
+% IFP - image file path
+% IFN - image filename only
+% here resizing at #2*1000 px wide
+\newread\myinput
+% must add default argument [] so typeout works
+\DeclareDocumentCommand{\includegraphicsRS}{ O{\@empty} O{1} m }{ %
+%\renewcommand\includegraphicsRS[2][\@empty]{
+	\FPeval\imagewidthdim{ round((\maximagewidth * #2) :0) } %
+	% run downsampling bash script
+	\ifwindows %If using windows,
+		\immediate\write18{includegraphicsRS.bat #3 \imagewidthdim\space\imagequali\space\downpath} %
+	\else %If not using windows,
+		\immediate\write18{bash includegraphicsRS.sh #3 \imagewidthdim\space\imagequali\space\downpath%
+		} % end write18
+	\fi
+	%
+	%
+	% here we should have downsampled file
+	% retrieve downsample filename first
+	\immediate\openin\myinput=tmpname
+	% The group localizes the change to \endlinechar
+	\bgroup
+	\endlinechar=-1
+	\immediate\read\myinput to \localline
+	% Since everything in the group is local, we have to explicitly make the
+	% assignment global
+	\global\let\myTmpFileName\localline
+	\egroup
+	\immediate\closein\myinput
+	% Clean up after ourselves
+	% \immediate\write18{rm -f -- tmpname}
+	% finally, include downsampled image
+	\includegraphics[#1]{\myTmpFileName}
+} % end renewcommand
+\else
+% No, disabled
+% in this case, \includegraphicsRS is just the usual \includegraphics
+\renewcommand\includegraphicsRS[2][\@empty]{%
+	\includegraphics[#1]{#2}
+}
+\fi
+
+\begin{comment}
+old stuff, not used any longer. Could be useful for future changes though.
+\usepackage{fp}
+
+\newlength{\TOarg} \newlength{\TOunit}
+{\catcode`p=12 \catcode`t=12 \gdef\TOnum#1pt{#1}}
+\newcommand\TOop[2]{\setlength{\TOarg}{#2}%
+	\FPdiv\TOres{\expandafter\TOnum\the\TOarg}{\expandafter\TOnum\the\TOunit}%
+	\FPround\TOres\TOres{#1}}
+\newcommand{\TOspace}{\ }
+\newcommand\TOpt[2][2]{\setlength{\TOunit}{1pt}\TOop{#1}{#2}\TOres\TOspace pt}
+\newcommand\TOin[2][2]{\setlength{\TOunit}{1in}\TOop{#1}{#2}\TOres\TOspace in}
+\newcommand\TOcm[2][2]{\setlength{\TOunit}{1cm}\TOop{#1}{#2}\TOres\TOspace cm}
+\newcommand\TOmm[2][2]{\setlength{\TOunit}{1mm}\TOop{#1}{#2}\TOres\TOspace mm}
+\newcommand\TOem[2][2]{\setlength{\TOunit}{1em}\TOop{#1}{#2}\TOres\TOspace em}
+\newcommand\TOpx[2][2]{\setlength{\TOunit}{1px}\TOop{#1}{#2}\TOres\TOspace px}
+\newcommand\TOptdeux[2][2]{\setlength{\TOunit}{1pt}\TOop{#1}{#2}\TOres}
+
+convert $IFP -resize 50\% images/downsampled/$IFN ; %		textwidth="\the\textwidth" ; %
+TW=${textwidth:0:(-2)} ; %
+VARI="$TW"; %
+convert -resize 2000x -units pixelspercentimeter $IFP -density 120 -pointsize 30 -draw "gravity south-east fill black text 0,5 '$VARI'" downsampled/$IFN ; %
+\end{comment}
+
+
+% END of \includegraphicsRS
+% ***************************************************************
+% ******************************~~~~*****************************

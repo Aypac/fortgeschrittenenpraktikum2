@@ -1,0 +1,26 @@
+\input{../../style/general.tex}
+\input{../../style/graphs.tex}
+\input{../../style/newsymbols.tex}
+
+
+\usepgfplotslibrary{smithchart}
+\pgfplotsset{compat=newest} %1.12
+
+\usepackage{pgfplotstable}
+\usepgfplotslibrary{units}
+\usepackage{siunitx}
+\sisetup{
+	%strict,
+	output-decimal-marker={,},
+	exponent-product=\cdot,
+	detect-all
+}
+
+
+\pgfkeys{
+	/pgfplots/legend cell align=left,
+	/pgf/number format/set thousands separator = {},
+	/pgf/number format/.cd,
+	use comma,
+	1000 sep={},
+}

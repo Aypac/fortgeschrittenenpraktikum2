@@ -1,0 +1,24 @@
+﻿
+*.aux
+*.bbl
+*.blg
+*.lof
+*.log
+*.out
+*.toc
+*.dvi
+*.ps
+*.synctex.gz
+*praktikum.pdf
+
+Vivis Übungskram
+*.gitignore~
+*.qti~
+*.csv~
+*.dat~
+*Thumbs.db
+*.odt#
+*.odp#
+*.ods#
+*tmpname
+*(busy)

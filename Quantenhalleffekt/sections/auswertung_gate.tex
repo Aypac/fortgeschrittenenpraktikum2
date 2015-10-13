@@ -1,0 +1,57 @@
+% !TeX root = ../praktikum.tex
+% !TeX encoding = UTF-8
+% !Tex spellcheck = de_DE
+
+Im abschließenden Versuchsteil sollte erst die Abhängigkeit der Ladungsträgerdichte von der Gatespannung ermittelt werden und dann daraus der Abstand des Gates zum 2DES.
+
+Die Ladungsträgerdichten wurden analog zu den obigen Versuchsteilen aus der Näherung über die Hall-Spannung bestimmt und es ergaben sich die Werte in Tabelle~\ref{tab:gate_ausw}. Wie bereits in den Messergebnissen selber (s. Abbildung\ref{fig:gate_mess}) zu sehe, fällt der Punkt ohne Gatespannung aus der Systematik heraus. Es wurde hier keine eigene Messung gemacht, sondern die Messung aus dem Kapitel~\ref{ch:ac} weiterverwendet. Dies stärkt die Vermutung aus diesem Kapitel, dass die Abweichung zu der Gleichstrommessung des Kapitel~\ref{ch:dc} aus einer elektrostatischen Aufladung des Gates herrührt.
+
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|r|r|l|r|r|}
+		\hline
+		\multicolumn{1}{|l|}{\cellcolor{black!30} $U_{Gate}$ } & \multicolumn{1}{|l|}{\cellcolor{black!30} $b$ } & \multicolumn{1}{|l|}{\cellcolor{black!30} $U_{xx}$ } & \multicolumn{1}{|l|}{\cellcolor{black!30} $n_s$ } & \multicolumn{1}{|l|}{\cellcolor{black!30} $\mu$ } \\
+		\multicolumn{1}{|l|}{\cellcolor{black!30} [$\unit{V}$] } &  \multicolumn{1}{|l|}{\cellcolor{black!30} [\unit{T}] } &
+		\multicolumn{1}{|l|}{\cellcolor{black!30} [$\unit{V}$] } &  \multicolumn{1}{|l|}{\cellcolor{black!30} [$\unitfrac{1}{m^2}$] } & \multicolumn{1}{|l|}{\cellcolor{black!30} [$\unitfrac{m^2}{Vs}$] } \\ \hline
+		$ 200 $  & $ 7,41865\cdot 10^{-4} $  & $ 9,53682\cdot 10^{-7} $  & $ 8,23972\cdot 10^{15} $  & $ 4,77216\cdot 10^{9} $  \\ 
+		$ 150 $  & $ 7,86923\cdot 10^{-4} $  & $ 9,53682\cdot 10^{-7} $  & $ 7,76793\cdot 10^{15} $  & $ 5,06200\cdot 10^{9} $  \\ 
+		\textcolor{gray}{$ 100 $}  & \textcolor{gray}{$ 8,52505\cdot 10^{-4} $}  & \textcolor{gray}{$ 2,76567\cdot 10^{-4} $}  & \textcolor{gray}{$ 7,17036\cdot 10^{15} $}  & \textcolor{gray}{$ 1,89099\cdot 10^{7} $}  \\ 
+		$ 50 $  & $ 9,34121\cdot 10^{-4} $  & $ 1,43052\cdot 10^{-6} $  & $ 6,54387\cdot 10^{15} $  & $ 4,00592\cdot 10^{9} $  \\ 
+		\textcolor{gray}{$ 0 $}  & \textcolor{gray}{$ 8,52914\cdot 10^{-4} $}  & \textcolor{gray}{$ 2,74183\cdot 10^{-4} $}  & \textcolor{gray}{$ 7,16692\cdot 10^{15} $}  & \textcolor{gray}{$ 1,90835\cdot 10^{7} $}  \\ 
+		$ -50 $  & $ 1,12890\cdot 10^{-3} $  & $ 2,86104\cdot 10^{-6} $  & $ 5,41482\cdot 10^{15} $  & $ 2,42060\cdot 10^{9} $  \\ 
+		\textcolor{gray}{$ -100 $}  & \textcolor{gray}{$ 1,26965\cdot 10^{-3} $}  & \textcolor{gray}{$ 7,30876\cdot 10^{-4} $}  & \textcolor{gray}{$ 4,81451\cdot 10^{15} $}  & \textcolor{gray}{$ 1,06570\cdot 10^{7} $}  \\ 
+		$ -150 $  & $ 1,51940\cdot 10^{-3} $  & $ 4,52998\cdot 10^{-6} $  & $ 4,02315\cdot 10^{15} $  & $ 2,05764\cdot 10^{9} $  \\ 
+		\textcolor{gray}{$ -200 $}  & \textcolor{gray}{$ 1,87273\cdot 10^{-3} $}  & \textcolor{gray}{$ 2,16796\cdot 10^{-3} $}  & \textcolor{gray}{$ 3,26410\cdot 10^{15} $}  & \textcolor{gray}{$ 5,29928\cdot 10^{6} $}  \\ \hline
+	\end{tabular}
+	\caption{Berechnete Elektronendichte $n_s$ und -beweglichkeit $\mu$ in Abhängigkeit zu der Gatespannung, aus Platzgründen ohne Fehler. Ausgegraut sind die Werte, die mit einer positiven Magnetfeldrampe gemessen wurden, alle anderen wurden bei einer negativen gemessen.}
+	\label{tab:gate_ausw}
+\end{table}
+
+Anhand der wie in Kapitel \ref{ch:gate} beschrieben aufgenommenen Messdaten zur Gatespannung sollte der Abstand des 2DEG zur Probenoberfläche bestimmt werden. Dazu dient die Annahme, dass das 2DEG und das verwendete Titan-Gate einen Plattenkondensator bilden. Die beiden Schichten von GaAs und AlGaAs dazwischen bilden hierfür ein nicht-leitendes Dielektrikum. 
+Durch das Anlegen der Gatespannung wurde die Ladungsträgerdichte im 2DEG verändert.  Dies kann durch das Modell eines Plattenkondensators erklärt werden: In einem Plattenkondensator der Fläche A ist die Anzahl der Ladungsträger $N_s=n_s \cdot A$ gegeben durch die Gleichung~\eqref{eq:kondensator_ladung}. Dabei kann $\epsilon \approx 12$ angenommen werden, da die verwendete Probe im wesentlichen AlGaAs mit einem Aluminiumanteil von 33 \% enthält. Anhand der beiden Gleichungen und der Einsatzspannung $U_{th}$ kann nun die Abhängigkeit der Ladungsträgerdichte von der Gatespannung angegeben werden durch Gleichung~\eqref{eq:kondens_lad_und_abst}.\\
+
+Um den Abstand des Gates zu bestimmen, wurde eine Lineare Regression unter Auslassung des Messwertes bei $U_{Gate}=\unit[0]{mV}$ über die Elektronendichte durchgeführt. Mit der Regressionsformel $n_s=a\cdot U_{Gate} + b$ wurden folgende Parameter errechnet:
+\begin{align}
+a = ( 0,012326 \pm 0,00031)\cdot 10^{15} ~ \unit{(m^2 \cdot mV)^{-1}}\\
+b=( 5,90481 \pm 0,04254 )\cdot 10^{15} ~ \unitfrac{1}{m^2}
+\end{align}
+%B (y-intercept) = 5.9048076827751e+15 +/- 4.2539634405612e+13
+%A (slope) = 1.2325863159878e+13 +/- 3.1066556469302e+11
+Durch Umformung der erwähnten Gleichung~\eqref{eq:kondens_lad_und_abst} ergibt sich der Abstand zu
+\begin{align}
+& n_s=\frac{\epsilon \epsilon_0}{d}\cdot U_{Gate} - \frac{\epsilon \epsilon_0}{n_s} \cdot U_{th}= a \cdot U_{Gate} + b \\
+\Rightarrow~ & a=\frac{\epsilon \epsilon_0}{d}\\
+\Leftrightarrow~ & d=\frac{\epsilon \epsilon_0}{a} \cong \unit[(53,80 \pm 1,32)]{nm}
+\end{align}\\
+
+Die Werte aus Tabelle~\ref{tab:gate_ausw} sind auch in Abbildung~\ref{fig:gate_ausw} aufgetragen. Da die Werte der Längsspannung $U_{xx}$ bei hochfahrendem Magnetfeld stark von jenem bei herunterfahrendem abweichen, wurden diese mit dem Faktor $200$ multipliziert und als $\mu_{\uparrow}\cdot 200$ geplottet. Woher dieser Effekt kommt konnte nicht geklärt werden.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=1]{graphs/gate/auswertung.pdf}
+	\caption[Auswertung der Gatespannungsvariation]{
+		Berechnete Elektronendichte $n_s$ und -beweglichkeit $\mu$ in Abhängigkeit zu der Gatespannung. $\mu_{\uparrow}$ entsprechen den Werten, die mit einer positiven Magnetfeldrampe gemessen wurden, die Werte $\mu_{\downarrow}$ wurden bei einer negativen gemessen. Die blaue Linie ist die Lineare Regression der blauen Kreise unter Auslassung des $U_{Gate}=\unit[0]{mV}$-Wertes, siehe Text.
+	}
+	\label{fig:gate_ausw}
+\end{figure}

@@ -1,0 +1,141 @@
+% !TeX encoding = UTF-8
+% !Tex spellcheck = de_DE
+
+%begin:Silbentrennung ****
+\RequirePackage{hyphsubst}
+\HyphSubstIfExists{ngerman-x-latest}{\HyphSubstLet{ngerman}{ngerman-x-latest}}{} 
+\listfiles
+%end:Silbentrennung ******
+
+\documentclass[12pt,a4paper]{article}
+\input{mystyle.tex}
+\usepackage[left=2.50cm, right=2.50cm, top=2.50cm, bottom=2.00cm]{geometry}
+
+
+\usepackage[ngerman]{babel}
+
+%test
+\begin{comment}
+\usepackage{titlesec}
+\titleformat{\subsection}[runin]% runin puts it in the same paragraph
+{\normalfont\bfseries}% formatting commands to apply to the whole heading
+{\thesubsection}% the label and number
+{0.5em}% space between label/number and subsection title
+{}% formatting commands applied just to subsection title
+[]% e.g. [.] punctuation or other commands following subsection title\frac{•}{•}
+\end{comment}
+
+
+\linespread{1.1}
+\usepackage{microtype}
+
+%\addto\captionsgerman{ \renewcommand{\figurename}{\small{\textbf{Abb.}}}
+%\captionsetup{figurewithin = section}
+%\captionsetup{font=small, labelfont=bf} }
+
+
+\begin{document}
+	
+	\pagenumbering{Roman}
+	%TODO REMOVE
+	\textbf{TODO}
+	\input{todo.tex}
+	
+	
+	%Metadaten
+	\title{\textit{Fortgeschrittenenpraktikum}\\\textbf{Optische Fouriertransformation} }
+	\date{August 2015}
+	\author{Vivien Sleziona \footnote{vivi.s@arcor.de}\\ Regina Schauer \footnote{regina.schauer@web.de}\\ René Vollmer \footnote{rene.vollmer@studium.uni-hamburg.de} \\ \\Betreut durch\\ Kai Morgener\footnote{kmorgene@physnet.uni-hamburg.de}}
+	
+	\maketitle
+	
+	\begin{center} 
+		\bigskip
+		\bigskip
+		
+		\begin{minipage}{0.75\textwidth}
+			\textbf{[Zusammenfassung]}
+			\input{sections/abstract.tex}
+		\end{minipage}
+	\end{center}
+	
+	%\vfill
+	\newpage
+	
+	\tableofcontents
+	\vfill
+	\newpage
+	\clearpage	
+	
+	\pagenumbering{arabic}
+	
+	\section{Theoretische Grundlagen}
+	\input{sections/theory.tex}
+
+	
+	\newpage
+	\clearpage
+	
+	\section{Experimentelle Durchführung}
+		Der Versuch der optischen Fouriertransformation besteht aus drei Versuchsteilen. Zunächst wurde die Einkopplung des Laserstrahls im Faserkopplungsaufbau optimiert und die Effizienz der Einkopplung und der Faser mithilfe einer Photodiode gemessen. \\
+		Hierzu wurde eine Photodiode mit einem ausgewählten Widerstand so aufgebaut, dass die Lichtleistung über ein Oszilloskop gemessen werden konnte.\\
+		Im letzten Versuchsteil wurde als optischer Pfad hinter dem Auskoppler der sogenannte 4f-Aufbau aufgebaut und optimiert. Mit einer Kamera wurden die Bilder mehrerer Objekte und deren Abbildungen in der Fourierebene aufgenommen. Für manche Objekte wurde zusätzlich zu einer Abbildung in der Fourierebene eine Reihe an Aufnahmen in der Abbildungsebene gemacht, wobei in die Fourierebene verschiedene Filter eingesetzt wurden.   
+		
+	\subsection{Einkopplung}
+	\input{sections/experiment_einkopplung.tex}
+	\subsection{Lichtsensor}
+	\input{sections/experiment_lichtsensor.tex}
+	\subsection{Abbildung und Fourierbild}
+	\input{sections/experiment_abbildung+fourier.tex}
+	
+	\newpage
+	\clearpage
+	
+	\section{Auswertung}
+	\label{chap:auswertung}
+	\input{sections/auswertung.tex}
+	
+	
+	%\section{Results and Discussion} %Messergebnisse mit Fehlerdiskussion
+	%\input{praktikum_results.tex}
+	
+	%\subsection{cite example}  Das will ich belegen \cite[p. 2]{erstesBuch}
+	
+	\section{Fazit} %Diskussion der physikalischen Ergebnisse
+	
+	\input{sections/fazit.tex}
+	
+	\newpage
+	\clearpage
+	
+	%\section{} %Zusammenfassung
+	
+	
+	
+	
+	\newpage
+	\clearpage
+	
+	%\pagenumbering{Roman}
+	\pagenumbering{Alph}
+	
+	
+	%\nocite{bibid}
+	\addcontentsline{toc}{section}{Literatur}
+	\bibliographystyle{deIEEEtran}
+	\bibliography{IEEEabrv,praktikum}
+	
+	\newpage
+	
+	\listoffigures %lof
+	\addcontentsline{toc}{section}{Abbildungsverzeichnis}
+	%\tableofcontents %toc
+	%\listoftables %lot
+	
+	\newpage
+	\clearpage
+	
+	\section{Anhang}
+	\input{sections/appendix.tex}
+	
+\end{document} 

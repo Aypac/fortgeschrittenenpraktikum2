@@ -1,0 +1,63 @@
+% !TeX encoding = UTF-8
+% !TeX spellcheck = de_DE
+
+\documentclass[12pt,border=0mm]{standalone}
+\input{../gammastyle.sty}
+\def\probelength{600} %µm
+\def\probewidth{100} %µm
+\def\probecurrent{(-(\thisrowno{5})*10^6)} %µA
+\def\unitfactor{10^3} %
+\def\UhallEq{(abs(\thisrowno{1})/\probecurrent)*\unitfactor}
+\def\UxxEq{\thisrowno{4}*\probewidth/(\probelength*\probecurrent)*\unitfactor} %kOhm
+
+
+\begin{document}
+	
+	\begin{tikzpicture}
+	\pgfplotsset{
+		scale only axis,
+		%scaled x ticks=base 10:3,
+		%xmin=0, xmax=0.06
+	}
+	
+	\begin{axis}[
+		axis y line*=left,
+		width=13.5cm, height=6.5cm,
+		xmin=-2,xmax=2, ymin=0, %ymax=14,
+		xlabel={Magnetfeld [T]},
+		ylabel={Hallwiderstand [\unit{$k\Omega$}]},
+		xtick={-2,-1.5,-1,-0.5,0,.5,1,1.5,2},
+	]
+	
+		\addplot[color=black!60, mark=\empty] table[skip first n=1, x index=0, y expr={\UhallEq}] {../data/wechselspannung/2Kelvin-1V-full_range_10MOhm.dat};
+		\addplot[color=green, mark=\empty] table[skip first n=1, x index=0, y expr={\UhallEq}] {../data/wechselspannung/2Kelvin-1V-(+-2T)_range_10MOhm_38Hz.dat};
+		%\addlegendentry{$U_H$}
+	\end{axis}
+	
+	\begin{axis}[
+		axis y line*=right,
+		width=13.5cm, height=6.5cm,
+		xmin=-2,xmax=2,
+		ymin=0, %ymax=1-
+		axis x line=none,
+		xlabel=none,
+		xticklabel=none,
+		ylabel={Längswiderstand [\unit{$\Omega$}]},
+		legend style={
+			at={(0,0)},
+			anchor=north,
+			at={(axis description cs:.5,.95)}
+		}
+	]
+		\addplot[color=green, mark=\empty] {-1}; %dummy
+		\addlegendentry{Hallwiderstand $\rho_H$}
+		
+		\addplot[color=black!60, mark=\empty] table[skip first n=1, x index=0, y expr={(\UxxEq)*1000}, forget plot]  {../data/wechselspannung/2Kelvin-1V-full_range_10MOhm.dat};
+		\addplot[color=red, mark=\empty] table[skip first n=1, x index=0, y expr={(\UxxEq)*1000}]  {../data/wechselspannung/2Kelvin-1V-(+-2T)_range_10MOhm_38Hz.dat};
+		\addlegendentry{Längswiderstand $\rho_{xx}$}
+	
+	\end{axis}
+	\end{tikzpicture}
+	
+	
+\end{document}
