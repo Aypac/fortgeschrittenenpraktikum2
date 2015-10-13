@@ -29,7 +29,9 @@
 		xtick={-2,-1.5,-1,-0.5,0,.5,1,1.5,2},
 	]
 		
-		\addplot[color=green, mark=\empty] table[x index=0, y expr={\UhallEq}] {../data/gleichspannung/2Kelvin-1uA-(+-2)_range.dat};
+		\addplot[color=black!70, mark=\empty, forget plot] table[x index=0, y expr={\UhallEq}] {../data/gleichspannung/2Kelvin-1uA-full_range.dat};
+			
+		\addplot[color=green, mark=\empty, forget plot] table[x index=0, y expr={\UhallEq}] {../data/gleichspannung/2Kelvin-1uA-(+-2)_range.dat};
 		%\addlegendentry{$U_H$}
 	\end{axis}
 	
@@ -51,6 +53,9 @@
 	]
 		\addplot[color=green, mark=\empty] {-1}; %dummy
 		\addlegendentry{Hallwiderstand $\rho_H$}
+		
+		\addplot[color=black!70, mark=\empty, forget plot] table[x index=0, y expr={\UxxEq * 1000}] {../data/gleichspannung/2Kelvin-1uA-full_range.dat};
+		\addlegendentry{Längswiderstand $\rho_{xx}$}
 		
 		\addplot[color=orange, mark=\empty] table[x index=0, y expr={\UxxEq * 1000}] {../data/gleichspannung/2Kelvin-1uA-(+-2)_range.dat};
 		\addlegendentry{Längswiderstand $\rho_{xx}$}
