@@ -2,12 +2,18 @@
 % !TeX encoding = UTF-8
 % !Tex spellcheck = de_DE
 
+\subsection{Lichtsensor}
+Um aus dem Spannungsabfall über den zu der Photodiode parallel geschalteten Widerstand eine Lichtleistung bestimmen zu können ist ein lineares Verhalten von Vorteil. So kann direkt aus der Spannung mittels eines Faktors die Leistung berechnet werden. Mit einem Widerstand von $\unit[1]{k\Omega}$ ist ein lineares Verhalten nur im Bereich bis etwa \unit[0,7]{mW} zu beobachten. Darüber hinaus sättigt die Spannung. Vermutlich ließe sich mit einer Wertetabelle (erstellt mit Hilfe des kommerziellen Powermeters) auch weit über diesen Bereich hinaus sinnvoll die Lichtleistung berechnen.
 
-Die Auswertung dieses Versuches bestand daran, die im 4f-Aufbau erzeugten Abbildungen mit den in der Fourierebene aufgenommen Beugungsbildern zu vergleichen und qualitativ zu erklären. Weiterhin wurden, durch verschiedene  in der Fourierebene eingesetzte Filter, die Beugungsbilder manipuliert. Die Auswirkungen der verschiedenen Filter wurde ebenfalls beschreiben und diskutiert.
+Für den $\unit[500]{\Omega}$ Widerstand ist bis zur maximal vermessenen Lichtleistung $P_L$ von etwa \unit[1,1]{mW} keine Sättigung festzustellen (vgl. Abb.~\ref{fig:photodiode}). Für den vorgesehen Verwendungszweck empfiehlt sich daher die Verwendung eines Widerstandswertes in der Nähe von $\unit[500]{\Omega}$. Mit Hilfe der Software \textit{QtiPlot} wurde eine Lineare Regression mit der Formel $U=a\cdot P_L + b$ über die aufgenommenen Datenpunkte ausgeführt. Daraus ergeben sich die Werte $b=(5,2346 \pm 1,1515) \unit{mW} $ und $a= 152,6614\pm 1,7095) \unitfrac{W}{V}$. Die Standardabweichung liegt bei $1,28$.\\
+
+
+Das beobachtet Verhalten lässt sich sehr gut erklären, indem man einen PN-Übergang in der Photodiode mit einer Bandlücke von etwa \unit[500]{mV} annimmt. Für eine feste Frequenz kann die Lichtleistung direkt in die Anzahl der Photonen $N_{Ph}$ umgerechnet werden: $N_{Ph} = \nicefrac{P_L}{E_{Ph}}$, wobei $E_{Ph}=\hbar \omega_{Ph}$ die Energie pro Photon ist. Jedes dieser Photonen treibt mit einer Wahrscheinlichkeit, entsprechend der Quanteneffizienz des Überganges für die Frequenz der Photonen $\omega_{Ph}$, genau einen elektronischen Übergang. So führt eine bestimmt Leistung zu einer bestimmten Anzahl angeregter Elektronen. Dies entspricht bei kompletter Besetzungsinversion der Zustände einem konstantem Strom und somit Spannungsabfall über den Widerstand. Sobald dieser Widerstand jedoch so groß gewählt wird, dass der Spannungsabfall in etwa dem Bandlückenpotential entspricht, wird die Besetzungsinversion aufgehoben. Dadurch sinkt die Quanteneffizienz und folglich der Stromfluss. Folglich sinkt die abgefallene Spannung über den Widerstand. Dies erklärt das lineare Verhalten bei kleinen Widerständen beziehungsweise Lichtleistungen und das Sättigungsverhalten ab etwa \unit[250]{mV}.
 
 \subsection{Erzeugung von Beugungsbilder von verschiedenen Gittern}
 
-Im ersten Schritt wurden in der Abbildungsebene vertikale Gitter und Kreuzgitter im 4f-Aufbau mit einer größtmöglichen Schärfe erzeugt (Abb.~\ref{fig:gitter_und_spektrum} a, \ref{fig:kreuzgitter_und_spektrum} a). Gitter sind Objekte, die aus Einzelspalten in gleichmäßigen Abständen zusammengesetzt sind. Da das Licht im vertikalen Gitter nur in der vertikalen Richtung gebeugt wird, bilden sich die Intensitätsschwankungen ausschließlich in horizontaler Richtung aus. Somit konnte in der Fourierebene eine senkrecht auf dem Gitter stehende Punktreiche aus Interferenzmaxima und –minima (Abb.~\ref{fig:gitter_und_spektrum}) abgebildet werden.
+In diesem Versuchsteil wurden in der Abbildungsebene vertikale und Kreuzgitter im 4f-Aufbau mit einer größtmöglichen Schärfe erzeugt (Abb.~\ref{fig:gitter_und_spektrum} a, \ref{fig:kreuzgitter_und_spektrum} a). %Gitter sind Objekte, die aus Einzelspalten in gleichmäßigen Abständen zusammengesetzt sind.
+Da das Licht im vertikalen Gitter nur in der vertikalen Richtung gebeugt wird, bilden sich die Intensitätsschwankungen in der Fourierebene ausschließlich in horizontaler Richtung aus. Somit wurde dort eine senkrecht zu dem Gitter stehende Punktreihe aus Interferenzmaxi- und -minima (Abb.~\ref{fig:gitter_und_spektrum}) beobachtet werden, vergleich Abbildung~{fig:gitter_und_spektrum}.
 	
 \begin{figure}[ht]
 	\centering
@@ -34,7 +40,8 @@ darstellte. Da das Verschiebungstheorem der Fouriertransformation besagt (siehe 
 \end{figure}
 
 Da wir in der Objektebene ein Dia als Quelle unserer Abbildungen
-verwendet haben und dieses Dia wie in Abb. 8 dargestellt (Objekt 3) in der untersten Reihe drei verschiedene Kreuzgitter und darüber weitere horizontale und vertikale Gitter aufwies,
+verwendet haben und dieses Dia wie in Abb. 8%TODO REF!!!
+ dargestellt (Objekt 3) in der untersten Reihe drei verschiedene Kreuzgitter und darüber weitere horizontale und vertikale Gitter aufwies,
 wurden diese ebenfalls angestrahlt und lieferten die zusätzlichen Kreuze. Um diese zu unterbinden, wurden die anderen Objekte, auch bei den nachfolgenden verwendeten Objekten, mit schwarzen Klebeband überklebt. Durch diese Modifizierung der Dias konnte das erwartete einzige Kreuz erzeugt werden (Abb.~\ref{fig:gitter_und_spektrum} b).
 
 Sowohl bei dem vertikalen Gitter als auch bei dem Kreuzgitter ist in der Fourierebene im Zentrum der Beugungsbilder eine maximale Intensität zu erkennen. Dieses Maximum entsteht durch das Kreuzen der mittleren horizontalen oder im Kreuzgitter der vertikalen und
@@ -112,8 +119,11 @@ Die Zahl 4 besteht lediglich aus Linien, wobei neben horizontalen und vertikalen
 
 \subsection{Erzeugung von Beugungsbildern des Fourierhauses}
 
-Das Fourierhaus ist ein Haus, welches aus Gittern mit gleichen Gitterkonstanten und unterschiedlicher Ausrichtungen der Gitter besteht (Abb. 19a). Die verschiedenen Gitter entsprechen verschiedenen Bauelementen im Haus. Die Wand besteht aus einem vertikalen Gitter, das Dach aus einem horizontalen Gitter und die Tür und der Schornstein werden aus diagonalen Gittern in entgegen gerichteten Richtung erstellt. Die Fouriertransforamtion dieses
-Fourierhauses ergibt das in Abb. 19b dargestellte Beugungsbild. Die vier verschiedenen Orientierung der Gitter sind in der Fourierebene ebenfalls durch vier verschiedene Orientierungen dargestellt, die jeweils senkrecht auf der Objektebene stehen. Da die Gitterkonstante des Fourierhauses im Vergleich zu den in Abb. 13a und 14a gezeigten Gittern sehr viel kleiner ist, sind die Abstände zwischen den Maxima im Fourierspektrum deutlich größer (siehe 1.1. Ähnlichkeit) und die Intensität im Zentrum erhöht.
+Das Fourierhaus ist ein Haus, welches aus Gittern mit gleichen Gitterkonstanten und unterschiedlicher Ausrichtungen der Gitter besteht (Abb. 19a%TODO REF!!!
+). Die verschiedenen Gitter entsprechen verschiedenen Bauelementen im Haus. Die Wand besteht aus einem vertikalen Gitter, das Dach aus einem horizontalen Gitter und die Tür und der Schornstein werden aus diagonalen Gittern in entgegen gerichteten Richtung erstellt. Die Fouriertransforamtion dieses
+Fourierhauses ergibt das in Abb. 19b %TODO REF!!!
+ dargestellte Beugungsbild. Die vier verschiedenen Orientierung der Gitter sind in der Fourierebene ebenfalls durch vier verschiedene Orientierungen dargestellt, die jeweils senkrecht auf der Objektebene stehen. Da die Gitterkonstante des Fourierhauses im Vergleich zu den in Abb. 13a und 14a gezeigten Gittern sehr viel kleiner ist, sind die Abstände zwischen den Maxima im Fourierspektrum deutlich größer (siehe 1.1. Ähnlichkeit%TODO REF!!!
+ ) und die Intensität im Zentrum erhöht.
 
 \begin{figure}[h]
 	\centering
@@ -143,7 +153,8 @@ sichtbar wurden (Abb. \ref{fig:fourierhaus_und_spektrum} c, d). Als letztes wurd
 
 \subsection{Optische Filterung durch Hochpass-, Tiefpass- und Breitbandfilter}
 
-Als Erstes wird ein Breitbandfilter bei der Zahl vier eingesetzt. Da der Breitbandfilter sowohl kleinere und größere Frequenzen herausfiltert und somit nur eine bestimmtes Frequenzintervall durchlässt, werden die Flächen unterdrückt und Ränder als Doppellinien dargestellt. Beim Breitbandfilter C (Abb?c) konnte dieser Effekt am besten beobachtet werden (Abb. \ref{fig:fourierhaus_mit_filtern}, b). Bei den Breitbandfilter B und A ist die Filterwirkung so stark, dass nur
+Als Erstes wird ein Breitbandfilter bei der Zahl vier eingesetzt. Da der Breitbandfilter sowohl kleinere und größere Frequenzen herausfiltert und somit nur eine bestimmtes Frequenzintervall durchlässt, werden die Flächen unterdrückt und Ränder als Doppellinien dargestellt. Beim Breitbandfilter C (Abb %TODO REF!!!
+c) konnte dieser Effekt am besten beobachtet werden (Abb. \ref{fig:fourierhaus_mit_filtern}, b). Bei den Breitbandfilter B und A ist die Filterwirkung so stark, dass nur
 ein sehr kleiner Frequenzintervall durchgelassen wird und dadurch die Zahl vier kaum noch zu erkennen ist (Abb. \ref{fig:fourierhaus_mit_filtern} c, d).
 
 \begin{figure}[h]
