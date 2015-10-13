@@ -37,6 +37,7 @@
 	
 	\pagenumbering{Roman}
 	%TODO REMOVE
+	\the\textwidth\newline\the\linewidth\newline
 	\textbf{TODO}
 	\input{todo.tex}
 	
@@ -87,8 +88,8 @@
 	\subsection{Abbildung und Fourierbild}
 	\input{sections/experiment_abbildung+fourier.tex}
 	
-	\newpage
 	\clearpage
+	\newpage
 	
 	\section{Auswertung}
 	\label{chap:auswertung}
@@ -100,8 +101,10 @@
 	
 	%\subsection{cite example}  Das will ich belegen \cite[p. 2]{erstesBuch}
 	
-	\section{Fazit} %Diskussion der physikalischen Ergebnisse
+	\clearpage
+	\newpage
 	
+	\section{Fazit} %Diskussion der physikalischen Ergebnisse
 	\input{sections/fazit.tex}
 	
 	\newpage
