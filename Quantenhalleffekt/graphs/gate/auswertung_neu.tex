@@ -1,0 +1,69 @@
+% !TeX encoding = UTF-8
+% !TeX spellcheck = de_DE
+
+\documentclass[12pt,border=0mm]{standalone}
+\input{../gammastyle.sty}
+
+\def\xerr{1}
+
+\begin{document}
+	
+	\begin{tikzpicture}
+	\pgfplotsset{
+		scale only axis,
+		%scaled y ticks=base 10:0,
+		%xmin=0, xmax=0.06
+	}
+	
+	\begin{axis}[
+		axis y line*=left,
+		width=13.5cm, height=6.5cm,
+		xmin=-210,xmax=210, ymin=0, %ymax=415,
+		xlabel={Gatespannung $ U_{Gate} $ [mV]},
+		ylabel={Elektronenbeweglichkeit $\mu$ [$\unitfrac{m^2}{Vs}$]},
+	]
+	
+	\addplot[color=red, mark=x, only marks,
+	%error bars/.cd, error mark=-, x dir=both, x explicit, y dir=both, y explicit
+	]
+	table[x index=0, y index=6, skip first n=1, x error expr=\xerr, y error index=7
+	] {../data/gate/ns_und_mu_neu.csv};
+	
+	\end{axis}
+	
+	\begin{axis}[
+		axis y line*=right,
+		width=13.5cm, height=6.5cm,
+		xmin=-210,xmax=210,
+		%ymin=0, %ymax=415,
+		axis x line=none,
+		%ymin=0, ymax=100,
+		xlabel=none,
+		xticklabel=none,
+		ylabel={Elektronendichte $n_s$ [$\unitfrac{1}{m^2}$]},
+		legend pos=north west,
+	]
+		
+		\addplot[color=red, mark=x, only marks, domain=-300:-299, samples=2] {0}; %dummy
+		\addlegendentry{Beweglichkeit $\mu$}
+		
+		
+		%\addplot[color=green!80!black, mark=\empty, domain=265:395, samples=250] {abs(cos(x))};
+		%\addlegendentry{$cos(\vartheta)$}
+		
+		\addplot[color=blue, mark=o, only marks,
+		%error bars/.cd, error mark=-, x dir=both, x explicit, y dir=both, y explicit
+		]
+		table[x index=0, y index=4, skip first n=1, x error expr=\xerr, y error index=5
+		] {../data/gate/ns_und_mu_neu.csv};
+		\addlegendentry{Dichte $n_s$}
+		
+		\addplot[color=blue, mark=\empty, domain=-205:205] {(((1.2325863159878*10^13)*x)+5.9048076827751*10^15)};
+		%B (y-intercept) = 5.9048076827751e+15 +/- 4.2539634405612e+13
+		%A (slope) = 1.2325863159878e+13 +/- 3.1066556469302e+11
+	
+	\end{axis}
+	\end{tikzpicture}
+	
+	
+\end{document}

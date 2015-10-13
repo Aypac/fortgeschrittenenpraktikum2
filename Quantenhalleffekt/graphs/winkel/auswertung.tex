@@ -4,7 +4,7 @@
 \documentclass[12pt,border=0mm]{standalone}
 \input{../gammastyle.sty}
 
-\def\yerr{{(1/(y+0.01))-(1/y)}}
+\def\yerr{y*0.01}
 \def\xerr{3}
 
 \begin{document}
@@ -34,17 +34,18 @@
 		\addplot[color=green!20!yellow!80!black, mark=\empty, domain=265:395, samples=250] {abs(cos(x-3))};
 		\addlegendentry{$cos(\vartheta-3^\circ)$}
 		
-		\addplot[color=blue, mark=o, only marks,
-		error bars/.cd, error mark=-, x dir=both, x explicit, y dir=both, y explicit
-		]
-		table[x index=0, x error expr=\xerr, y error expr=\yerr]  {../data/winkel/auswertung.dat};
-		\addlegendentry{Minumum 1}
-		
 		\addplot[color=red, mark=x, only marks,
 		error bars/.cd, error mark=-, x dir=both, x explicit, y dir=both, y explicit
 		]
 		table[ x index=0, y index=7, x error expr=\xerr, y error expr=\yerr]  {../data/winkel/auswertung.dat};
+		\addlegendentry{Minumum 1}
+		
+		\addplot[color=blue, mark=o, only marks,
+		error bars/.cd, error mark=-, x dir=both, x explicit, y dir=both, y explicit
+		]
+		table[x index=0, x error expr=\xerr, y error expr=\yerr]  {../data/winkel/auswertung.dat};
 		\addlegendentry{Minumum 2}
+		
 	
 	\end{axis}
 	\end{tikzpicture}

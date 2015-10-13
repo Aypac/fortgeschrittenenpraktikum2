@@ -53,7 +53,7 @@
 		\addlegendentry{Hallwiderstand $\rho_H$}
 		
 		\addplot[color=black!60, mark=\empty] table[skip first n=1, x index=0, y expr={(\UxxEq)*1000}, forget plot]  {../data/wechselspannung/2Kelvin-1V-full_range_10MOhm.dat};
-		\addplot[color=red, mark=\empty] table[skip first n=1, x index=0, y expr={(\UxxEq)*1000}]  {../data/wechselspannung/2Kelvin-1V-(+-2T)_range_10MOhm_38Hz.dat};
+		\addplot[color=orange, mark=\empty] table[skip first n=1, x index=0, y expr={(\UxxEq)*1000}]  {../data/wechselspannung/2Kelvin-1V-(+-2T)_range_10MOhm_38Hz.dat};
 		\addlegendentry{Längswiderstand $\rho_{xx}$}
 	
 	\end{axis}

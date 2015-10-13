@@ -44,7 +44,7 @@ Die Zustandsdichte D in einem Band ergibt sich aus der Anzahl der Elektronenzust
 \end{equation}
 
 Mit dem Probenvolumen V und der Teilchenzahl N. Der rechte Term folgt dabei aus der Zweidimensionalität des Probenvolumens und aus Gleichung \ref{eq:energie_2DEG}.
-Die Zustandsdichte D(E) in dem Leitungsband eines 2DEGs ist also konstant mit dem Entartungsfaktor g. Für die Spinentartung ist $g_s=2$. Im senkrechten Magnetfeld ist die Bewegung der Elektronen auch in der xy-Ebene festgelegt.
+Die Zustandsdichte D(E) in dem Leitungsband eines 2DEGs ist also konstant mit dem Entartungsfaktor $g$. Für die Spinentartung ist $g=2$. Im senkrechten Magnetfeld ist die Bewegung der Elektronen auch in der xy-Ebene festgelegt.
 
 Wenn nun ein Magnetfeld angelegt wird, werden die freien Elektronen klassisch durch die Lorentz-Kraft auf Kreisbahnen abgelenkt. Diese lässt sich durch die Überlagerung zweier senkrecht aufeinander stehenden harmonischen Schwingungen beschreiben, die senkrecht zueinander in der xy-Ebene schwingen. Der Abstand der Energiewerte ist durch $\hbar \omega_c$ gegeben,
 mit der Kreisfrequenz:
@@ -143,7 +143,7 @@ Aufgrund der in z-Richtung eingeschränkten Elektronenbewegung innerhalb des 2DE
 \end{equation}
 
 Hierbei entsprechen die Einträge auf der Diagonalen des Tensors der spezifischen Leitfähigkeit in Richtung des elektrischen Feldes \cite[Kap.3.6]{kopitzki_einfuhrung_2009}. Die Einträge auf der Nebendiagonalen sind nur für $B\neq0$ nicht Null.
-Den spezifischen Widerstandstensor erhält man Matrixinversion.
+Den spezifischen Widerstandstensor erhält man durch Matrixinversion.
 
 \begin{equation}
 \rho=\sigma^{-1}=\frac{1}{\sigma_{xx}\sigma_{yy} - \sigma_{xy}\sigma_{yx}}=\begin{pmatrix}
@@ -152,8 +152,8 @@ Den spezifischen Widerstandstensor erhält man Matrixinversion.
 \label{eq:widerstandstensor_matrixinversion}
 \end{equation}
 
-Im hier durchgeführten Experiment wurde die Richtung des Stroms festgelegt und aus den gemessenen Daten zunächst die Komponenten des spezifischen Widerstandstensors $\vec{\rho}$ bestimmt. 
-Diese erhält man aus
+Im hier durchgeführten Experiment wurde die Richtung des Stroms festgelegt und aus den gemessenen Spannungen zunächst die Komponenten des spezifischen Widerstandstensors $\vec{\rho}$ bestimmt. 
+Aus diesen erhält man dann die Elektronenbeweglichkeit $\mu$ und -dichte $n_s$.
 
 \begin{equation}
 \rho_{xx}=\rho_{yy}=\frac{1}{e\mu n_s}
@@ -161,7 +161,7 @@ Diese erhält man aus
 \end{equation}
 und
 \begin{equation}
-\rho_{xy}=-\rho_{yx}=\frac{1}{\mu n_s}B
+\rho_{xy}=-\rho_{yx}=\frac{1}{e n_s}B
 \label{eq:widerst_tensor_xy_yx}
 \end{equation}
 
@@ -233,14 +233,14 @@ Daraus und aus den Gleichungen \ref{eq:widerst_tensor_xx_yy} und \ref{eq:widerst
  \label{eq:bewegl_masse}
  \end{equation}
  
- Ein alternativer Ansatz, welcher in diesem Versuch für die Auswertung verwendet wurde um die Ladungsträgerdichte zu bestimmen, ist der über die Shubnikov-de Haas-Oszillation. Hierzu wird die Längsspannung $U_xy$ gegen das reziproke Magnetfeld $\nicefrac{1}{B}$ aufgetragen und jedem Minimum der Oszillation ein Füllfaktor $\nu$ zugeordnet. Die Ladungsträgerdichte hängt wie folgt mit dem Füllfaktor zusammen
+ Ein alternativer Ansatz, welcher in diesem Versuch für die Auswertung verwendet wurde um die Ladungsträgerdichte zu bestimmen, ist der über die Shubnikov-de Haas-Oszillation. Hierzu wird die Längsspannung $U_{xy}$ gegen das reziproke Magnetfeld $\nicefrac{1}{B}$ aufgetragen und jedem Minimum der Oszillation ein Füllfaktor $\nu$ zugeordnet. Die Ladungsträgerdichte hängt wie folgt mit dem Füllfaktor zusammen
  
  \begin{align}
  	\nu = \frac{hn_s}{eB} & & \Leftrightarrow & & n_s = \frac{eb}{h}
  	\label{eq:sdh_osz_naeherung}
  \end{align}
  
- Dabei ist h Plancksche Wirkungsquantum, e die Elementarladung und B die Stärke des Magnetfeldes. 
+Dabei ist $h$ Plancksche Wirkungsquantum, $e$ die Elementarladung, $B$ die Stärke des Magnetfeldes und $b$ die Steigung im $\nu$-$\nicefrac{1}{B}$-Diagramm.
  
  
  
@@ -255,7 +255,7 @@ R_H=\frac{1}{\nu}\cdot 25812,8\Omega =\frac{1}{\nu} \frac{h}{e^2}
 \label{eq:qh_plateauwerte}
 \end{equation}
 
-Dabei ist $\nu$ ein Füllfaktor, $h$ das Planksche Wirkungsquantum und e die Elementarladung. 
+Dabei ist $\nu$ der Füllfaktor, $h$ das Planksche Wirkungsquantum und $e$ die Elementarladung. 
 
 \begin{figure}[h]
 	\centering
@@ -268,7 +268,7 @@ Während sich unter den Bedingungen des Quanten-Hall-Effekt für den Hallwiderst
 
 \subsubsection{Randkanalmodell}
 
-Um die beiden hier betrachteten Effekte erklären zu können, wird das sogenannte Randkanalmodell verwendet. Dabei handelt es sich um eine Näherung, bei der am Rand der Probe ein Potential erzeugt wird, welches zu einer Erhöhung der Landau-Niveaus führt. Obwohl die Fermi-Energie $E_F$ im Inneren der Probe zwischen zwei Landau-Niveaus liegen, können so am Probenrand auch elektronische Zustände nahe der Fermi-Energie entstehen. Es bilden sich also eindimensionale Randkanäle zum Transport der Ladungsträger aus. Diese können sich nur in eine Richtung bewegen, welche von der Orientierung des Magnetfelds abhängt. Die chiralen Zustände sind durch Einwirken des Magnetfeldes über die Lorentzkraft auf geladene Teilchen recht stabil und Ladungsträger können dadurch trotz  eventueller Stöße mit Phononen wieder auf ihre Bahn finden. Dies ist in der folgenden Abbildung \ref{fig:Randkanalmodell_Anleitungsheft} dargestellt.
+Um die beiden hier betrachteten Effekte erklären zu können, wird das sogenannte Randkanalmodell verwendet. Dabei handelt es sich um eine Näherung, bei der am Rand der Probe ein Potential angenommen wird, welches zu einer Erhöhung der Landau-Niveaus führt. Obwohl die Fermi-Energie $E_F$ im Inneren der Probe zwischen zwei Landau-Niveaus liegen, können so am Probenrand auch elektronische Zustände nahe der Fermi-Energie entstehen. Es bilden sich also eindimensionale Randkanäle zum Transport der Ladungsträger aus. Diese können sich nur in eine Richtung bewegen, welche von der Orientierung des Magnetfelds abhängt. Die chiralen Zustände sind durch Einwirken des Magnetfeldes über die Lorentzkraft auf geladene Teilchen recht stabil und Ladungsträger können dadurch trotz  eventueller Stöße mit Phononen wieder auf ihre Bahn finden. Dies ist in der folgenden Abbildung \ref{fig:Randkanalmodell_Anleitungsheft} dargestellt.
 
 \begin{figure}[h]
 	\centering
@@ -280,7 +280,7 @@ Um die beiden hier betrachteten Effekte erklären zu können, wird das sogenannt
 Zur anschaulichen Beschreibung des Ladungstransport in den Randkanälen kann der Landauer-Büttiker-Formalismus genutzt werden. 
 Dabei werden Parallelen von der Optik zur Technik aufgezeigt, wie zum Beispiel der Vergleich der Transmission einer Elektronenwelle mit der einer elektromagnetischen Lichtwelle. 
 
-Die Anzahl M der Randkanäle hängt ab von der Lage der Fermienergie $E_F$ und somit auch von der Stärke des Magnetfeldes, wie in Abbildung \ref{fig:Randkanalmodell_Anleitungsheft} (a) dargestellt.
+Die Anzahl $M$ der Randkanäle hängt ab von der Lage der Fermienergie $E_F$ und somit auch von der Stärke des Magnetfeldes, wie in Abbildung \ref{fig:Randkanalmodell_Ann_sleitungsheft} (a) dargestellt.
 Die Hauptaussage des Landauer-Büttiker-Formalismus beruht auf der Annahme, dass die Elektronen mit einer Wahrscheinlichkeit $T_{lm}$ vom Kontakt m zum Kontakt l transmittiert werden. Dabei sei nun die Anzahl der Kontakte an der Probe $p=2$, diese liegen auf unterschiedlichen chemischen Potentialen $\mu_p$. Dann sei weiter am oberen Rand der Probe $T_{12}=1$ und $T_{21}=0$, denn ein Elektron, welches an Kontakt 1 in den Randkanal transmittiert wird, kann die Probe nur über Kanal 2 wieder verlassen. Am unteren Rand der Probe drehen sich die Wahrscheinlichkeiten genau um.  
 Die gemessene Spannung an den beiden Kontakten ist dann
 
@@ -296,9 +296,8 @@ I_0=-e \cdot \left( \int^{\mu_1}_0T_{12}D(E)v(E)~dE-\int^{\mu_2}_0T_{12}D(E)v(E)
 \label{eq:strom_randkanal}
 \end{equation}
 
-Mit der Transmissionswahrscheinlichkeit T, der Zustandsdichte D(E)
-und der Gruppengeschwindigkeit v(E) mit $v(E)=\frac{1}{\hbar}\pd{E}{k}$.
-
+Mit der Transmissionswahrscheinlichkeit $T$, der Zustandsdichte $D(E)$
+und der Gruppengeschwindigkeit $v(E)=\frac{1}{\hbar}\pd{E}{k}$.
 Der gesamte Nettostrom setzt sich aus dem Strom des oberen und unteren Kanals zusammen und beträgt
 
 \begin{equation}
@@ -309,7 +308,7 @@ I=I_0+I_u=-e\int^{\mu_1}_{\mu2}T_{12}D(E)v(E)dE=\frac{e^2}{h}(U_1-U_2)
 
 \subsubsection{Erklärung der Hall-Plateaus und der SDH-Oszillation}
 
-Randkanalmodell und Landauer-Büttiker-Formalismus (oben beschrieben) sind zwei Ansätze zur Erklärung der Ursache für die Hall-Plateaus und die Shubnikov-de Haas-Oszillation (SDH-Oszillation). 
+Das Randkanalmodell und der Landauer-Büttiker-Formalismus (oben beschrieben) sind zwei Ansätze zur Erklärung der Ursache für die Hall-Plateaus.
 Betrachtet wird nun eine Vierpunkt-Messung, wie sie in Abbildung \ref{fig:Vierpunktmessung_Anleitungsheft} dargestellt ist. 
 
 \begin{figure}[h]
@@ -317,11 +316,12 @@ Betrachtet wird nun eine Vierpunkt-Messung, wie sie in Abbildung \ref{fig:Vierpu
 	\includegraphicsRS[width=0.7\linewidth]{images/Anleitungsheft/Vierpunktmessung_Anleitungsheft.png}
 	\caption[Vierpunkt-Messung]{
 		\textbf{Links:} Schema der sogenannten Hall-Kreuz-Geometrie zur Messung der Hall-Spannung zwischen $\mu_2$ und $\mu_4$ \cite{anleitung}.\\
-		\textbf{Rechts:} Schema der Kontaktgeometrie zur Messung des Längswiderstandes zwischen $\mu_2$ und $\mu_3$ \cite{anleitung}.}
+		\textbf{Rechts:} Schema der Kontaktgeometrie zur Messung des Längswiderstandes zwischen $\mu_2$ und $\mu_3$ \cite{anleitung}.
+	}
 	\label{fig:Vierpunktmessung_Anleitungsheft}
 \end{figure}
 
-Die roten Pfeile in der Abbildung \ref{fig:Vierpunktmessung_Anleitungsheft} zeigen die mögliche Richtung des Stromflusses in den Randzuständen an. Deren Anzahl sei M. Ströme, die in einen Kontakt hinein fließen, seien positiv. 
+Die roten Pfeile in der Abbildung \ref{fig:Vierpunktmessung_Anleitungsheft} zeigen die mögliche Richtung des Stromflusses in den Randzuständen an. Deren Anzahl sei $M$. Ströme, die in einen Kontakt hinein fließen, seien positiv. 
 Anhand Gleichung \ref{eq:randkanal_nettostrom} lassen sich in diesem Beispiel die vier Ströme berechnen und man erhält ein Gleichungssystem dessen Lösungen die Hallspannung $U_{Hall}=U_4-U_2$ liefern. 
 Mithilfe des Ohmschen Gesetzes erhält man den Hallwiderstand über
 
@@ -337,7 +337,7 @@ Es wird erneut der Landauer-Büttiker-Formalismus zur Hand genommen, um das Vers
 \subsubsection{Lokalisierte Zustände}
 \label{sec:lokalisierte Zust}
 
-Die Fermienergie liegt per Definition zwischen dem höchsten besetzten und dem niedrigsten unbesetzten Elektronenniveau. Die Landau-Niveaus haben den Abstand $\hbar\omega_c$. Dieser wächst linear mit dem B-Feld. Das hat zur Folge, dass die teilweise gefüllten Landau-Niveaus zu größeren Energien hin verschoben werden und gleichzeitig entvölkert werden, da sich ihre relative Höhe zur Fermienergie verändert. Besitzt das Niveau unterhalb der Fermienergie einen ausreichend hohen Entartungsgrad, ist das oberhalb der Fermienergie liegende Niveau vollständig entvölkert und im Verhätnis fällt so die Fermi-Energie auf das nächst kleinere Energieniveau ab. Dies ist schematisch in Abbildung \ref{fig:Lokalisierte_Zust_Anleitungsheft} dargestellt.
+Die Fermienergie liegt per Definition zwischen dem höchsten besetzten und dem niedrigsten unbesetzten Elektronenniveau. Die Landau-Niveaus haben den Abstand $\hbar\omega_c$. Dieser Abstand wächst also linear mit dem B-Feld. So nimmt auch die Fermienergie linear mit dem Magnetfeld zu. Gleichzeitig nimmt jedoch auch die Entartung der Niveaus zu. Wenn also mit zunehmendem Magnetfeld die letzte Besetzung des höchsten Zustandes in den nächst niedrigeren Zustand springt, springt auch die Fermienergie. Dieses Verhalten ist schematisch in Abbildung \ref{fig:Lokalisierte_Zust_Anleitungsheft} dargestellt.
 
 \begin{figure}[h]
 	\centering
@@ -348,7 +348,7 @@ Die Fermienergie liegt per Definition zwischen dem höchsten besetzten und dem n
 	\label{fig:Lokalisierte_Zust_Anleitungsheft}
 \end{figure}
 
-Eine ideale Probe zeichnet sich durch eine peak-förmige Zustandsdichte aus. Liegt ein singuläres Magnetfeld an, liegt die Fermienergie darin zwischen zwei Landau-Niveaus. Doch bei einer realen Probe treten Fluktuationen in der Zustandsdichte auf. Das liegt daran, dass die Landau-Niveaus im Inneren der Probe nicht konstant verlaufen, sondern durch Störstellen zu Verbreiterungen der Zustandsdichte führen.
+Eine ideale Probe zeichnet sich durch eine peak-förmige Zustandsdichte aus. Liegt ein singuläres Magnetfeld an, liegt die Fermienergie darin zwischen zwei Landau-Niveaus. Doch bei einer realen Probe treten Fluktuationen in der Zustandsdichte auf. Das liegt daran, dass die Landau-Niveaus im Inneren der Probe nicht konstant verlaufen, sondern durch Störstellen verbreitert sind.
 
 \begin{figure}[h]
 \centering
@@ -359,8 +359,8 @@ Eine ideale Probe zeichnet sich durch eine peak-förmige Zustandsdichte aus. Lie
 \label{fig:fermi_landau_Anleitungsheft}
 \end{figure}
 
-Die chiralen Zustände des Randkanalmodells verschwinden in den Übergangsbereichen, in welchen die Fermienergie exakt auf einem LAndau-Niceau liegt. Dadurch kann es zu Rückstreuung kommen und der Längswiderstand ist nicht mehr Null.  
-So lässt sich die Ursache der Ausdehnung der Hall-Plateaus, sowie die Minima der SDH-Oszillation mittels des Randkanalmodells zusammen mit dem Landauer-Büttiker-Formalismus und den lokalisierten Zuständen erklären.
+Die chiralen Zustände des Randkanalmodells verschwinden in den Übergangsbereichen, in welchen die Fermienergie exakt auf einem Landau-Niveau liegt. Dadurch kann es zu Rückstreuung kommen und der Längswiderstand ist nicht mehr Null.  
+So lässt sich die Ursache der Ausdehnung der Hall-Plateaus, sowie SDH-Oszillation mittels des Randkanalmodells zusammen mit dem Landauer-Büttiker-Formalismus und den lokalisierten Zuständen erklären.
 
 
 \subsection{Plattenkondensator}
