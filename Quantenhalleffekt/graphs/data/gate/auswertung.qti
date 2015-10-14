@@ -3,7 +3,7 @@ QtiPlot 0.9.8 project file
 <windows>	23
 <table>
 p100t	456	19	10.09.15 23:27
-geometry	0	0	470	220	
+geometry	0	33	470	220	
 header	B[X]	T[Y]	X1V[Y]	Y1[Y]	V[Y]	X2V[Y]	Y2V[Y]	X3[Y]	V1[Y]	Y3[Y]	V2[Y]	X4[Y]	V3[Y]	Y4[Y]	V4[Y]	SensA[Y]	V5[Y]	SensB[Y]	V6[Y]
 ColWidth	100	100	100	100	100	100	100	100	100	100	100	100	100	100	100	100	100	100	100	
 <com>
@@ -474,7 +474,7 @@ WindowLabel	/media/rene/DATA/Dropbox/Uni/Uni-Privat/Fortgeschrittenenpraktikum2/
 </table>
 <table>
 p150t	456	19	10.09.15 23:27
-geometry	38	28	463	220	
+geometry	38	61	463	220	
 header	B[X]	T[Y]	X1V[Y]	Y1[Y]	V[Y]	X2V[Y]	Y2V[Y]	X3[Y]	V1[Y]	Y3[Y]	V2[Y]	X4[Y]	V3[Y]	Y4[Y]	V4[Y]	SensA[Y]	V5[Y]	SensB[Y]	V6[Y]
 ColWidth	100	100	100	100	100	100	100	100	100	100	100	100	100	100	100	100	100	100	100	
 <com>
@@ -945,7 +945,7 @@ WindowLabel	/media/rene/DATA/Dropbox/Uni/Uni-Privat/Fortgeschrittenenpraktikum2/
 </table>
 <table>
 p200t	456	19	10.09.15 23:27
-geometry	76	56	451	220	
+geometry	76	89	451	220	
 header	B[X]	T[Y]	X1V[Y]	Y1[Y]	V[Y]	X2V[Y]	Y2V[Y]	X3[Y]	V1[Y]	Y3[Y]	V2[Y]	X4[Y]	V3[Y]	Y4[Y]	V4[Y]	SensA[Y]	V5[Y]	SensB[Y]	V6[Y]
 ColWidth	100	100	100	100	100	100	100	100	100	100	100	100	100	100	100	100	100	100	100	
 <com>
@@ -1416,7 +1416,7 @@ WindowLabel	/media/rene/DATA/Dropbox/Uni/Uni-Privat/Fortgeschrittenenpraktikum2/
 </table>
 <table>
 p050t	456	19	10.09.15 23:27
-geometry	114	84	450	220	
+geometry	114	117	450	220	
 header	B[X]	T[Y]	X1V[Y]	Y1[Y]	V[Y]	X2V[Y]	Y2V[Y]	X3[Y]	V1[Y]	Y3[Y]	V2[Y]	X4[Y]	V3[Y]	Y4[Y]	V4[Y]	SensA[Y]	V5[Y]	SensB[Y]	V6[Y]
 ColWidth	100	100	100	100	100	100	100	100	100	100	100	100	100	100	100	100	100	100	100	
 <com>
@@ -1887,7 +1887,7 @@ WindowLabel	/media/rene/DATA/Dropbox/Uni/Uni-Privat/Fortgeschrittenenpraktikum2/
 </table>
 <table>
 m100t	456	19	10.09.15 23:27
-geometry	152	112	458	220	
+geometry	152	145	458	220	
 header	B[X]	T[Y]	X1V[Y]	Y1[Y]	V[Y]	X2V[Y]	Y2V[Y]	X3[Y]	V1[Y]	Y3[Y]	V2[Y]	X4[Y]	V3[Y]	Y4[Y]	V4[Y]	SensA[Y]	V5[Y]	SensB[Y]	V6[Y]
 ColWidth	100	100	100	100	100	100	100	100	100	100	100	100	100	100	100	100	100	100	100	
 <com>
@@ -2358,7 +2358,7 @@ WindowLabel	/media/rene/DATA/Dropbox/Uni/Uni-Privat/Fortgeschrittenenpraktikum2/
 </table>
 <table>
 m150t	456	19	10.09.15 23:27
-geometry	190	140	441	220	
+geometry	190	173	441	220	active
 header	B[X]	T[Y]	X1V[Y]	Y1[Y]	V[Y]	X2V[Y]	Y2V[Y]	X3[Y]	V1[Y]	Y3[Y]	V2[Y]	X4[Y]	V3[Y]	Y4[Y]	V4[Y]	SensA[Y]	V5[Y]	SensB[Y]	V6[Y]
 ColWidth	100	100	100	100	100	100	100	100	100	100	100	100	100	100	100	100	100	100	100	
 <com>
@@ -2829,7 +2829,7 @@ WindowLabel	/media/rene/DATA/Dropbox/Uni/Uni-Privat/Fortgeschrittenenpraktikum2/
 </table>
 <table>
 m200t	579	19	10.09.15 23:27
-geometry	228	168	444	220	
+geometry	228	201	444	220	
 header	B[X]	T[Y]	X1V[Y]	Y1[Y]	V[Y]	X2V[Y]	Y2V[Y]	X3[Y]	V1[Y]	Y3[Y]	V2[Y]	X4[Y]	V3[Y]	Y4[Y]	V4[Y]	SensA[Y]	V5[Y]	SensB[Y]	V6[Y]
 ColWidth	100	100	100	100	100	100	100	100	100	100	100	100	100	100	100	100	100	100	100	
 <com>
@@ -3423,7 +3423,7 @@ WindowLabel	/media/rene/DATA/Dropbox/Uni/Uni-Privat/Fortgeschrittenenpraktikum2/
 </table>
 <table>
 m050t	462	19	10.09.15 23:27
-geometry	266	196	459	220	
+geometry	266	229	459	220	
 header	B[X]	T[Y]	X1V[Y]	Y1[Y]	V[Y]	X2V[Y]	Y2V[Y]	X3[Y]	V1[Y]	Y3[Y]	V2[Y]	X4[Y]	V3[Y]	Y4[Y]	V4[Y]	SensA[Y]	V5[Y]	SensB[Y]	V6[Y]
 ColWidth	100	100	100	100	100	100	100	100	100	100	100	100	100	100	100	100	100	100	100	
 <com>
@@ -3900,7 +3900,7 @@ WindowLabel	/media/rene/DATA/Dropbox/Uni/Uni-Privat/Fortgeschrittenenpraktikum2/
 </table>
 <table>
 0t	899	19	10.09.15 23:27
-geometry	304	216	445	220	
+geometry	304	249	445	220	
 header	B[X]	T[Y]	X1V[Y]	Y1[Y]	V[Y]	X2V[Y]	Y2V[Y]	X3[Y]	V1[Y]	Y3[Y]	V2[Y]	X4[Y]	V3[Y]	Y4[Y]	V4[Y]	SensA[Y]	V5[Y]	SensB[Y]	V6[Y]
 ColWidth	100	100	100	100	100	100	100	100	100	100	100	100	100	100	100	100	100	100	100	
 <com>
@@ -4814,9 +4814,9 @@ WindowLabel	/media/rene/DATA/Dropbox/Uni/Uni-Privat/Fortgeschrittenenpraktikum2/
 </table>
 <table>
 overview	30	4	10.09.15 23:28
-geometry	20	484	445	288	
+geometry	20	517	518	288	
 header	1[X]	2[Y]	3[Y]	4[Y]
-ColWidth	100	100	100	100	
+ColWidth	100	165	100	100	
 <com>
 </com>
 ColType	0;0/13	0;0/13	0;0/13	0;0/13
@@ -4838,7 +4838,7 @@ WindowLabel		2
 </table>
 <table>
 Table1	1001	19	11.09.15 00:04
-geometry	372	252	445	220	
+geometry	372	285	445	220	
 header	B[X]	T[Y]	X1V[Y]	Y1[Y]	V[Y]	X2V[Y]	Y2V[Y]	X3[Y]	V1[Y]	Y3[Y]	V2[Y]	X4[Y]	V3[Y]	Y4[Y]	V4[Y]	SensA[Y]	V5[Y]	SensB[Y]	V6[Y]
 ColWidth	100	100	100	100	100	100	100	100	100	100	100	100	100	100	100	100	100	100	100	
 <com>
@@ -5852,9 +5852,33 @@ WindowLabel	/media/rene/DATA/Dropbox/Uni/Uni-Privat/Fortgeschrittenenpraktikum2/
 1000	2	-0.00172997	0.000333788	9.53682e-07	0.000314714	-9.75801e-07	-2.50294e-09	0	0	1.9923	0								
 </data>
 </table>
+<table>
+Table2	30	8	11.09.15 03:10
+geometry	225	528	510	283	
+header	U-gate[X]	b[Y]	b-err[Y]	U-xx[Y]	n-s[Y]	n-s-err[Y]	µ[Y]	µ-err[Y]
+ColWidth	100	100	100	100	100	100	100	100	
+<com>
+</com>
+ColType	0;0/13	0;0/13	0;0/13	0;0/13	0;0/13	0;0/13	0;0/13	0;0/13
+ReadOnlyColumn	0	0	0	0	0	0	0	0
+HiddenColumn	0	0	0	0	0	0	0	0
+Comments									
+WindowLabel		2
+<data>
+0	200	0.0007418653884126	4.682458919151e-07	9.53682e-07	8.239724171374e+15	2862277	4772160132.694	1.657730102539
+1	150	0.0007869231655308	8.322354911264e-07	9.53682e-07	7.767932678263e+15	5087261	5062001026.999	3.315132141113
+2	100	0.0008525051312498	8.300892507609e-07	0.000276567	7.170357043889e+15	5074141	18909938.97269	0.01338171213865
+3	50	0.0009341212677496	4.601845778608e-07	1.43052e-06	6.543867893657e+15	2813001	4005924966.319	1.722019195557
+4	0	0.0008529135848636	1.963533195967e-07	0.000274183		1200262	19083498.36837	0.003195960074663
+5	-50	0.001128895912879	1.969741254929e-06	2.86104e-06	5.414818233525e+15	12040567	2420602376.752	5.382530212402
+6	-100	0.00126965403898	8.389657281438e-07	0.000730876	4.814513233636e+15	5128402	10657005.30296	0.01135180331767
+7	-150	0.001519397909992	1.475237572036e-06	4.52998e-06	4.023150310139e+15	9017782	2057636828.226	4.612137317657
+8	-200	0.001872727584881	5.875741821929e-07	0.00216796	3.264097897718e+15	3591703.5	5299279.510638	0.005831147544086
+</data>
+</table>
 <multiLayer>
 p100	1	1	10.09.15 23:27
-geometry	749	0	575	469	
+geometry	749	33	575	469	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -5963,7 +5987,7 @@ EnabledTickLabels	1	1	1	1
 </multiLayer>
 <multiLayer>
 p150	1	1	10.09.15 23:29
-geometry	751	50	575	469	
+geometry	751	83	575	469	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -6072,7 +6096,7 @@ EnabledTickLabels	1	1	1	1
 </multiLayer>
 <multiLayer>
 p200	1	1	10.09.15 23:31
-geometry	759	102	575	469	
+geometry	759	135	575	469	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -6134,8 +6158,30 @@ curve	p200t_B	p200t_T	0	1	#000000	0	1	7	0	#000000	#000000	0	#000000	14	1	2	0	0	4
 <CurveType>0</CurveType>
 <Visible>1</Visible>
 </Function>
-scale	0	-0.007	0.001	0	9	5	0	0
-scale	1	-0.007	0.001	0	9	5	0	0
+curve	p200t_B	p200t_X1V	2	1	#ff0000	0	1	7	0	#ff0000	#ff0000	0	#000000	14	1	2	0	0	455	1
+<Function>
+<Type>0</Type>
+<Title>LinearFit3</Title>
+<Expression>A*x+B</Expression>
+<Variable>x</Variable>
+<Range>0.1	1</Range>
+<Points>100</Points>
+<Constant>A	0.000142813269529453</Constant>
+<Constant>B	-6.52814003335243e-06</Constant>
+<Style>0</Style>
+<LineStyle>1</LineStyle>
+<Pen>
+	<Color>#ff0000</Color>
+	<Style>0</Style>
+	<Width>1</Width>
+</Pen>
+<xAxis>2</xAxis>
+<yAxis>0</yAxis>
+<CurveType>0</CurveType>
+<Visible>1</Visible>
+</Function>
+scale	0	-0.007	0.002	0	10	5	0	0
+scale	1	-0.007	0.002	0	10	5	0	0
 scale	2	-1	8	0	10	5	0	0
 scale	3	-1	8	0	10	5	0	0
 LabelsFormat	0	6	0	6	0	6	0	6
@@ -6166,6 +6212,8 @@ EnabledTickLabels	1	1	1	1
 <Text>
 \l(1)%(1)
 \l(2)%(2)
+\l(3)%(3)
+\l(4)%(4)
 </Text>
 <Font>Ubuntu	11	50	0	0	0</Font>
 <TextColor>#000000</TextColor>
@@ -6181,7 +6229,7 @@ EnabledTickLabels	1	1	1	1
 </multiLayer>
 <multiLayer>
 p50	1	1	10.09.15 23:32
-geometry	763	151	575	469	
+geometry	763	184	575	469	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -6290,7 +6338,7 @@ EnabledTickLabels	1	1	1	1
 </multiLayer>
 <multiLayer>
 m100	1	1	10.09.15 23:33
-geometry	1334	1	575	469	
+geometry	1334	34	575	469	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -6399,7 +6447,7 @@ EnabledTickLabels	1	1	1	1
 </multiLayer>
 <multiLayer>
 m150	1	1	10.09.15 23:34
-geometry	1345	56	575	469	
+geometry	1345	89	575	469	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -6508,7 +6556,7 @@ EnabledTickLabels	1	1	1	1
 </multiLayer>
 <multiLayer>
 m200	1	1	10.09.15 23:36
-geometry	1350	118	575	469	
+geometry	1350	151	575	469	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -6617,7 +6665,7 @@ EnabledTickLabels	1	1	1	1
 </multiLayer>
 <multiLayer>
 m50	1	1	10.09.15 23:37
-geometry	1353	165	575	469	
+geometry	1353	198	575	469	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -6726,7 +6774,7 @@ EnabledTickLabels	1	1	1	1
 </multiLayer>
 <multiLayer>
 0	1	1	10.09.15 23:38
-geometry	1052	234	575	469	
+geometry	1052	267	575	469	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -6835,7 +6883,7 @@ EnabledTickLabels	1	1	1	1
 </multiLayer>
 <multiLayer>
 Graph1	1	1	11.09.15 00:04
-geometry	1043	290	593	469	
+geometry	1043	323	593	469	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -6942,33 +6990,9 @@ EnabledTickLabels	1	1	1	1
 <LinkXAxes>0</LinkXAxes>
 <ScaleLayers>1</ScaleLayers>
 </multiLayer>
-<table>
-Table2	30	8	11.09.15 03:10
-geometry	470	484	510	283	
-header	U-gate[X]	b[Y]	b-err[Y]	U-xx[Y]	n-s[Y]	n-s-err[Y]	µ[Y]	µ-err[Y]
-ColWidth	100	100	100	100	100	100	100	100	
-<com>
-</com>
-ColType	0;0/13	0;0/13	0;0/13	0;0/13	0;0/13	0;0/13	0;0/13	0;0/13
-ReadOnlyColumn	0	0	0	0	0	0	0	0
-HiddenColumn	0	0	0	0	0	0	0	0
-Comments									
-WindowLabel		2
-<data>
-0	200	0.0007418653884126	4.682458919151e-07	9.53682e-07	8.239724171374e+15	2862277	4772160132.694	1.657730102539
-1	150	0.0007869231655308	8.322354911264e-07	9.53682e-07	7.767932678263e+15	5087261	5062001026.999	3.315132141113
-2	100	0.0008525051312498	8.300892507609e-07	0.000276567	7.170357043889e+15	5074141	18909938.97269	0.01338171213865
-3	50	0.0009341212677496	4.601845778608e-07	1.43052e-06	6.543867893657e+15	2813001	4005924966.319	1.722019195557
-4	0	0.0008529135848636	1.963533195967e-07	0.000274183		1200262	19083498.36837	0.003195960074663
-5	-50	0.001128895912879	1.969741254929e-06	2.86104e-06	5.414818233525e+15	12040567	2420602376.752	5.382530212402
-6	-100	0.00126965403898	8.389657281438e-07	0.000730876	4.814513233636e+15	5128402	10657005.30296	0.01135180331767
-7	-150	0.001519397909992	1.475237572036e-06	4.52998e-06	4.023150310139e+15	9017782	2057636828.226	4.612137317657
-8	-200	0.001872727584881	5.875741821929e-07	0.00216796	3.264097897718e+15	3591703.5	5299279.510638	0.005831147544086
-</data>
-</table>
 <multiLayer>
 Graph2	1	1	11.09.15 03:11
-geometry	491	-33	569	469	active
+geometry	491	0	569	469	
 WindowLabel		2
 Margins	5	5	5	5
 Spacing	5	5
@@ -7054,8 +7078,8 @@ EnabledTickLabels	1	1	1	1
 <LineStyle>0</LineStyle>
 <x>-284.96240601504</x>
 <y>8.7993311036789e+15</y>
-<right>-136.09022556391</right>
-<bottom>8.21739130434783e+15</bottom>
+<right>-157.071960297767</right>
+<bottom>8.21212121212121e+15</bottom>
 <attachTo>1</attachTo>
 <onTop>1</onTop>
 <visible>1</visible>
@@ -7273,5 +7297,45 @@ R^2 = 0.9962029124761
 Adjusted R^2 = 0.9946840774665
 RMSE (Root Mean Squared Error) = 1.203202558296e+14
 RSS (Residual Sum of Squares) = 8.686178377743e+28
+---------------------------------------------------------------------------------------
+
+[13.10.15 18:23	Diagramm: ''p200'']
+Lineare Regression von Datensatz: p200t_X1V, unter Verwendung der Funktion: A*x+B
+Gewichtungsmethode: Keine Gewichtung (alle w_i = 1)
+Von x = 7,696300000000000e+00 bis x = -1,000000000000000e-01
+B (y-intercept) = -4,834917739146496e-05 +/- 4,576494032840361e-06
+A (slope) = 1,653310286158329e-04 +/- 1,036526788964142e-06
+--------------------------------------------------------------------------------------
+Chi^2/doF = 2,497472689624198e-09
+R^2 = 0,982468193108232
+Angepasstes R^2 = 0,982390789987297
+RMSE (Standardabweichung) = 4,99747205057137e-05
+RSS (Summe der quadrierten Restwerte) = 1,13385260108939e-06
+---------------------------------------------------------------------------------------
+[13.10.15 18:24	Diagramm: ''p200'']
+Lineare Regression von Datensatz: p200t_X1V, unter Verwendung der Funktion: A*x+B
+Gewichtungsmethode: Keine Gewichtung (alle w_i = 1)
+Von x = 9,898000000000000e-01 bis x = 1,152000000000000e-01
+B (y-intercept) = -6,528140033352429e-06 +/- 1,145312172140122e-07
+A (slope) = 1,428132695294534e-04 +/- 1,879236231084377e-07
+--------------------------------------------------------------------------------------
+Chi^2/doF = 1,216273916591078e-13
+R^2 = 0,999913431869906
+Angepasstes R^2 = 0,999909898476841
+RMSE (Standardabweichung) = 3,48751188756551e-07
+RSS (Summe der quadrierten Restwerte) = 6,08136958295537e-12
+---------------------------------------------------------------------------------------
+[13.10.15 18:25	Diagramm: ''p200'']
+Lineare Regression von Datensatz: p200t_X1V, unter Verwendung der Funktion: A*x+B
+Gewichtungsmethode: Keine Gewichtung (alle w_i = 1)
+Von x = 9,898000000000000e-01 bis x = 1,152000000000000e-01
+B (y-intercept) = -6,528140033352429e-06 +/- 1,145312172140122e-07
+A (slope) = 1,428132695294534e-04 +/- 1,879236231084377e-07
+--------------------------------------------------------------------------------------
+Chi^2/doF = 1,216273916591078e-13
+R^2 = 0,999913431869906
+Angepasstes R^2 = 0,999909898476841
+RMSE (Standardabweichung) = 3,48751188756551e-07
+RSS (Summe der quadrierten Restwerte) = 6,08136958295537e-12
 ---------------------------------------------------------------------------------------
 </log>

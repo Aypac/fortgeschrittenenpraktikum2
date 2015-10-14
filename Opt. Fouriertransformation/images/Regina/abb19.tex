@@ -1,0 +1,23 @@
+% !TeX encoding = UTF-8
+% !TeX spellcheck = de_DE
+
+\documentclass[12pt,border=0mm]{standalone}
+
+\def\imgtilesize{3.5}
+\def\imgtilesizeY{\imgtilesize}
+\def\imgtilesizeX{\imgtilesize}
+\def\imgtileborder{0.17}
+\def\imgtileborderX{\imgtileborder}
+\def\imgtileborderY{\imgtileborder}
+\input{../markedimage.sty}
+	
+\begin{document}
+	 \begin{tikzpicture}
+	 	\textcolor{white}{
+	        \squareImgtile[a1]{abb19a.jpg}{0}{0};
+        	\squareImgtile[a2]{abb19b.jpg}{1}{0};
+        	\squareImgtile[b1]{abb19c.jpg}{2.2}{0};
+        	\squareImgtile[b2]{abb19d.jpg}{3.2}{0};
+        }
+	\end{tikzpicture}
+\end{document}
