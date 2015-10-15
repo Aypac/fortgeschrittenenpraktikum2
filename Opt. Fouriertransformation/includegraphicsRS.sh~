@@ -12,7 +12,7 @@ IFN=$(basename $IFP) ;
 echo "$DOWNDIR/$IFN" > tmpname ;
 if [ ! -f $DOWNDIR/$IFN ]; then
 	echo "File $DOWNDIR/$IFN not found! Converting..." ;
-	convert $IFP -density 90 -resize $PIX"x>" -quality $Q $DOWNDIR/$IFN ;
+	convert $IFP -resize $PIX"x>" -quality $Q $DOWNDIR/$IFN ;
 else
 	echo "Found images/downsampled/$IFN - reusing.";
 fi ; 
