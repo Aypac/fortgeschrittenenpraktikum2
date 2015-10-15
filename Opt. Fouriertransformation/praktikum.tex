@@ -74,25 +74,40 @@
 	
 	\newpage
 	\clearpage
+	\section{Aufbau und Justage des Experiments}
+	Der Aufbau des Versuches für die optische Fouriertransformation besteht aus drei Teilen: Zunächst wurde die Einkopplung des Laserstrahls im Faserkopplungsaufbau optimiert und die Effizienz dieser Vermessen. Anschließend wurde die Tauglichkeit einer Photodiode zur Vermessung der Lichtleistung und somit Einkoppeleffizienz untersucht. Abschließend wurde als hinter dem Auskoppler der für die Erzeugung, Aufnahme und Manipulation der Fourierspektren sowie die Rücktransformation benötigte 4f-Aufbau aufgebaut und optimiert.
 	
-	\section{Experimentelle Durchführung}
-		Der Versuch der optischen Fouriertransformation besteht aus drei Versuchsteilen. Zunächst wurde die Einkopplung des Laserstrahls im Faserkopplungsaufbau optimiert und die Effizienz der Einkopplung und der Faser mithilfe einer Photodiode gemessen. \\
-		Hierzu wurde eine Photodiode mit einem ausgewählten Widerstand so aufgebaut, dass die Lichtleistung über ein Oszilloskop gemessen werden konnte.\\
-		Im letzten Versuchsteil wurde als optischer Pfad hinter dem Auskoppler der sogenannte 4f-Aufbau aufgebaut und optimiert. Mit einer Kamera wurden die Bilder mehrerer Objekte und deren Abbildungen in der Fourierebene aufgenommen. Für manche Objekte wurde zusätzlich zu einer Abbildung in der Fourierebene eine Reihe an Aufnahmen in der Abbildungsebene gemacht, wobei in die Fourierebene verschiedene Filter eingesetzt wurden.   
-		
 	\subsection{Einkopplung}
 	\input{sections/experiment_einkopplung.tex}
 	\subsection{Lichtsensor}
 	\input{sections/experiment_lichtsensor.tex}
 	\subsection{4f-Aufbau}
-	\input{sections/experiment_abbildung+fourier.tex}
+	\input{sections/experiment_vierF.tex}
 	\label{chap:abb+ft}
+		
+		
+	\section{Experimentelle Durchführung und Auswertung}
+	\label{chap:auswertung}
+	In diesem Teil sollen Bildinformationen eines Objektes fouriertransformiert, die Transformierte aufgenommen, mit Hilfe verschiedener Filter manipuliert und anschließend rücktransformiert werden. Hierfür werden Objekte, wie z.B. Dias in die Objektebene eingebracht. In der Fourierebene können  Filter oder eine Kamera montiert werden, um die Fouriertransformierte manipulieren oder aufnehmen zu können. Eine Kamera dient zur Aufnahme der Rücktransformierten.\\
 	
+	Die fünf verwendeten Objektdias werden als \textit{Objekte 1 bis 5} (siehe Abbildung~\ref{fig:Objekte-aus-Anleitungsheft}) bezeichnet. Objekt 1-4 enthalten mehrere Motive, die einzeln untersucht werden.
 	
-	%\section{Results and Discussion} %Messergebnisse mit Fehlerdiskussion
-	%\input{praktikum_results.tex}
+	\begin{figure}[h]
+		\centering
+		\includegraphicsRS[width=0.15\textwidth]{images/Anleitungsheft/objekt1.png}~~
+		\includegraphicsRS[width=0.15\textwidth]{images/Anleitungsheft/objekt2.png}~~
+		\includegraphicsRS[width=0.15\textwidth]{images/Anleitungsheft/objekt3.png}~~
+		\includegraphicsRS[width=0.15\textwidth]{images/Anleitungsheft/objekt4.png}~~
+		\includegraphicsRS[width=0.15\textwidth]{images/Anleitungsheft/objekt5.png}
+		\caption[Die zur Messung verwendeten Diamotive]{
+			Darstellung der zur Messung verwendeten Dias. Im Text werden diese Objektdias mit Objekt 1 bis 5, von links nach rechts, bezeichnet.
+		}
+		\label{fig:Objekte-aus-Anleitungsheft}
+	\end{figure}
 	
-	%\subsection{cite example}  Das will ich belegen \cite[p. 2]{erstesBuch}
+	Anhand der Dias wurden zunächst sowohl Kamera 1, als auch Kamera 2 nachjustiert, bis ein möglichst scharfes Bild auf dem über das Programm \textit{uc480 Viewer-DCC1545M-ID} angeschlossenen Bildschirm zu erkennen war. %In den nachfolgenden Teilen werden für die Objekte Aufnahmen in der Abbildungsebene und zugehörig zu jeder Einstellung auch in der Fourierebene gemacht. Zudem werden für die Objekte 4 und 5 verschiedene Filter in die Fourierebene gestellt und Aufnahmen der Kamera 1 in der Abbildungsebene gemacht und untersucht. Für Objekt 4 wurde hierzu ein Tiefpass und mehrere Breitbandfilter verwendet. Für Objekt 5 wurde ein Halbebenenfilter horizontal, vertikal und diagonal in die Fourierebene gehalten.\\
+		
+	\input{sections/experiment_durchf.tex}
 	
 	\clearpage
 	\newpage
@@ -104,8 +119,6 @@
 	\clearpage
 	
 	%\section{} %Zusammenfassung
-	
-	
 	
 	
 	\newpage
