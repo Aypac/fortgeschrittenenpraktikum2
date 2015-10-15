@@ -3,12 +3,7 @@
 % !Tex spellcheck = de_DE
 
 \subsection{Lichtsensor}
-Um aus dem Spannungsabfall über den zu der Photodiode parallel geschalteten Widerstand eine Lichtleistung bestimmen zu können ist ein lineares Verhalten von Vorteil. So kann direkt aus der Spannung mittels eines Faktors die Leistung berechnet werden. Mit einem Widerstand von $\unit[1]{k\Omega}$ ist ein lineares Verhalten nur im Bereich bis etwa \unit[0,7]{mW} zu beobachten. Darüber hinaus sättigt die Spannung. Vermutlich ließe sich mit einer Wertetabelle (erstellt mit Hilfe des kommerziellen Powermeters) auch weit über diesen Bereich hinaus sinnvoll die Lichtleistung berechnen.
-
-Für den $\unit[500]{\Omega}$ Widerstand ist bis zur maximal vermessenen Lichtleistung $P_L$ von etwa \unit[1,1]{mW} keine Sättigung festzustellen (vgl. Abb.~\ref{fig:photodiode}). Für den vorgesehen Verwendungszweck empfiehlt sich daher die Verwendung eines Widerstandswertes in der Nähe von $\unit[500]{\Omega}$. Mit Hilfe der Software \textit{QtiPlot} wurde eine Lineare Regression mit der Formel $U=a\cdot P_L + b$ über die aufgenommenen Datenpunkte ausgeführt. Daraus ergeben sich die Werte $b=(5,2346 \pm 1,1515) \unit{mW} $ und $a= 152,6614\pm 1,7095) \unitfrac{W}{V}$. Die Standardabweichung liegt bei $1,28$.\\
-
-
-Das beobachtet Verhalten lässt sich sehr gut erklären, indem man einen PN-Übergang in der Photodiode mit einer Bandlücke von etwa \unit[500]{mV} annimmt. Für eine feste Frequenz kann die Lichtleistung direkt in die Anzahl der Photonen $N_{Ph}$ umgerechnet werden: $N_{Ph} = \nicefrac{P_L}{E_{Ph}}$, wobei $E_{Ph}=\hbar \omega_{Ph}$ die Energie pro Photon ist. Jedes dieser Photonen treibt mit einer Wahrscheinlichkeit, entsprechend der Quanteneffizienz des Überganges für die Frequenz der Photonen $\omega_{Ph}$, genau einen elektronischen Übergang. So führt eine bestimmt Leistung zu einer bestimmten Anzahl angeregter Elektronen. Dies entspricht bei kompletter Besetzungsinversion der Zustände einem konstantem Strom und somit Spannungsabfall über den Widerstand. Sobald dieser Widerstand jedoch so groß gewählt wird, dass der Spannungsabfall in etwa dem Bandlückenpotential entspricht, wird die Besetzungsinversion aufgehoben. Dadurch sinkt die Quanteneffizienz und folglich der Stromfluss. Folglich sinkt die abgefallene Spannung über den Widerstand. Dies erklärt das lineare Verhalten bei kleinen Widerständen beziehungsweise Lichtleistungen und das Sättigungsverhalten ab etwa \unit[250]{mV}.
+s.o.
 
 \subsection{Erzeugung von Beugungsbilder von verschiedenen Gittern}
 
@@ -168,7 +163,7 @@ ein sehr kleiner Frequenzintervall durchgelassen wird und dadurch die Zahl vier 
 
 Durch die Verwendung eines Tiefpassfilters wurden die niedrigen Frequenzen durchgelassen und somit die hohen Frequenzen herausgefiltert. Diese bewirken eine niedrigere Auflösung des
 Bildes, da die Flächen unterdrückt werden, welches in der Abbildung~\ref{fig:vier_mit_breitband}~b dargestellt ist bei der Zahl 4 und dem Buchstaben D dargestellt ist. Da diese beiden Objekte keine innere Flächenstrukturen wie Gitter aufweisen, ist dieser Effekt nicht zu erkennen.
-Im Gegenteil dazu wurden bei einem Fingerabdruck ein Hochpassfilter eingesetzt, der die niedrigen Frequenzen herausgefiltert, welches zu einer Heraushebung der Kanten führte (Abb.~\ref{fig:vier_mit_tiefpass}~b). In der Bildverarbeitung werden die Filter eingesetzt und tragen deshalb dort folgende Bezeichnungen: Tiefpass = Weichzeichner und Hochpassfilter = Kantenerkennung.
+Im Gegenteil dazu wurden bei einem Fingerabdruck ein Hochpassfilter eingesetzt, der die niedrigen Frequenzen herausgefiltert, welches zu einer Hervorhebung der Kanten führte (Abb.~\ref{fig:vier_mit_tiefpass}~b). In der Bildverarbeitung werden die Tiefpass- (Weichzeichner) und Hochpassfilter (Kantenerkennung) häufig verwendet.
 
 \begin{figure}[h]
 	\centering
@@ -180,22 +175,6 @@ Im Gegenteil dazu wurden bei einem Fingerabdruck ein Hochpassfilter eingesetzt, 
 	\label{fig:vier_mit_tiefpass}
 \end{figure}
 
-\begin{figure}[h]
-	\centering
-	\includegraphicsRS[width=0.4\textwidth]{images/Regina/abb24.jpg}
-	\caption[Abbildung Fingerabdruck mit Tiefpassfilter]{Fingerabdruck ohne (a) und mit einem Tiefpassfilter (b)}
-	\label{fig:fingerabdruck_mit_filtern}
-\end{figure}
-
 \subsection{Schlierenverfahren durch Verwendung eines Halbebenenfilters}
 
 Mit Hilfe eines Halbebenenfilters (Schneide) wurden die durch   eine brennende Kerze erzeugten Schlieren dargestellt (Abb.~\ref{fig:luftstroemungen}). Als Schlieren werden Bereiche bezeichnet, die sich von ihrer Umgebung  in  der  Dichte  bzw.  im  Brechungsindex  unterscheiden,  welche  in  unseren Versuch die durch  die  Kerze erzeugten Luftströmungen darstellten. Bei diesem Versuchsaufbau  wurde  das  Prinzip  genutzt,  dass  parallele  Strahlenbündel  beim  Durchgang durch   ein   inhomogenes Dichtefeld   unterschiedlich   stark   abgelenkt   werden.   Durch   die eingesetzte  Schneide,  wurden  die  Anteile  des  gebrochenen  Lichts  ausgeblendet,  so  dass richtungsabhängige  Brechzahl-  bzw.  Dichtegradienten auf  dem  Projektionsschirm  sichtbar wurden. Dabei ist die Intensitätsverteilung im   Bild   proportional   zum   Quadrat   der Phasenverschiebung   durch   das   Objekt.   Somit   ermöglicht es dieses Verfahren, eine Phasenverschiebung sichtbar zu machen. 
-
-\begin{figure}[h]
-	\centering
-	\includegraphicsRS[width=0.4\textwidth]{images/Regina/abb25.jpg}
-	\caption[Durch Schlierenverfahren sichtbar gemachte Luftströmungen]{
-		Durch Schlierenverfahren sichtbar gemachte Luftströmungen (durch Pfeile markiert).
-	}
-	\label{fig:luftstroemungen}
-\end{figure}
