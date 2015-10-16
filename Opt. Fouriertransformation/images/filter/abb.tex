@@ -3,7 +3,7 @@
 
 \documentclass[12pt,border=0mm]{standalone}
 
-\def\imgtilesize{3.5}
+\def\imgtilesize{3}
 \def\imgtilesizeY{\imgtilesize}
 \def\imgtilesizeX{\imgtilesize}
 \def\imgtileborder{0.17}
@@ -48,13 +48,21 @@
 		 	\fill[black] (.44,.46) rectangle (.56,.54);
 		 	% %
 	 	]{empty.JPG}{2}{0};
-	 	\squareImgtile[c][
+	 	\squareImgtile[d][
 		 	\fill[black] (0,0) rectangle (1,1);
 		 	\fill[white] (.15,.15) rectangle (.85,.85);
 		 	%
 		 	\fill[black] (0,0) rectangle (.5,1);
 		 	% %
 	 	]{empty.JPG}{3}{0};
+	 	\squareImgtile[e][
+		 	\fill[black] (0,0) rectangle (1,1);
+		 	\fill[white] (.15,.15) rectangle (.85,.85);
+		 	%
+		 	\fill[black] (0,0) rectangle (1,.4);
+		 	\fill[black] (0,0.6) rectangle (1,1);
+		 	% %
+	 	]{empty.JPG}{4}{0};
         }
 	\end{tikzpicture}
 \end{document}
