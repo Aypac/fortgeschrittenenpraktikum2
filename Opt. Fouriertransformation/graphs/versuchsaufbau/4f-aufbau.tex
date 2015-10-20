@@ -1,5 +1,7 @@
 \documentclass[pstricks,border=12pt]{standalone}% remove the border key if you want a tight output without any border.
 
+% REMEMBER: You'll need DVI->PS->PDF chain instead of pdflatex!
+
 %Optical elements
 \input{../optexpstyle.sty}
 
@@ -19,30 +21,33 @@
 	\begin{optexp} %All beams placed behind components
 	
 	
-	\optbox[position=start,compname=LA, optboxsize=2 1, labeloffset=0](L0)(L2){Auskoppler}
-	
-	\optretplate[compname=LH](L0)(L1){$\nicefrac{\lambda}{2}$}
-	\beamsplitter[compname=BS](L0)(L2)(4,0)
-	\lens[lensradius=0.7,lensheight=1, labeloffset=1, labelangle=180,compname=L1, position=0](L3)(L4){Linse 1}
-	\lens[lensradius=2.3,lensheight=1.4, labeloffset=1, labelangle=180,compname=L2, position=1](L3)(L4){Linse 2}
-	\optplate[plateheight=1.5, labelangle=180, labeloffset=1, compname=DIA, position=1](L4)(L5){Objekt/Dia}
-	\lens[lensradius=\fourFwidth,lensheight=1.4, labeloffset=1, labelangle=180,compname=L3, position=0.25](L5)(L6){Linse 3}
-	\optplate[plateheight=1.5, labelangle=180, labeloffset=1, compname=CCD1, position=.5](L5)(L6){Fourierebene}
-	\lens[lensradius=\fourFwidth,lensheight=1.4, labeloffset=1, labelangle=180,compname=L4, position=0.75](L5)(L6){Linse 4}
-	\optplate[plateheight=1.5, labelangle=180, labeloffset=1, compname=CCD2, position=1](L5)(L6){CCD}
-	
-	\drawwidebeam[beamwidth=0.2, fillstyle=solid, opacity=0.25, arrowscale=1.8, fillcolor=red, linecolor=red] {LA}{LH}{BS}{L1}{L2}{DIA}{L3}{CCD1}{L4}{CCD2}
+		\optbox[position=start,compname=LA, optboxsize=2 1, labeloffset=0](L0)(L2){Auskoppler}
+		
+		\optretplate[compname=LH](L0)(L1){$\nicefrac{\lambda}{2}$}
+		\beamsplitter[compname=BS](L0)(L2)(4,0)
+		\lens[lensradius=0.7,lensheight=1, labeloffset=1, labelangle=180,compname=L1, position=0](L3)(L4){Linse 1}
+		\lens[lensradius=2.3,lensheight=1.4, labeloffset=1, labelangle=180,compname=L2, position=1](L3)(L4){Linse 2}
+		\optplate[plateheight=1.5, labelangle=180, labeloffset=1, compname=DIA, position=1](L4)(L5){Objekt/Dia}
+		\lens[lensradius=\fourFwidth,lensheight=1.4, labeloffset=1, labelangle=180,compname=L3, position=0.25](L5)(L6){Linse 3}
+		\optplate[plateheight=1.5, labelangle=180, labeloffset=1, compname=CCD1, position=.5](L5)(L6){Fourierebene}
+		\lens[lensradius=\fourFwidth,lensheight=1.4, labeloffset=1, labelangle=180,compname=L4, position=0.75](L5)(L6){Linse 4}
+		\optplate[plateheight=1.5, labelangle=180, labeloffset=1, compname=CCD2, position=1](L5)(L6){CCD}
+		
+		\drawwidebeam[beamwidth=0.2, fillstyle=solid, opacity=0.25, arrowscale=1.8, fillcolor=red, linecolor=red] {LA}{LH}{BS}{L1}{L2}{DIA}{L3}{CCD1}{L4}{CCD2}
 	
 	\end{optexp}
 	
 	\psset{arrows=|*-|*}
 	\pcline([offset=-1]\oenodeCenter{4})([offset=-1]\oenodeCenter{5})
-	\ncput*{$f_1$}
-	\pcline([offset=-1]\oenodeCenter{5})([offset=-1]\oenodeCenter{6})
-	\ncput*{$f_2$}
+	\ncput*{$f_1+f_2$}
+	
 	\pcline([offset=-1]\oenodeCenter{6})([offset=-1]\oenodeCenter{7})
 	\ncput*{$f_3$}
 	\pcline([offset=-1]\oenodeCenter{7})([offset=-1]\oenodeCenter{8})
+	\ncput*{$f_3$}
+	\pcline([offset=-1]\oenodeCenter{8})([offset=-1]\oenodeCenter{9})
+	\ncput*{$f_4$}
+	\pcline([offset=-1]\oenodeCenter{9})([offset=-1]\oenodeCenter{10})
 	\ncput*{$f_4$}
 	
 	\end{pspicture}
